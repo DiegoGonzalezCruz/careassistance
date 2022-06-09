@@ -1,7 +1,7 @@
 export const footer1 = [
   {
     title: 'Home',
-    href: '/home',
+    href: '/',
   },
   {
     title: 'Nosotros',

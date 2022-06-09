@@ -6,10 +6,14 @@ import { Mobile } from './NavBar/Mobile'
 export const NavBar = () => {
   return (
     <div className="navbar bg-primary flex flex-row justify-between">
-      <div className="md:hidden">{/* <Mobile /> */}</div>
+      <div className="md:hidden">
+        <Mobile />
+      </div>
       <div className="w-24 h-24 ">{/* <Logo /> */}</div>
 
-      <div className="hidden md:flex">{/* <Desktop /> */}</div>
+      <div className="hidden md:flex">
+        <Desktop />
+      </div>
     </div>
   )
 }
