@@ -1,15 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { CalltoAction } from '../Components/Boxes/CalltoAction'
+import { CalltoAction } from '../components/Boxes/CalltoAction'
 
-import { box1 } from '../Components/Boxes/boxesContent'
-import { BoxWithImage } from '../Components/Boxes/BoxWithImage'
-import { HeroBox } from '../Components/Boxes/HeroBox'
-import { AnimatedBox1 } from '../Components/AnimatedBoxes/AnimatedBox1'
-import { BoxWhiteBGImage } from '../Components/Boxes/BoxWhiteBGImage'
-import { BoxRotatingElements } from '../Components/Boxes/BoxRotatingElements'
-import { NuestrosProgramas } from '../Components/Boxes/Programas/NuestrosProgramas'
-import { Numbers } from '../Components/Boxes/Numbers'
+import { box1 } from '../components/Boxes/boxesContent'
+import { BoxWithImage } from '../components/Boxes/BoxWithImage'
+import { HeroBox } from '../components/Boxes/HeroBox'
+import { AnimatedBox1 } from '../components/AnimatedBoxes/AnimatedBox1'
+import { BoxWhiteBGImage } from '../components/Boxes/BoxWhiteBGImage'
+import { BoxRotatingElements } from '../components/Boxes/BoxRotatingElements'
+import { NuestrosProgramas } from '../components/Boxes/Programas/NuestrosProgramas'
+import { Numbers } from '../components/Boxes/Numbers'
 
 
 

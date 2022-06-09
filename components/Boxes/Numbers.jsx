@@ -37,14 +37,14 @@ export const Numbers = () => {
         <div className="bg-primary/70 w-full text-white relative flex flex-col h-full items-center justify-center">
           {stats.map((stat, index) => {
             return (
-              <>
+              <div key={stat.sub}>
                 <p>
                   <span className="text-accent font-bold text-7xl">
                     {stat.number}
                   </span>
                 </p>
                 <p>{stat.sub}</p>
-              </>
+              </div>
             )
           })}
         </div>
