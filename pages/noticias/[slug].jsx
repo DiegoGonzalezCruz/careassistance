@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import React from 'react'
-import { BlogBody } from '../../Components/Blog/BlogBody'
-import { BlogHeader } from '../../Components/Blog/BlogHeader'
-import { BlogRelated } from '../../Components/Blog/BlogRelated'
-import { CalltoAction } from '../../Components/Boxes/CalltoAction'
+import { BlogBody } from '../../components/Blog/BlogBody'
+import { BlogHeader } from '../../components/Blog/BlogHeader'
+import { BlogRelated } from '../../components/Blog/BlogRelated'
+import { CalltoAction } from '../../components/Boxes/CalltoAction'
 
 const BlogPost = () => {
   const router = useRouter()

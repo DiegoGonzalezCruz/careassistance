@@ -1,9 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
-import { HeroBox } from '../Components/Boxes/HeroBox'
-import { InfiniteBox } from '../Components/Boxes/Animated/InfiniteBox'
-import { MapBox } from '../Components/Boxes/Animated/MapBox'
-import { CalltoAction } from '../Components/Boxes/CalltoAction'
+import { HeroBox } from '../components/Boxes/HeroBox'
+import { InfiniteBox } from '../components/Boxes/Animated/InfiniteBox'
+import { MapBox } from '../components/Boxes/Animated/MapBox'
+import { CalltoAction } from '../components/Boxes/CalltoAction'
 
 const Nosotros = () => {
   return (

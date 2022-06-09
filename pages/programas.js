@@ -1,11 +1,11 @@
 import React from 'react'
 import Head from 'next/head'
-import { HeroBox } from '../Components/Boxes/HeroBox'
-import { ComoFuncionanNuestrosProgramas } from '../Components/Boxes/Animated/ComoFuncionanNuestrosProgramas'
-import { NuestrosProgramas } from '../Components/Boxes/Animated/NuestrosProgramas'
-import { NuestroProposito } from '../Components/Boxes/NuestroProposito'
-import { CanalesAtencion } from '../Components/Boxes/CanalesAtencion'
-import { CalltoAction } from '../Components/Boxes/CalltoAction'
+import { HeroBox } from '../components/Boxes/HeroBox'
+import { ComoFuncionanNuestrosProgramas } from '../components/Boxes/Animated/ComoFuncionanNuestrosProgramas'
+import { NuestrosProgramas } from '../components/Boxes/Animated/NuestrosProgramas'
+import { NuestroProposito } from '../components/Boxes/NuestroProposito'
+import { CanalesAtencion } from '../components/Boxes/CanalesAtencion'
+import { CalltoAction } from '../components/Boxes/CalltoAction'
 
 const Programas = () => {
   return (

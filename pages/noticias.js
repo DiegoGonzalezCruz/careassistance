@@ -1,8 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
-import { HeroBox } from '../Components/Boxes/HeroBox'
-import { NoticiasDestacadas } from '../Components/Blog/Destacadas'
-import { MasNoticias } from '../Components/Blog/MasNoticias'
+import { HeroBox } from '../components/Boxes/HeroBox'
+import { NoticiasDestacadas } from '../components/Blog/Destacadas'
+import { MasNoticias } from '../components/Blog/MasNoticias'
 
 const Noticias = () => {
   return (

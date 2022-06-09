@@ -1,9 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
-import { HeroBox } from '../Components/Boxes/HeroBox'
-import { BoxClientes } from '../Components/Boxes/BoxClientes'
-import { Testimonios } from '../Components/Boxes/Testimonios/Testimonios'
-import { CalltoAction } from '../Components/Boxes/CalltoAction'
+import { HeroBox } from '../components/Boxes/HeroBox'
+import { BoxClientes } from '../components/Boxes/BoxClientes'
+import { Testimonios } from '../components/Boxes/Testimonios/Testimonios'
+import { CalltoAction } from '../components/Boxes/CalltoAction'
 
 const Clientes = () => {
   return (
