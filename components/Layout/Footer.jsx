@@ -24,7 +24,6 @@ export const Footer = () => {
             </Link>
           )
         })}
-        <a className="link link-hover">About us</a>
       </div>
       <div>
         <span className="footer-title">Social</span>
