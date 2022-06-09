@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1061" viewBox="0 0 1920 1061">
+  <defs>
+    <clipPath id="clip-Vector_Home_Proposito_1">
+      <rect width="1920" height="1061"/>
+    </clipPath>
+  </defs>
+  <g id="Vector_Home_Proposito_1" data-name="Vector Home_Proposito 1" clip-path="url(#clip-Vector_Home_Proposito_1)">
+    <rect width="1920" height="1061" fill="#fff"/>
+    <rect id="Rectángulo_48" data-name="Rectángulo 48" width="2532" height="1061" transform="translate(-306)" fill="#66f"/>
+    <g id="Grupo_127" data-name="Grupo 127" transform="translate(-23.22 51.115)">
+      <text id="Nuestro" transform="translate(1257.22 398.885)" fill="#fff" font-size="104" font-family="FiraSans-BoldItalic, Fira Sans" font-weight="700" font-style="italic"><tspan x="-183.768" y="0">Nuestro</tspan></text>
+      <text id="propósito" transform="translate(983.22 599.885)" fill="#fff" font-size="220" font-family="FiraSans-ThinItalic, Fira Sans" font-weight="200" font-style="italic"><tspan x="-458.48" y="0">propósito</tspan></text>
+    </g>
+  </g>
+</svg>
