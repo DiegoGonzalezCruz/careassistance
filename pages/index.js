@@ -27,6 +27,8 @@ export default function Home() {
         accent='Care Assistance'
         sub='Y contamos con la plataforma de salud y bienestar más avanzada de Latinoamérica'
         video={"/images/VideoBg1.mp4"}
+        buttonHref='/programas'
+        buttonText='Nuestros programas'
       />
       <AnimatedBox1 text='Sanos, Motivados y Felices' />
       <BoxWithImage

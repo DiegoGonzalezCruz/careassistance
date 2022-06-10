@@ -4,7 +4,7 @@ import { navbarItems } from '../navbarItems'
 
 export const Desktop = () => {
   return (
-    <div className=" navbar-center hidden lg:flex text-white ">
+    <div className="navbar-center hidden lg:flex text-white ">
       <ul className="menu menu-horizontal p-0">
         {navbarItems.map((item, index) => {
           return (

@@ -12,17 +12,23 @@ export const HeroBox = ({
   buttonHref = ''
 }) => {
   return (
-    <div className="w-screen bg-primary h-full  ">
-      <header className="relative flex items-center justify-center h-96 overflow-hidden w-full ">
-        <div className="relative text-white w-full  md:w-1/2 px-10 flex flex-col items-start z-20 ">
-          <p className="my-4">{prevText}</p>
-          <h1 className="text-3xl">
-            {first} <span className="text-accent">{accent}</span>
-          </h1>
-          <p className="font-thin">{sub}</p>
-          {buttonText && (
-            <button className="btn btn-accent text-white">{buttonText}</button>
-          )}
+    <div className="w-screen h-full relative">
+      <header className="relative flex items-center justify-center h-96 md:overflow-hidden w-full ">
+        <div className="text-white flex flex-col z-20 w-full h-full relative bg-primary/50">
+          <div className="text-white flex flex-col z-20 w-1/2 relative mx-auto my-auto">
+            <p className="my-0 text-center text-sm">{prevText}</p>
+            <h1 className="text-4xl text-center my-2 w-1/2 mx-auto">
+              {first} <span className="text-accent ">{accent}</span>
+            </h1>
+            <p className="font-thin text-center text-sm my-2 w-3/4 mx-auto">
+              {sub}
+            </p>
+            {buttonText && (
+              <button className="text-center mx-auto my-2 h-10 btn-accent text-white font-normal text-xs w-48 rounded-full">
+                {buttonText}
+              </button>
+            )}
+          </div>
         </div>
         {video && (
           <video

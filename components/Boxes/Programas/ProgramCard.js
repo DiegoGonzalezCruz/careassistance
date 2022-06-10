@@ -3,8 +3,8 @@ import React from 'react'
 
 export const ProgramCard = () => {
   return (
-    <div className="card w-96 bg-white shadow-xl image-full ">
-      <div className=' w-48 h-48 shadow-xl'>
+    <div className="card w-48 h-48 bg-white shadow-xl  ">
+      <div className='absolute w-48 h-48 shadow-xl '>
         <Image
           src={'/images/programas/IMG_1_EMOCIONAL.jpg'}
           layout='fill'
@@ -13,11 +13,14 @@ export const ProgramCard = () => {
           alt='Programas'
         />
       </div>
-      <div className="card-body flex flex-col justify-center">
-        <h2 className="card-title self-center">Programa de consulta médica</h2>
-        {/* <div className="card-actions justify-end">
+
+      <div className="relative h-full w-full flex flex-col items-center bg-black/20">
+        <div className="h-full w-full px-4 my-auto debug2 relative">
+          <h2 className="text-lg  absolute bottom-0 ">Programa de consulta médica</h2>
+          {/* <div className="card-actions justify-end">
           <button className="btn btn-primary">Buy Now</button>
         </div> */}
+        </div>
       </div>
     </div>
 

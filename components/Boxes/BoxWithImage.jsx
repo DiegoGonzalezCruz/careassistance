@@ -9,23 +9,27 @@ export const BoxWithImage = ({
   button = ''
 }) => {
   return (
-    <div className="bg-primary flex">
+    <div className="bg-primary flex ">
       <div
-        className={`hero-content flex w-full items-center justify-center ${
+        className={`hero-content flex w-full items-center justify-center  ${
           imagePosition === 'right' ? 'flex-row-reverse' : 'flex-row'
         }`}
       >
-        <div className="relative h-56 w-56">
+        <div
+          className={`relative h-56 w-full rounded-2xl  
+        ${imagePosition === 'right' ? 'translate-x-10' : '-translate-x-10'}
+        `}
+        >
           <Image
             src={image}
-            className="max-w-sm rounded-lg shadow-2xl"
+            className="max-w-sm shadow-2xl rounded-2xl "
             layout="fill"
             objectFit="cover"
             alt={title}
           />
         </div>
-        <div className="w-full text-white">
-          <h2 className=" font-bold">{title}</h2>
+        <div className=" text-white w-full px-5">
+          <h2 className="font-bold">{title}</h2>
           <p className="py-6">{text}</p>
           {/* {button && <button className="btn btn-primary">{'button'}</button>} */}
         </div>
