@@ -11,6 +11,7 @@ export const Footer = () => {
             src="/images/Logo_Care_Assistance.svg"
             layout="fill"
             className=""
+            alt="footer logo"
           />
         </div>
       </div>

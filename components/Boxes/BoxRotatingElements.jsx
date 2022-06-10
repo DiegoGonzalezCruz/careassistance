@@ -10,6 +10,7 @@ export const BoxRotatingElements = () => {
           src={'/images/experiencia_unica/vector2.svg'}
           layout="fill"
           className="w-screen"
+          alt="vector"
         />
       </div>
     </div>

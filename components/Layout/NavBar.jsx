@@ -15,6 +15,7 @@ export const NavBar = () => {
           src="/images/Logo_Care_Assistance.svg"
           layout="fill"
           className=""
+          alt="logo care assistance"
         />
       </div>
       <div className="hidden md:flex">
