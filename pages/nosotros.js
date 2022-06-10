@@ -22,7 +22,7 @@ const Nosotros = () => {
       />
       <InfiniteBox />
       <MapBox />
-      <CalltoAction buttonText={'¿Quieres sumar estos beneficios a tu empresa?'} question={'Contáctanos'} />
+      <CalltoAction question={'¿Quieres sumar estos beneficios a tu empresa?'} buttonText={'Contáctanos'} />
 
     </div>
   )

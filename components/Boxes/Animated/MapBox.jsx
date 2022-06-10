@@ -6,7 +6,7 @@ export const MapBox = () => {
     <div>
       <div className="relative w-screen h-96">
         <Image
-          src={'/images/mapa/Vector_Home_Mapa.svg'}
+          src={'/images/mapa/mapa2.svg'}
           layout="fill"
           objectFit="cover"
           alt="mapa"
