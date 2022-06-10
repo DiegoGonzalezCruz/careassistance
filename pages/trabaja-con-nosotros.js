@@ -1,4 +1,5 @@
 import React from 'react'
+import { FormSimple } from '../components/Forms/FormSimple'
 
 const TrabajaNosotros = () => {
   return (
@@ -16,13 +17,7 @@ const TrabajaNosotros = () => {
             Nunc non tincidunt quam. Nam at urna neque. Curabitur lacinia fermentum finibus. Phasellus non tellus arcu. Pellentesque at neque porta, ultricies nisl sed, congue augue. Nullam nisi libero, maximus a elementum id, varius et massa. Mauris dolor tellus, eleifend id augue vitae, volutpat eleifend est. Aliquam vulputate luctus aliquet. Maecenas scelerisque luctus lobortis. Sed vestibulum, metus a pulvinar dictum, diam velit pharetra est, et rhoncus dolor justo nec diam. Donec nec rhoncus diam, eget aliquet leo. Nullam ornare nisl nec massa congue, quis ultricies elit fringilla. Phasellus sed dui accumsan, pretium magna vel, condimentum leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec vestibulum ex in urna dignissim elementum. Fusce sodales sem quis est viverra, nec tristique augue sodales.
           </p>
 
-          <p>
-            Nam bibendum, tortor a dignissim iaculis, dui est molestie massa, suscipit viverra metus eros ac sem. Morbi egestas imperdiet dolor. Morbi porttitor est quis nibh fringilla facilisis. Ut eget turpis ac nunc elementum tristique. Nunc arcu odio, rutrum ac luctus vitae, dapibus sed quam. Proin suscipit nisl a malesuada rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-
-          <p>
-            Aliquam rutrum porta augue, sed ultricies lorem. Integer a ligula leo. Morbi sit amet faucibus tellus. Morbi pretium consectetur nisi, id dictum metus blandit sed. Suspendisse tempus sagittis nisi, eu venenatis tortor congue non. Quisque nec augue vel ex tincidunt tincidunt eget sit amet odio. Aliquam erat erat, pretium sit amet nunc nec, bibendum volutpat nisl. Proin sit amet laoreet enim, ac iaculis odio. Cras vitae condimentum quam.
-          </p>
+          <FormSimple />
         </div>
       </div>
     </div>
