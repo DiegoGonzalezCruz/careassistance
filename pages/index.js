@@ -1,15 +1,14 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { CalltoAction } from '../components/Boxes/CalltoAction'
-
 import { box1 } from '../components/Boxes/boxesContent'
-import { BoxWithImage } from '../components/Boxes/BoxWithImage'
+import { BoxWithImageLeft } from '../components/Boxes/BoxWithImageLeft'
 import { AnimatedBox1 } from '../components/AnimatedBoxes/AnimatedBox1'
 import { BoxWhiteBGImage } from '../components/Boxes/BoxWhiteBGImage'
 import { BoxRotatingElements } from '../components/Boxes/BoxRotatingElements'
 import { NuestrosProgramas } from '../components/Boxes/Programas/NuestrosProgramas'
 import { Numbers } from '../components/Boxes/Numbers'
 import { HeroBoxVideo } from '../components/Boxes/HeroBoxVideo'
+import { BoxWithImageRight } from '../components/Boxes/BoxWithImageRight'
 
 
 
@@ -31,19 +30,19 @@ export default function Home() {
         buttonText='Nuestros programas'
       />
       <AnimatedBox1 text='Sanos, Motivados y Felices' />
-      <BoxWithImage
+      <BoxWithImageLeft
         image={'/images/pexels-julia-avamotive.jpg'}
         text={"Have you ever needed to matrix your cutting-edge feature set? Free? Think B2C2B. The capability to implement wirelessly leads to the ability to whiteboard without lessening our power to benchmark. "}
-        title={'Sanos,Motivados y Felices'}
+        title={'Sanos,Motivados y Felices left'}
         imagePosition='left'
       />
       <AnimatedBox1 text='nuestro proposito' />
       <AnimatedBox1 text='Mejorar el bienestar de las personas a través de programas de acompañamiento para la adopción de hábitos saludables.' />
       <BoxWhiteBGImage />
       <AnimatedBox1 text='Experiencia única' />
-      <BoxWithImage image={'/images/pexels-julia-avamotive.jpg'}
+      <BoxWithImageRight image={'/images/pexels-julia-avamotive.jpg'}
         text={"Have you ever needed to matrix your cutting-edge feature set? Free? Think B2C2B. The capability to implement wirelessly leads to the ability to whiteboard without lessening our power to benchmark. "}
-        title={'Experiencia única'}
+        title={'Experiencia única Right'}
         imagePosition='right'
       />
       <BoxRotatingElements />

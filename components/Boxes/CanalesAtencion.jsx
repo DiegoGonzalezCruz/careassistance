@@ -30,8 +30,8 @@ const canales = [
 
 export const CanalesAtencion = () => {
   return (
-    <div className="w-screen py-14 bg-primary text-white">
-      <div className="w-1/2 flex flex-col gap-10 items-center mx-auto">
+    <div className="w-screen py-14 bg-primary text-white h-full ">
+      <div className="w-full px-10 flex flex-col gap-10 items-center mx-auto xl:w-1/2">
         <h2>Nuestros canales de atención</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. A porro non
@@ -39,14 +39,14 @@ export const CanalesAtencion = () => {
           odio neque voluptatibus quibusdam!
         </p>
       </div>
-      <div className="w-3/4 mx-auto flex flex-wrap gap-4 my-10">
+      <div className="md:w-3/4 lg:w-3/4 xl:w-full mx-auto flex flex-wrap gap-4 my-10  items-center justify-center ">
         {canales.map((canal) => {
           return (
             <div
               key={canal.title}
-              className=" flex flex-row items-center w-48 bg-accent rounded-xl"
+              className=" flex flex-row items-center w-48 xl:w-96 bg-accent rounded-xl"
             >
-              <div className="relative bg-white h-20 w-20 rounded-l-xl py-4">
+              <div className="relative bg-white h-20 w-20 rounded-l-xl py-4 min-w-48">
                 <div className="relative bg-white h-full w-full rounded-l-xl">
                   <Image
                     src={canal.image}

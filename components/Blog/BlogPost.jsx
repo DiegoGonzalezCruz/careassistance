@@ -3,7 +3,7 @@ import React from 'react'
 
 export const BlogPost = () => {
   return (
-    <div className="h-full w-48 p-4">
+    <div className="h-full w-48 flex flex-col items-center justify-center">
       <div className="relative h-48 w-48">
         <Image
           src="/images/IMG_3.jpg"
@@ -13,7 +13,7 @@ export const BlogPost = () => {
           alt="blog post"
         />
       </div>
-      <div className="text-white  w-full">
+      <div className="text-white w-full py-4">
         <p>8 Junio 2022</p>
         <h3 className="text-white text-sm">
           Tendencias tecnológicas en el sector salud que van a revolucionar este

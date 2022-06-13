@@ -5,7 +5,7 @@ import { footer1, footer2, socialNetworks } from './footerItems'
 export const Footer = () => {
   return (
     <footer className="footer md:p-10 pb-10 bg-base-200 flex flex-col text-white ">
-      <div className=" w-full">
+      <div className="pl-4 w-full h-full flex ">
         <div className="relative w-24 h-24 ">
           <Image
             src="/images/Logo_Care_Assistance.svg"
@@ -15,8 +15,8 @@ export const Footer = () => {
           />
         </div>
       </div>
-      <div className="w-full border-2 border-white"></div>
-      <div className="flex md:flex-row flex-col gap-10 md:items-start pl-4 justify-between w-full">
+      <div className="w-3/4 border-2 border-white self-center"></div>
+      <div className=" flex md:flex-row flex-col gap-10 md:items-start pl-4 justify-between w-full">
         <div>
           <span className="footer-title">Servicios</span>
 

@@ -9,8 +9,8 @@ const menu = [
 
 export const NuestrosProgramas = () => {
   return (
-    <div className="h-screen w-full bg-primary ">
-      <div className="flex flex-col text-white  p-10">
+    <div className="min-h-screen w-screen bg-primary ">
+      <div className="flex flex-col text-white lg:max-w-3xl mx-auto p-10">
         <h2>
           Nuestros <span className="text-accent">Programas</span>
         </h2>
@@ -20,15 +20,15 @@ export const NuestrosProgramas = () => {
           nemo ea delectus illum doloribus totam atque provident minima eum.
         </p>
       </div>
-      <div className="w-screen flex flex-col items-center">
-        <div className="card w-3/4 bg-base-100 shadow-xl flex flex-row">
-          <div className="card-body w-1/3">
+      <div className="w-full h-full flex flex-col items-center ">
+        <div className="card sm:w-3/4 bg-base-100 shadow-xl flex flex-row w-full h-full">
+          <div className="card-body sm:w-1/3">
             <ul>
               {menu.map((item) => {
                 return (
                   <li
                     key={item}
-                    className="border-b-2 hover:border-b-accent cursor-pointer text-primary py-4"
+                    className="text-xs sm:text-lg  border-b-2 hover:border-b-accent cursor-pointer text-primary py-4"
                   >
                     {item}
                   </li>
@@ -36,7 +36,7 @@ export const NuestrosProgramas = () => {
               })}
             </ul>
           </div>
-          <figure className="w-2/3  p-4">
+          <figure className="w-full sm:p-4 ">
             <div className="relative h-full w-full rounded-2xl">
               <Image
                 src="/images/programas/IMG_7_SALUD_SEXUAL.jpg"

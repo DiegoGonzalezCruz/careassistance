@@ -21,18 +21,18 @@
     font-family: Comfortaa, FiraSans, sans-serif;
   }
   h1 {
-    @apply font-semibold text-3xl font-FiraSans;
+    @apply font-semibold font-FiraSans text-3xl sm:text-4xl lg:text-5xl;
   }
   h2 {
-    @apply font-bold text-white text-3xl font-FiraSans;
+    @apply font-bold text-white text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-FiraSans;
   }
   h3 {
-    @apply text-primary text-2xl font-light font-FiraSans;
+    @apply text-primary text-2xl sm:text-3xl lg:text-4xl font-light xl:text-2xl font-FiraSans;
   }
   h4 {
-    @apply text-primary font-light text-lg font-FiraSans;
+    @apply text-primary font-light text-lg sm:text-xl lg:text-3xl xl:text-2xl font-FiraSans;
   }
   p {
-    @apply text-xl font-extralight font-Comfortaa;
+    @apply font-extralight font-Comfortaa text-sm lg:text-lg  xl:text-2xl;
   }
 }
