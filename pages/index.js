@@ -4,12 +4,12 @@ import { CalltoAction } from '../components/Boxes/CalltoAction'
 
 import { box1 } from '../components/Boxes/boxesContent'
 import { BoxWithImage } from '../components/Boxes/BoxWithImage'
-import { HeroBox } from '../components/Boxes/HeroBox'
 import { AnimatedBox1 } from '../components/AnimatedBoxes/AnimatedBox1'
 import { BoxWhiteBGImage } from '../components/Boxes/BoxWhiteBGImage'
 import { BoxRotatingElements } from '../components/Boxes/BoxRotatingElements'
 import { NuestrosProgramas } from '../components/Boxes/Programas/NuestrosProgramas'
 import { Numbers } from '../components/Boxes/Numbers'
+import { HeroBoxVideo } from '../components/Boxes/HeroBoxVideo'
 
 
 
@@ -21,7 +21,7 @@ export default function Home() {
         <meta name="description" content="CareAssistance" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <HeroBox
+      <HeroBoxVideo
         prevText='Hola,'
         first='Somos'
         accent='Care Assistance'

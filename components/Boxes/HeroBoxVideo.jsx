@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-export const HeroBox = ({
+export const HeroBoxVideo = ({
   prevText,
   first,
   accent,
@@ -12,9 +12,9 @@ export const HeroBox = ({
   buttonHref = ''
 }) => {
   return (
-    <div className="w-screen h-full relative ">
-      <header className=" relative flex flex-row items-center justify-center h-96 md:overflow-hidden w-full bg-primary/50">
-        <div className="text-white  flex flex-col z-20 w-full h-full relative ">
+    <div className="w-screen md:h-[60vh]  debug1 relative ">
+      <header className="relative flex items-center justify-center h-full md:overflow-hidden w-full ">
+        <div className="text-white flex flex-col z-20 w-full h-full relative bg-primary/50">
           <div className="text-white flex flex-col z-20 w-1/2 relative mx-auto my-auto">
             <p className="my-0 text-center text-sm">{prevText}</p>
             <h1 className="text-4xl text-center my-2 w-1/2 mx-auto">
@@ -29,16 +29,6 @@ export const HeroBox = ({
               </button>
             )}
           </div>
-        </div>
-
-        <div className="relative h-56 w-1/2 ">
-          <Image
-            src={image}
-            layout="fill"
-            objectFit="cover"
-            className="rounded-xl"
-            alt={accent}
-          />
         </div>
       </header>
     </div>

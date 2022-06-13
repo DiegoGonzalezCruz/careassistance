@@ -9,7 +9,7 @@ export const BoxWithImage = ({
   button = ''
 }) => {
   return (
-    <div className="bg-primary flex ">
+    <div className="bg-primary flex debug1 overflow-hidden">
       <div
         className={`hero-content flex w-full items-center justify-center  ${
           imagePosition === 'right' ? 'flex-row-reverse' : 'flex-row'

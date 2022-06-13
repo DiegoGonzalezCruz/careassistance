@@ -4,7 +4,7 @@ import React from 'react'
 import { footer1, footer2, socialNetworks } from './footerItems'
 export const Footer = () => {
   return (
-    <footer className="footer p-10 bg-base-200 flex flex-col text-white">
+    <footer className="footer md:p-10 pb-10 bg-base-200 flex flex-col text-white ">
       <div className=" w-full">
         <div className="relative w-24 h-24 ">
           <Image
@@ -16,7 +16,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className="w-full border-2 border-white"></div>
-      <div className="flex flex-row items-start justify-between  w-full">
+      <div className="flex md:flex-row flex-col gap-10 md:items-start pl-4 justify-between w-full">
         <div>
           <span className="footer-title">Servicios</span>
 
