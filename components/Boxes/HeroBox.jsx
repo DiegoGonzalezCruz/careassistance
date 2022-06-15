@@ -1,5 +1,18 @@
 import Image from 'next/image'
 import React from 'react'
+import { motion } from 'framer-motion'
+
+const overlayVariants = {
+  hidden: {
+    opacity: 0
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.3
+    }
+  }
+}
 
 export const HeroBox = ({
   prevText,
@@ -11,8 +24,8 @@ export const HeroBox = ({
   buttonHref = ''
 }) => {
   return (
-    <div className="w-screen md:h-[60vh] relative ">
-      <header className="py-10 relative flex flex-row items-center justify-center md:overflow-hidden h-full w-full bg-primary/50">
+    <div className="w-screen md:h-[60vh] relative">
+      <header className="py-10 relative flex flex-row items-center justify-center  h-full w-full bg-primary/50">
         <div className="text-white flex flex-col z-20 w-full h-full relative ">
           <div className="text-white flex flex-col z-20 relative mx-auto my-auto px-2">
             <p className="my-0 text-center  ">{prevText}</p>
@@ -30,7 +43,12 @@ export const HeroBox = ({
           </div>
         </div>
 
-        <div className="relative sm:min-h-[50vh] h-48 w-1/2">
+        <motion.div
+          variants={overlayVariants}
+          initial="hidden"
+          whileInView="visible"
+          className="relative sm:min-h-[50vh] h-48 w-1/2 translate-y-28"
+        >
           <Image
             src={image}
             layout="fill"
@@ -38,7 +56,7 @@ export const HeroBox = ({
             className="rounded-xl"
             alt={accent}
           />
-        </div>
+        </motion.div>
       </header>
     </div>
   )

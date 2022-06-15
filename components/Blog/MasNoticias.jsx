@@ -1,6 +1,7 @@
 import React from 'react'
 import { CalltoAction } from '../Boxes/CalltoAction'
 import { BlogPost } from './BlogPost'
+import { motion } from 'framer-motion'
 
 export const MasNoticias = () => {
   return (
@@ -17,14 +18,14 @@ export const MasNoticias = () => {
           <button className="btn btn-primary text-white">Tecnología</button>
           <button className="btn btn-primary text-white">Comunicación</button>
         </div>
-        <div className="flex flex-wrap gap-10 py-10 items-center justify-center">
+        <motion.div className="flex flex-wrap gap-10 py-10 items-center justify-center">
           <BlogPost />
           <BlogPost />
           <BlogPost />
           <BlogPost />
           <BlogPost />
           <BlogPost />
-        </div>
+        </motion.div>
         <CalltoAction
           question={
             'Te gustaría tener más información de nuestros programas de salud y bienestar?'

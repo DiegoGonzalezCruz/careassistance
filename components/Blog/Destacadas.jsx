@@ -3,7 +3,7 @@ import React from 'react'
 
 export const NoticiasDestacadas = () => {
   return (
-    <div className="flex flex-col items-center py-5 w-screen min-h-[50vh]">
+    <div className="flex flex-col items-center py-5 w-screen min-h-[50vh] my-10">
       <h2 className="text-primary py-10">
         Noticias <span className="text-accent">destacadas</span>
       </h2>
