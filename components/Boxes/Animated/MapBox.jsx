@@ -3,10 +3,10 @@ import React from 'react'
 
 export const MapBox = () => {
   return (
-    <div>
-      <div className="relative w-screen h-96">
+    <div className="relative w-screen h-[100vh]">
+      <div>
         <Image
-          src={'/images/mapa/mapa2.svg'}
+          src={'/img/mapa/mapa1.svg'}
           layout="fill"
           objectFit="cover"
           alt="mapa"

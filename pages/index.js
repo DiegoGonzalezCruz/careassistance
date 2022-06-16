@@ -9,6 +9,7 @@ import { NuestrosProgramas } from '../components/Boxes/Programas/NuestrosProgram
 import { Numbers } from '../components/Boxes/Numbers'
 import { HeroBoxVideo } from '../components/Boxes/HeroBoxVideo'
 import { BoxWithImageRight } from '../components/Boxes/BoxWithImageRight'
+import { AnimatedBox2 } from '../components/AnimatedBoxes/AnimatedBox2'
 
 
 
@@ -36,7 +37,7 @@ export default function Home() {
         title={'Sanos,Motivados y Felices left'}
         imagePosition='left'
       />
-      <AnimatedBox1 text='nuestro proposito' />
+      <AnimatedBox2 text='nuestro proposito' />
       <AnimatedBox1 text='Mejorar el bienestar de las personas a través de programas de acompañamiento para la adopción de hábitos saludables.' />
       <BoxWhiteBGImage />
       <AnimatedBox1 text='Experiencia única' />

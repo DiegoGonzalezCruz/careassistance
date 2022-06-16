@@ -28,7 +28,7 @@ const Programas = () => {
       <NuestrosProgramas />
       <NuestroProposito />
       <CanalesAtencion />
-      <CalltoAction question={'Quieres sumar estos beneficios a tu empresa'} buttonText={'Quiero que me contacten'} />
+      <CalltoAction question={'¿Quieres sumar estos beneficios a tu empresa?'} buttonText={'Contáctenme'} />
 
     </div>
   )

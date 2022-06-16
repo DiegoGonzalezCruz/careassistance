@@ -11,7 +11,7 @@ import {
   useViewportScroll
 } from 'framer-motion'
 
-export const AnimatedBox1 = ({ text }) => {
+export const AnimatedBox2 = ({ text }) => {
   const { scrollY, scrollYProgress } = useViewportScroll()
   const control = useAnimation()
   const [ref, inView] = useInView()
@@ -19,30 +19,23 @@ export const AnimatedBox1 = ({ text }) => {
   const rainbowColors = useTransform(scrollY, [400, 1000], ['#fff', '#6265F3'])
   const forwardX = useTransform(scrollY, [400, 1000], ['150%', '-150%'])
 
-  const animationBox = {
-    // visible: { x: forwardX, color: rainbowColors }
-    visible: { x: 100 }
-  }
-
   useEffect(() => {
     if (inView) {
       control.start('visible')
     }
-    if (!inView) {
-      control.start('hidden')
-    }
-    return { ref }
   }, [control, inView])
 
   return (
-    <div className="h-[100vh] w-screen bg-primary overflow-hidden flex flex-col items-center justify-center">
+    <div
+      ref={ref}
+      className="h-[100vh] w-screen bg-primary overflow-hidden flex flex-col items-center justify-center"
+    >
       <div className="sticky-wrapper flex flex-col items-center justify-center  content-center">
         <motion.p
           // ref={ref}
           className="motion-paragraph text-7xl text-white font-black"
-          // animate={'visible'}
-          variants={animationBox}
-          whileInView={control}
+          animate={{ x: forwardX, color: rainbowColors }}
+          // animate={control
         >
           {text}
         </motion.p>

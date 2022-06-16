@@ -10,7 +10,7 @@ const menu = [
 export const NuestrosProgramas = () => {
   return (
     <div className="min-h-screen w-screen bg-primary ">
-      <div className="flex flex-col text-white lg:max-w-3xl mx-auto p-10">
+      <div className="flex flex-col text-white lg:max-w-3xl mx-auto p-10 gap-10">
         <h2>
           Nuestros <span className="text-accent">Programas</span>
         </h2>

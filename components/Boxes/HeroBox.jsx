@@ -25,9 +25,9 @@ export const HeroBox = ({
 }) => {
   return (
     <div className="w-screen md:h-[60vh] relative">
-      <header className="py-10 relative flex flex-row items-center justify-center  h-full w-full bg-primary/50">
+      <header className="py-10 relative flex flex-row items-center justify-center h-full w-full bg-primary/50">
         <div className="text-white flex flex-col z-20 w-full h-full relative ">
-          <div className="text-white flex flex-col z-20 relative mx-auto my-auto px-2">
+          <div className="text-white flex flex-col z-20 relative mx-auto my-auto md:px-20">
             <p className="my-0 text-center  ">{prevText}</p>
             <h1 className=" text-center my-2  mx-auto ">
               {first} <span className="text-accent ">{accent}</span>
