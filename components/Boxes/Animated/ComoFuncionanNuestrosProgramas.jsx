@@ -28,7 +28,10 @@ export const ComoFuncionanNuestrosProgramas = () => {
         <div className="flex md:flex-row flex-col h-full w-full items-center">
           {historia.map((item, index) => {
             return (
-              <div className="md:w-1/5 h-full flex md:flex-col flex-row mx-auto ">
+              <div
+                key={item.src}
+                className="md:w-1/5 h-full flex md:flex-col flex-row mx-auto "
+              >
                 <div className="w-full h-full relative ">
                   <Image
                     src={item.src}

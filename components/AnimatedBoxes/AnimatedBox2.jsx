@@ -25,7 +25,7 @@ export const AnimatedBox2 = ({ text }) => {
   useEffect(() => {
     setEnter(size.height * 4)
     setLeave(size.height * 5)
-  })
+  }, [size.height])
 
   const forwardX = useTransform(scrollY, [1095, 1303], ['150%', '-150%'])
 
