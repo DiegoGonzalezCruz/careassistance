@@ -1,5 +1,4 @@
-import { useEffect, useRef } from 'react'
-import { useInView } from 'react-intersection-observer'
+import { useEffect, useRef, useState } from 'react'
 
 import {
   motion,
@@ -10,32 +9,69 @@ import {
   useTransform,
   useViewportScroll
 } from 'framer-motion'
+import { useWindowSize } from '../hooks/useWindowSize'
 
 export const AnimatedBox2 = ({ text }) => {
-  const { scrollY, scrollYProgress } = useViewportScroll()
-  const control = useAnimation()
-  const [ref, inView] = useInView()
+  const { scrollY } = useViewportScroll()
 
-  const rainbowColors = useTransform(scrollY, [400, 1000], ['#fff', '#6265F3'])
-  const forwardX = useTransform(scrollY, [400, 1000], ['150%', '-150%'])
+  const size = useWindowSize()
+
+  const [enter, setEnter] = useState(0)
+  const [leave, setLeave] = useState(0)
+
+  console.log(enter, 'enter')
+  console.log(leave, 'leave')
 
   useEffect(() => {
-    if (inView) {
-      control.start('visible')
+    setEnter(size.height * 4)
+    setLeave(size.height * 5)
+  })
+
+  const forwardX = useTransform(scrollY, [1095, 1303], ['150%', '-150%'])
+
+  const control = useAnimation()
+
+  const animationBox = {
+    // visible: { x: forwardX, color: rainbowColors }
+    visible: {
+      // x: forwardX
+      opacity: 1
+      // transition: {
+      //   delay: 0.5,
+      //   type: 'tween'
+      // }
+    },
+    hidden: {
+      opacity: 0
     }
-  }, [control, inView])
+  }
+
+  const onViewportEnter = () => {
+    // console.log(value)
+    console.log(scrollY.current, 'onviewportenter')
+    setEnter(enter + scrollY.current)
+    control.start('visible')
+  }
+  const onViewportLeave = () => {
+    // console.log(value)
+    console.log(scrollY.current, 'onviewportleave')
+    setLeave(leave + scrollY.current)
+    control.start('hidden')
+  }
 
   return (
-    <div
-      ref={ref}
-      className="h-[100vh] w-screen bg-primary overflow-hidden flex flex-col items-center justify-center"
-    >
-      <div className="sticky-wrapper flex flex-col items-center justify-center  content-center">
+    <div className="debug1 overflow-scroll h-[100vh] w-screen bg-primary flex flex-col items-center justify-center ">
+      <div className="sticky-wrapper flex flex-col items-center justify-center content-center ">
         <motion.p
           // ref={ref}
-          className="motion-paragraph text-7xl text-white font-black"
-          animate={{ x: forwardX, color: rainbowColors }}
-          // animate={control
+          className=" text-7xl text-white font-black"
+          initial="hidden"
+          animate={control}
+          onViewportEnter={onViewportEnter}
+          onViewportLeave={onViewportLeave}
+          variants={animationBox}
+          // custom={forwardX}
+          style={{ x: forwardX }}
         >
           {text}
         </motion.p>

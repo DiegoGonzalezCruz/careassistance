@@ -9,46 +9,66 @@ import {
   useTransform,
   useViewportScroll
 } from 'framer-motion'
+import { useWindowSize } from '../hooks/useWindowSize'
 
-export const AnimatedBox1 = ({ text, vh }) => {
-  const [entry, setEntry] = useState(0)
-  const [exit, setExit] = useState(0)
+export const AnimatedBox1 = ({ text }) => {
+  const { scrollY } = useViewportScroll()
 
-  const ref = useRef(null)
+  const size = useWindowSize()
 
-  const { scrollY, scrollYProgress } = useViewportScroll()
+  const [enter, setEnter] = useState(0)
+  const [leave, setLeave] = useState(0)
+
+  console.log(enter, 'enter')
+  console.log(leave, 'leave')
+
+  useEffect(() => {
+    setEnter((size.height / 3) * 2)
+    setLeave(size.height)
+  })
+
+  const forwardX = useTransform(scrollY, [enter, leave], ['150%', '-150%'])
+
   const control = useAnimation()
-
-  const forwardX = useTransform(scrollY, [entry, exit], ['-150%', '150%'])
 
   const animationBox = {
     // visible: { x: forwardX, color: rainbowColors }
-    visible: { opacity: 1 },
-    hidden: { opacity: 0 }
+    visible: {
+      // x: forwardX
+      // opacity: 1,
+      // transition: {
+      //   delay: 0.5,
+      //   type: 'tween'
+      // }
+    },
+    hidden: {}
   }
 
   const onViewportEnter = () => {
     // console.log(value)
-    console.log(scrollY.current, 'onviewportenter')
-    // setEntry(scrollY.current)
+    // console.log(scrollY.current, 'onviewportenter')
+    setEnter(enter + scrollY.current)
+    control.start('visible')
   }
   const onViewportLeave = () => {
     // console.log(value)
-    console.log(scrollY.current, 'onviewportleave')
-    // setExit(scrollY.current)
+    // console.log(scrollY.current, 'onviewportleave')
+    setLeave(leave + scrollY.current)
+    control.start('hidden')
   }
 
   return (
-    <div className="h-[100vh] w-screen bg-primary overflow-hidden flex flex-col items-center justify-center debug1">
-      <div className="sticky-wrapper flex flex-col items-center justify-center  content-center">
+    <div className="overflow-scroll h-[100vh] w-screen bg-primary flex flex-col items-center justify-center ">
+      <div className="sticky-wrapper flex flex-col items-center justify-center content-center ">
         <motion.p
           // ref={ref}
-          className="motion-paragraph text-7xl text-white font-black"
-          // initial="hidden"
-          whileInView="visible"
+          className=" text-7xl text-white font-black"
+          initial="hidden"
+          animate={control}
           onViewportEnter={onViewportEnter}
           onViewportLeave={onViewportLeave}
-          // variants={animationBox}
+          variants={animationBox}
+          // custom={forwardX}
           style={{ x: forwardX }}
         >
           {text}

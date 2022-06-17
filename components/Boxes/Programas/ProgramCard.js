@@ -1,9 +1,12 @@
 import Image from 'next/image'
 import React from 'react'
+import { motion } from 'framer-motion'
 
-export const ProgramCard = () => {
+export const ProgramCard = ({ variants }) => {
   return (
-    <div className="card w-32 h-32 md:w-48 md:h-48 bg-white shadow-xl ">
+    <motion.div
+      variants={variants}
+      className="card w-32 h-32 md:w-48 md:h-48 bg-white shadow-xl ">
       <div className='absolute w-full h-48 shadow-xl '>
         <Image
           src={'/images/programas/IMG_1_EMOCIONAL.jpg'}
@@ -22,7 +25,7 @@ export const ProgramCard = () => {
         </div> */}
         </div>
       </div>
-    </div>
+    </motion.div>
 
 
 

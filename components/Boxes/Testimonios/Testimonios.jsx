@@ -46,10 +46,10 @@ export const Testimonios = () => {
   return (
     <div className="bg-primary text-center min-h-[50vh] w-screen">
       <h2>Testimonios de clientes</h2>
-      <div class="carousel rounded-box">
+      <div className="carousel rounded-box">
         {testimonials.map((el, idx) => {
           return (
-            <div className="carousel-item">
+            <div className="carousel-item" key={el.title + idx}>
               <TestimoniosBox name={el.name} title={el.title} text={el.text} />
             </div>
           )

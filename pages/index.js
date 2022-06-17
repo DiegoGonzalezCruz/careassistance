@@ -30,18 +30,15 @@ export default function Home() {
         buttonHref='/programas'
         buttonText='Nuestros programas'
       />
-      <AnimatedBox1 text='Sanos, Motivados y Felices' vh={[90, 120]} />
+      <AnimatedBox1 text='Sanos, Motivados y Felices' />
       <BoxWithImageLeft
         image={'/images/pexels-julia-avamotive.jpg'}
         text={"Have you ever needed to matrix your cutting-edge feature set? Free? Think B2C2B. The capability to implement wirelessly leads to the ability to whiteboard without lessening our power to benchmark. "}
         title={'Sanos,Motivados y Felices left'}
         imagePosition='left'
       />
-      <AnimatedBox1 text='Nuestro propósito' viewport={[1800, 2000]} />
-
       <AnimatedBox2 text='nuestro proposito' />
       <AnimatedBox1
-        viewport={[3600, 4500]}
         text='Mejorar el bienestar de las personas a través de programas de acompañamiento para la adopción de hábitos saludables.' />
       <BoxWhiteBGImage />
       {/* <AnimatedBox1 text='Experiencia única' /> */}
