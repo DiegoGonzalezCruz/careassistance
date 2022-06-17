@@ -12,7 +12,7 @@ export const HeroBoxVideo = ({
   buttonHref = ''
 }) => {
   return (
-    <div className="w-screen md:h-[60vh] relative ">
+    <div className="w-screen md:h-[80vh] relative ">
       <header className="relative flex items-center justify-center h-full md:overflow-hidden w-full ">
         <div className="text-white flex flex-col z-20 w-full h-full relative ">
           <div className="text-white flex flex-col z-20 relative  py-4 h-full w-screen  bg-primary/50 items-center justify-center">

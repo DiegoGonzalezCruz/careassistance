@@ -5,8 +5,8 @@ import { motion, useTransform, useViewportScroll } from 'framer-motion'
 export const BoxWhiteBGImage = () => {
   const { scrollY } = useViewportScroll()
 
-  scrollY.onChange((v) => console.log(v))
-  const forwardY = useTransform(scrollY, [3500, 4200], [200, 1])
+  // scrollY.onChange((v) => console.log(v))
+  const forwardY = useTransform(scrollY, [4500, 5200], [200, 1])
 
   return (
     <div className="debug1 overflow-hidden h-[120vh] flex flex-col items-center justify-center">

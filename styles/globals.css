@@ -35,4 +35,7 @@
   p {
     @apply font-extralight font-Comfortaa text-sm lg:text-lg  xl:text-2xl;
   }
+  a {
+    @apply font-extralight font-Comfortaa text-sm lg:text-lg  xl:text-2xl;
+  }
 }
