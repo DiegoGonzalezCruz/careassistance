@@ -28,7 +28,14 @@ export const AnimatedBox1 = ({ text, vh }) => {
     return px * (100 / document.documentElement.clientHeight)
   }
 
-  // scrollY.onChange((v) => console.log(convertPXToVW(v)), 'value')
+  const onViewportEnter = () => {
+    // console.log(value)
+    console.log(scrollY.current, 'onviewportenter')
+  }
+  const onViewportLeave = () => {
+    // console.log(value)
+    console.log(scrollY.current, 'onviewportleave')
+  }
 
   return (
     <div className="h-[100vh] w-screen bg-primary overflow-hidden flex flex-col items-center justify-center debug1">
@@ -38,8 +45,8 @@ export const AnimatedBox1 = ({ text, vh }) => {
           className="motion-paragraph text-7xl text-white font-black"
           initial="hidden"
           whileInView="visible"
-          onViewportEnter={() => console.log('onViewportEnter')}
-          onViewportLeave={() => console.log('onViewportLeave')}
+          onViewportEnter={onViewportEnter}
+          onViewportLeave={onViewportLeave}
           variants={animationBox}
           // style={{ x: forwardX }}
         >
