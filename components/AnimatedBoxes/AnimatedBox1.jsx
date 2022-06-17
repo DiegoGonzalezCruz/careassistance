@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import {
   motion,
@@ -11,12 +11,15 @@ import {
 } from 'framer-motion'
 
 export const AnimatedBox1 = ({ text, vh }) => {
+  const [entry, setEntry] = useState(0)
+  const [exit, setExit] = useState(0)
+
   const ref = useRef(null)
 
   const { scrollY, scrollYProgress } = useViewportScroll()
   const control = useAnimation()
 
-  // const forwardX = useTransform(scrollY, viewport, ['-150%', '150%'])
+  const forwardX = useTransform(scrollY, [entry, exit], ['-150%', '150%'])
 
   const animationBox = {
     // visible: { x: forwardX, color: rainbowColors }
@@ -24,17 +27,15 @@ export const AnimatedBox1 = ({ text, vh }) => {
     hidden: { opacity: 0 }
   }
 
-  function convertPXToVW(px) {
-    return px * (100 / document.documentElement.clientHeight)
-  }
-
   const onViewportEnter = () => {
     // console.log(value)
     console.log(scrollY.current, 'onviewportenter')
+    // setEntry(scrollY.current)
   }
   const onViewportLeave = () => {
     // console.log(value)
     console.log(scrollY.current, 'onviewportleave')
+    // setExit(scrollY.current)
   }
 
   return (
@@ -43,12 +44,12 @@ export const AnimatedBox1 = ({ text, vh }) => {
         <motion.p
           // ref={ref}
           className="motion-paragraph text-7xl text-white font-black"
-          initial="hidden"
+          // initial="hidden"
           whileInView="visible"
           onViewportEnter={onViewportEnter}
           onViewportLeave={onViewportLeave}
-          variants={animationBox}
-          // style={{ x: forwardX }}
+          // variants={animationBox}
+          style={{ x: forwardX }}
         >
           {text}
         </motion.p>
