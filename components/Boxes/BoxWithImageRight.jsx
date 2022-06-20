@@ -10,22 +10,26 @@ export const BoxWithImageRight = ({
   button = ''
 }) => {
   const iconVariants = {
-    hover: {
-      scale: 0.95,
-      duration: 1,
-      x: 50
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: 'tween'
+      }
+    },
+    offscreen: {
+      opacity: 0,
+      x: -100
     }
-    // initial: {
-    //   x: 0
-    // }
   }
 
   return (
-    <div className="bg-primary flex overflow-hidden min-h-[50vh] w-screen">
+    <div className="bg-primary flex overflow-hidden min-h-[100vh] w-screen">
       <div className="flex flex-col md:flex-row-reverse w-full items-center justify-center">
         <motion.div
-          // transition={{ ease: 'easeOut', duration: 2 }}
-          whileHover="hover"
+          whileInView="onscreen"
+          viewport={{ once: false, amount: 0.8 }}
+          initial="offscreen"
           variants={iconVariants}
           className="relative h-56 lg:h-full w-full rounded-2xl translate-x-10"
         >
@@ -37,11 +41,17 @@ export const BoxWithImageRight = ({
             alt={title}
           />
         </motion.div>
-        <div className=" text-white w-full h-full ml-5 px-5 flex flex-col items-center justify-center">
+        <motion.div
+          variants={iconVariants}
+          whileInView="onscreen"
+          viewport={{ once: false, amount: 0.8 }}
+          initial="offscreen"
+          className=" text-white w-full h-full ml-5 px-5 flex flex-col items-center justify-center"
+        >
           <h2 className="font-bold">{title}</h2>
           <p className="py-6">{text}</p>
           {/* {button && <button className="btn btn-primary">{'button'}</button>} */}
-        </div>
+        </motion.div>
       </div>
     </div>
   )
