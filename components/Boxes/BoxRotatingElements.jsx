@@ -5,10 +5,10 @@ import React from 'react'
 export const BoxRotatingElements = () => {
   return (
     <div className=" relative w-screen h-[100vh] bg-primary flex items-center">
-      <div className=" w-fit h-full max-w-full max-h-full mx-auto bg-[url('/img/canales/cellphone.svg')] bg-no-repeat flex justify-center">
-        <div className=" debug2 w-96 h-full mx-auto flex flex-col justify-between text-center text-white">
-          <div className="debug1 flex flex-row items-center justify-between  ">
-            <div className=" flex flex-col items-center -translate-y-20 -translate-x-20">
+      <div className=" w-fit mx-auto bg-[url('/img/canales/cellphone.svg')] bg-no-repeat bg-contain bg-center ">
+        <div className=" w-full h-full mx-auto flex flex-col justify-between text-center text-white">
+          <div className=" flex flex-row justify-around  ">
+            <div className=" w-1/3 flex flex-col items-center">
               <div className="relative h-36 w-36">
                 <Image
                   src={'/img/canales/tl.png'}
@@ -19,7 +19,7 @@ export const BoxRotatingElements = () => {
               </div>
               <p>Profesionales Propios</p>
             </div>
-            <div className=" flex flex-col items-center -translate-y-20 translate-x-20">
+            <div className="w-1/3 flex  flex-col items-center ">
               <div className="relative h-36 w-36">
                 <Image
                   src={'/img/canales/tr.png'}
@@ -33,8 +33,8 @@ export const BoxRotatingElements = () => {
               </p>
             </div>
           </div>
-          <div className="flex debug1 items-center justify-center ">
-            <div className=" flex flex-col items-center">
+          <div className=" self-center  flex flex-row">
+            <div className="  flex flex-col items-center">
               <div className="relative h-36 w-36">
                 <Image
                   src={'/img/canales/bl.png'}
@@ -46,8 +46,8 @@ export const BoxRotatingElements = () => {
               <p>Tecnología</p>
             </div>
           </div>
-          <div className=" flex debug1 flex-row items-center justify-between  ">
-            <div className=" flex flex-col items-center -translate-y-20 -translate-x-20">
+          <div className="  flex flex-row justify-around">
+            <div className=" w-1/3 flex flex-col items-center">
               <div className="relative h-36 w-36">
                 <Image
                   src={'/img/canales/bl.png'}
@@ -58,7 +58,7 @@ export const BoxRotatingElements = () => {
               </div>
               <p>Seguimiento Permanente</p>
             </div>
-            <div className=" flex flex-col items-center -translate-y-20 translate-x-20">
+            <div className="w-1/3  flex flex-col items-center ">
               <div className="relative h-36 w-36 ">
                 <Image
                   src={'/img/canales/br.png'}

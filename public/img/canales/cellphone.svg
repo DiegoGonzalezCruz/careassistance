@@ -1,20 +1,22 @@
-<svg width="432" height="764" viewBox="0 0 432 764" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g opacity="0.17">
-<g filter="url(#filter0_d_250_15291)">
-<path d="M48.2621 7.7417H333.832C344.751 7.7417 355.222 12.079 362.942 19.7995C370.663 27.5199 375 37.9911 375 48.9095V665.528C375 676.447 370.663 686.918 362.942 694.638C355.222 702.359 344.751 706.696 333.832 706.696H48.2621C37.3437 706.696 26.8725 702.359 19.152 694.638C11.4316 686.918 7.09424 676.447 7.09424 665.528L7.09424 48.9095C7.09424 37.9911 11.4316 27.5199 19.152 19.7995C26.8725 12.079 37.3437 7.7417 48.2621 7.7417V7.7417Z" fill="white" stroke="#6666FF" stroke-width="4" stroke-linecap="round"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 432 764" style="enable-background:new 0 0 432 764;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.17;}
+	.st1{fill:#FFFFFF;stroke:#6666FF;stroke-width:4;stroke-linecap:round;}
+	.st2{fill:#FFFFFF;stroke:#6666FF;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
+	.st3{fill:none;stroke:#6666FF;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<g class="st0">
+	<g>
+		<path class="st1" d="M74.3,30.7h285.6c10.9,0,21.4,4.3,29.1,12.1C396.7,50.5,401,61,401,71.9v616.6c0,10.9-4.3,21.4-12.1,29.1
+			c-7.7,7.7-18.2,12.1-29.1,12.1H74.3c-10.9,0-21.4-4.3-29.1-12.1c-7.7-7.7-12.1-18.2-12.1-29.1V71.9c0-10.9,4.3-21.4,12.1-29.1
+			C52.9,35.1,63.3,30.7,74.3,30.7L74.3,30.7z"/>
+	</g>
+	<path class="st2" d="M122.1,30.7h189.9v17.6c0,2.5-0.5,5-1.5,7.3c-1,2.3-2.4,4.4-4.1,6.2c-1.8,1.8-3.9,3.2-6.2,4.1
+		c-2.3,1-4.8,1.5-7.3,1.5H141.2c-2.5,0-5-0.5-7.3-1.5c-2.3-1-4.4-2.4-6.2-4.1c-1.8-1.8-3.2-3.9-4.1-6.2c-1-2.3-1.5-4.8-1.5-7.3V30.7
+		z"/>
+	<path class="st3" d="M33.1,640.2H401"/>
 </g>
-<path d="M96.145 7.7417H286.084V25.3639C286.086 27.8729 285.593 30.3576 284.633 32.676C283.674 34.9943 282.267 37.1008 280.493 38.8749C278.719 40.649 276.612 42.056 274.294 43.0153C271.976 43.9747 269.491 44.4675 266.982 44.4658H115.247C112.738 44.4675 110.253 43.9747 107.935 43.0153C105.616 42.056 103.51 40.649 101.736 38.8749C99.9618 37.1008 98.5548 34.9943 97.5955 32.676C96.6361 30.3576 96.1433 27.8729 96.145 25.3639V7.7417Z" fill="white" stroke="#6666FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M7.09424 617.241H375" stroke="#6666FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<filter id="filter0_d_250_15291" x="0.0942383" y="0.741699" width="431.906" height="762.955" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dx="25" dy="25"/>
-<feGaussianBlur stdDeviation="15"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.502 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_250_15291"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_250_15291" result="shape"/>
-</filter>
-</defs>
 </svg>
