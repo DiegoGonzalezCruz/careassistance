@@ -1,14 +1,29 @@
 import Image from 'next/image'
 import React from 'react'
+import { motion } from 'framer-motion'
+import { overlayVariants } from '../../styles/animations'
 
 export const NoticiasDestacadas = () => {
   return (
     <div className="flex flex-col items-center py-5 w-screen min-h-[50vh] my-10">
-      <h2 className="text-primary py-10">
+      <motion.h2
+        initial="hidden"
+        whileInView="visible"
+        variants={overlayVariants}
+        className="text-primary py-10"
+      >
         Noticias <span className="text-accent">destacadas</span>
-      </h2>
-      <div className="flex md:flex-row flex-col h-full w-full items-center justify-center md:px-20 gap-5 xl:gap-10">
-        <div className="relative h-48 xl:h-96 w-full max-w-4xl rounded-2xl overflow-hidden  ">
+      </motion.h2>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={overlayVariants}
+        className="flex md:flex-row flex-col h-full w-full items-center justify-center md:px-20 gap-5 xl:gap-10"
+      >
+        <motion.div
+          variants={overlayVariants}
+          className="relative h-48 xl:h-96 w-full max-w-4xl rounded-2xl overflow-hidden  "
+        >
           <Image
             src="/images/IMG_8_ORIENTACION.jpg"
             layout="fill"
@@ -16,18 +31,27 @@ export const NoticiasDestacadas = () => {
             className="w-full"
             alt="noticia destacada"
           />
-        </div>
-        <div className="flex flex-col items-center justify-center text-center py-5 max-w-4xl ">
-          <p>Fecha</p>
-          <div className="divider"></div>
-          <h2 className="text-primary my-4">
+        </motion.div>
+        <motion.div
+          variants={overlayVariants}
+          className="flex flex-col items-center justify-center text-center py-5 max-w-4xl "
+        >
+          <motion.p variants={overlayVariants}>Fecha</motion.p>
+          <motion.div
+            variants={overlayVariants}
+            className="divider"
+          ></motion.div>
+          <motion.h2 variants={overlayVariants} className="text-primary my-4">
             Ventajas del uso de las redes sociales si eres enfermera.
-          </h2>
-          <button className="btn btn-primary w-48">
+          </motion.h2>
+          <motion.button
+            variants={overlayVariants}
+            className="btn btn-primary w-48"
+          >
             Leer noticia completa
-          </button>
-        </div>
-      </div>
+          </motion.button>
+        </motion.div>
+      </motion.div>
     </div>
   )
 }

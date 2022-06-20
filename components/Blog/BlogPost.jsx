@@ -16,15 +16,13 @@ const overlayVariants = {
 
 const blogposts = {}
 
-export const BlogPost = () => {
+export const BlogPost = (variants) => {
   return (
     <motion.div
-      variants={overlayVariants}
-      initial="hidden"
-      whileInView="visible"
+      variants={variants}
       className="h-full w-56 flex flex-col items-center justify-center card bg-white p-4"
     >
-      <div className="relative h-48 w-full">
+      <motion.div variants={variants} className="relative h-48 w-full">
         <Image
           src="/images/IMG_3.jpg"
           layout="fill"
@@ -32,15 +30,20 @@ export const BlogPost = () => {
           className="rounded-xl"
           alt="blog post"
         />
-      </div>
-      <div className="text-primary w-full py-4 flex flex-col gap-4">
-        <p>8 Junio 2022</p>
-        <h3 className="text-primary text-sm">
+      </motion.div>
+      <motion.div
+        variants={variants}
+        className="text-primary w-full py-4 flex flex-col gap-4"
+      >
+        <motion.p variants={variants}>8 Junio 2022</motion.p>
+        <motion.h3 variants={variants} className="text-primary text-sm">
           Tendencias tecnológicas en el sector salud que van a revolucionar este
           2020.
-        </h3>
-        <button className="btn btn-primary">Leer noticia completa</button>
-      </div>
+        </motion.h3>
+        <motion.button variants={variants} className="btn btn-primary">
+          Leer noticia completa
+        </motion.button>
+      </motion.div>
     </motion.div>
   )
 }

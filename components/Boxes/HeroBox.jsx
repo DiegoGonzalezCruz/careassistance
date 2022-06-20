@@ -1,18 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
-
-const overlayVariants = {
-  hidden: {
-    opacity: 0
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 0.3
-    }
-  }
-}
+import { overlayVariants } from '../../styles/animations'
 
 export const HeroBox = ({
   prevText,
@@ -27,20 +16,36 @@ export const HeroBox = ({
     <div className="w-screen md:h-[60vh] relative">
       <header className="py-10 relative flex flex-row items-center justify-center h-full w-full bg-primary/50">
         <div className="text-white flex flex-col z-20 w-full h-full relative ">
-          <div className="text-white flex flex-col z-20 relative mx-auto my-auto md:px-20">
-            <p className="my-0 text-center  ">{prevText}</p>
-            <h1 className=" text-center my-2  mx-auto ">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={overlayVariants}
+            className=" text-white flex flex-col z-20 relative mx-auto my-auto md:px-20"
+          >
+            <motion.p variants={overlayVariants} className="my-0 text-center  ">
+              {prevText}
+            </motion.p>
+            <motion.h1
+              variants={overlayVariants}
+              className=" text-center my-2  mx-auto "
+            >
               {first} <span className="text-accent ">{accent}</span>
-            </h1>
-            <p className="font-thin text-center text-sm my-2 sm:w-3/4 lg:text-xl mx-auto">
+            </motion.h1>
+            <motion.p
+              variants={overlayVariants}
+              className="font-thin text-center text-sm my-2 sm:w-3/4 lg:text-xl mx-auto"
+            >
               {sub}
-            </p>
+            </motion.p>
             {buttonText && (
-              <button className="text-center mx-auto my-2 h-10 lg:h-16 btn-accent text-white font-normal text-xs lg:text-xl w-48 lg:w-56 rounded-full">
+              <motion.button
+                variants={overlayVariants}
+                className="text-center mx-auto my-2 h-10 lg:h-16 btn-accent text-white font-normal text-xs lg:text-xl w-48 lg:w-56 rounded-full"
+              >
                 {buttonText}
-              </button>
+              </motion.button>
             )}
-          </div>
+          </motion.div>
         </div>
 
         <motion.div
