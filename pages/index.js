@@ -31,6 +31,7 @@ export default function Home() {
         buttonHref='/programas'
         buttonText='Nuestros programas'
       />
+      <AnimatedSandBox />
       <AnimatedBox1 text='Sanos, Motivados y Felices' />
       <BoxWithImageLeft
         image={'/images/pexels-julia-avamotive.jpg'}

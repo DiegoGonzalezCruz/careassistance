@@ -15,7 +15,7 @@ export const AnimatedBox1 = ({ text }) => {
   const [enter, setEnter] = useState(size.height)
   // const [forwardX, setForwardX] = useState(size.height)
 
-  console.log(size)
+  // console.log(size)
   const forwardX = useTransform(
     scrollY,
     [size.height * 0.7, size.height * 1.4],

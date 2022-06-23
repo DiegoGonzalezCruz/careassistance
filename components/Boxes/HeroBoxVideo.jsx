@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
+import { buttonsVariants } from '../../styles/animations'
 
 export const HeroBoxVideo = ({
   prevText,
@@ -12,21 +13,6 @@ export const HeroBoxVideo = ({
   buttonText = '',
   buttonHref = ''
 }) => {
-  const boxVariants = {
-    hidden: {
-      opacity: 0,
-      y: -100
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        when: 'beforeChildren',
-        staggerChildren: 0.2
-      }
-    }
-  }
-
   return (
     <div className="w-screen md:h-[80vh] relative ">
       <header className="relative flex items-center justify-center h-full md:overflow-hidden w-full ">
@@ -34,27 +20,28 @@ export const HeroBoxVideo = ({
           <motion.div
             animate="visible"
             initial="hidden"
-            variants={boxVariants}
+            variants={buttonsVariants}
             className="text-white flex flex-col z-20 relative  py-4 h-full w-screen  bg-primary/50 items-center justify-center"
           >
-            <motion.p variants={boxVariants} className="my-0 text-center ">
+            <motion.p variants={buttonsVariants} className="my-0 text-center ">
               {prevText}
             </motion.p>
             <motion.h1
-              variants={boxVariants}
+              variants={buttonsVariants}
               className=" text-center my-2 w-1/2 mx-auto"
             >
               {first} <span className="text-accent ">{accent}</span>
             </motion.h1>
             <motion.p
-              variants={boxVariants}
+              variants={buttonsVariants}
               className="font-thin text-center  my-2 w-3/4 mx-auto"
             >
               {sub}
             </motion.p>
             {buttonText && (
               <motion.button
-                variants={boxVariants}
+                variants={buttonsVariants}
+                whileHover={'hover'}
                 className="text-center mx-auto my-2 h-10 btn-accent text-white font-normal  w-48 rounded-full"
               >
                 {buttonText}

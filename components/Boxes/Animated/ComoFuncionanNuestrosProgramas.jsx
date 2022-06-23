@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
+import { motion } from 'framer-motion'
+import { studyCase } from '../../../styles/animations'
 
 const historia = [
   {
@@ -22,33 +24,46 @@ const historia = [
 
 export const ComoFuncionanNuestrosProgramas = () => {
   return (
-    <div className="w-screen h-[120vh]  py-24">
-      <div className="h-full w-full flex flex-col items-center gap-5">
+    <div className="w-screen h-[120vh] py-24">
+      <motion.div
+        variants={studyCase}
+        initial="hidden"
+        animate="visible"
+        className="h-full w-3/4 mx-auto flex flex-col items-center gap-5"
+      >
         <h2 className="text-primary">Como funcionan nuestros programas</h2>
-        <div className="flex md:flex-row flex-col h-full w-full items-center">
+        <motion.div
+          variants={studyCase}
+          className="flex md:flex-row flex-col h-full w-full items-center"
+        >
           {historia.map((item, index) => {
             return (
-              <div
+              <motion.div
+                variants={studyCase}
+                initial="notHover"
+                whileHover={'hover'}
                 key={item.src}
                 className="md:w-1/5 h-full flex md:flex-col flex-row mx-auto "
               >
-                <div className="w-full h-full relative ">
+                <motion.div
+                  variants={studyCase}
+                  className="w-full h-full relative "
+                >
                   <Image
                     src={item.src}
                     alt={item.text}
                     layout="fill"
                     objectFit="contain"
-                    className="debug2"
                   />
-                </div>
-                <div className="flex items-center">
+                </motion.div>
+                <motion.div variants={studyCase} className="flex items-center">
                   <p>{item.text}</p>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             )
           })}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   )
 }

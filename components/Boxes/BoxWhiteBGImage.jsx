@@ -19,7 +19,7 @@ export const BoxWhiteBGImage = () => {
     }
   }
 
-  scrollY.onChange((v) => console.log(v))
+  // scrollY.onChange((v) => console.log(v))
   const forwardY = useTransform(scrollY, [3500, 4300], [100, 1])
 
   return (

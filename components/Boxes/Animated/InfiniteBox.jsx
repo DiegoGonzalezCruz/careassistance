@@ -3,39 +3,33 @@ import React from 'react'
 
 export const InfiniteBox = () => {
   return (
-    <div className="w-screen h-[80vh] ">
-      <div className="w-screen h-full overflow-scroll debug1">
-        <div className="relative h-full w-full md:my-20 ">
-          <Image
-            src={'/img/nosotros/nosotros1.svg'}
-            layout="fill"
-            objectFit="contain"
-            alt="nosotros"
-          />
-        </div>
-        <div className="relative h-full w-full md:my-20">
-          <Image
-            src={'/img/nosotros/nosotros2.svg'}
-            layout="fill"
-            objectFit="contain"
-            alt="nosotros"
-          />
-        </div>
-        <div className="relative h-full w-full md:my-20">
-          <Image
-            src={'/img/nosotros/nosotros3.svg'}
-            layout="fill"
-            objectFit="contain"
-            alt="nosotros"
-          />
-        </div>
-        <div className="relative h-full w-full md:my-20">
-          <Image
-            src={'/img/nosotros/nosotros4.svg'}
-            layout="fill"
-            objectFit="contain"
-            alt="nosotros"
-          />
+    <div className="w-screen h-[80vh] main overflow-auto">
+      <div className="w-screen h-full  debug1 flex flex-row wrap">
+        <div className="relative w-screen h-full flex flex-row overflow-scroll ">
+          <div className="relative h-full w-full ">
+            <Image
+              src={'/img/nosotros/nosotros1.svg'}
+              layout="fill"
+              objectFit="contain"
+              alt="nosotros"
+            />
+          </div>
+          <div className="relative h-full w-full ">
+            <Image
+              src={'/img/nosotros/nosotros2.svg'}
+              layout="fill"
+              objectFit="contain"
+              alt="nosotros"
+            />
+          </div>
+          <div className="relative h-full w-full ">
+            <Image
+              src={'/img/nosotros/nosotros3.svg'}
+              layout="fill"
+              objectFit="contain"
+              alt="nosotros"
+            />
+          </div>
         </div>
       </div>
     </div>

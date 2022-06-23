@@ -10,7 +10,7 @@ export const NavBar = () => {
       <div className="md:hidden ">
         <Mobile />
       </div>
-      <div className="relative w-24 h-full  xl:w-48">
+      <div className="relative w-24 h-full mx-4">
         <Image
           src="/images/Logo_Care_Assistance.svg"
           layout="fill"
