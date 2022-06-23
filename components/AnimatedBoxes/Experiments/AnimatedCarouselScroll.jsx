@@ -21,7 +21,7 @@ const slideAnimation = {
   viewport: { amount: 1, once: true }
 }
 
-export const AnimatedSandBox = ({ text }) => {
+export const AnimatedCarouselScroll = ({ text }) => {
   const ref = useRef(null)
   const carouselRef = useRef(null)
   const { position } = useElementViewportPosition(ref)

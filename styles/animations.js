@@ -68,3 +68,17 @@ export const studyCase = {
     opacity: 0.5
   }
 }
+
+export const slideAnimation = {
+  variants: {
+    full: {
+      // backgroundColor: '#663399'
+    },
+    partial: {
+      // backgroundColor: '#808080'
+    }
+  },
+  initial: 'partial',
+  whileInView: 'full',
+  viewport: { amount: 1, once: true }
+}

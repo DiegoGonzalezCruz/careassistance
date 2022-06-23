@@ -27,7 +27,7 @@ export const BoxWithImageLeft = ({
       <div className="flex flex-col md:flex-row w-full items-center justify-center">
         <motion.div
           whileInView="onscreen"
-          viewport={{ once: false, amount: 0.8 }}
+          viewport={{ once: false, amount: 0.3 }}
           initial="offscreen"
           variants={iconVariants}
           className="relative h-56 lg:h-full w-full rounded-2xl -translate-x-14"
@@ -43,7 +43,7 @@ export const BoxWithImageLeft = ({
         <motion.div
           variants={iconVariants}
           whileInView="onscreen"
-          viewport={{ once: false, amount: 0.8 }}
+          viewport={{ once: false, amount: 0.3 }}
           initial="offscreen"
           className=" text-white w-full h-full  mr-5 px-5 flex flex-col items-center justify-center"
         >
