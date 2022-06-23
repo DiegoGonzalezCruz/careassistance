@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
-import { overlayVariants } from '../../styles/animations'
+import { buttonsVariants, overlayVariants } from '../../styles/animations'
 
 export const HeroBox = ({
   prevText,
@@ -39,7 +39,9 @@ export const HeroBox = ({
             </motion.p>
             {buttonText && (
               <motion.button
-                variants={overlayVariants}
+                variants={buttonsVariants}
+                whileHover={'hover'}
+                whileInView="visible"
                 className="text-center mx-auto my-2 h-10 lg:h-16 btn-accent text-white font-normal text-xs lg:text-xl w-48 lg:w-56 rounded-full"
               >
                 {buttonText}

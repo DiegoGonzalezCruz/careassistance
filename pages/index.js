@@ -11,6 +11,7 @@ import { HeroBoxVideo } from '../components/Boxes/HeroBoxVideo'
 import { BoxWithImageRight } from '../components/Boxes/BoxWithImageRight'
 import { AnimatedTextBox } from '../components/AnimatedBoxes/AnimatedTextBox'
 import { AnimatedBox3 } from '../components/AnimatedBoxes/AnimatedBox3'
+import { RotatingCirclesIntoCellphone } from '../components/AnimatedBoxes/Experiments/RotatingCirclesIntoCellphone'
 
 
 export default function Home() {
@@ -48,7 +49,7 @@ export default function Home() {
         title={'Experiencia única Right'}
         imagePosition='right'
       />
-      <BoxRotatingElements />
+      <RotatingCirclesIntoCellphone />
 
       <NuestrosProgramas />
       <Numbers />

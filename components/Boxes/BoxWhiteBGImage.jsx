@@ -37,7 +37,7 @@ export const BoxWhiteBGImage = () => {
     <div className="">
       <section ref={ref}>
         <div
-          className="container bg-white max-w-full debug1"
+          className="container bg-white max-w-full"
           style={{ height: '600vh' }}
         >
           <div className="sticky-wrapper sticky top-0 h-[100vh] w-full flex flex-col items-start justify-center overflow-hidden">

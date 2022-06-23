@@ -24,7 +24,7 @@ const historia = [
 
 export const ComoFuncionanNuestrosProgramas = () => {
   return (
-    <div className="w-screen h-[120vh] py-24">
+    <div className="w-screen h-[120vh] py-24 ">
       <motion.div
         variants={studyCase}
         initial="hidden"
@@ -34,7 +34,7 @@ export const ComoFuncionanNuestrosProgramas = () => {
         <h2 className="text-primary">Como funcionan nuestros programas</h2>
         <motion.div
           variants={studyCase}
-          className="flex md:flex-row flex-col h-full w-full items-center"
+          className="flex md:flex-row flex-col h-full w-full items-center  "
         >
           {historia.map((item, index) => {
             return (
@@ -43,7 +43,7 @@ export const ComoFuncionanNuestrosProgramas = () => {
                 initial="notHover"
                 whileHover={'hover'}
                 key={item.src}
-                className="md:w-1/5 h-full flex md:flex-col flex-row mx-auto "
+                className="md:w-1/5 h-full flex md:flex-col flex-row mx-auto  gap-5 m-5"
               >
                 <motion.div
                   variants={studyCase}

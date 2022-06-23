@@ -61,7 +61,6 @@ export const studyCase = {
     opacity: 1,
     transition: {
       when: 'beforeChildren',
-      staggerChildren: 0.3
     }
   },
   notHover: {
