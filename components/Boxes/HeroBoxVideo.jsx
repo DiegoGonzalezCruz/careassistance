@@ -14,7 +14,7 @@ export const HeroBoxVideo = ({
   buttonHref = ''
 }) => {
   return (
-    <div className="w-screen md:h-[80vh] relative bg-primary">
+    <div className="w-screen md:h-[80vh] relative bg-primary ">
       <motion.header
         animate="visible"
         initial="hidden"
@@ -24,32 +24,34 @@ export const HeroBoxVideo = ({
         <div className="text-white flex flex-col z-20 w-full h-full relative ">
           <motion.div
             variants={buttonsVariants}
-            className="text-white flex flex-col z-20 relative  py-4 h-full w-screen  bg-primary/50 items-center justify-center"
+            className="text-white flex flex-col z-20 relative  py-4 h-full w-screen  bg-primary/50 items-center justify-center "
           >
-            <motion.p variants={buttonsVariants} className="my-0 text-center ">
-              {prevText}
-            </motion.p>
-            <motion.h1
-              variants={buttonsVariants}
-              className=" text-center my-2 w-1/2 mx-auto"
-            >
-              {first} <span className="text-accent ">{accent}</span>
-            </motion.h1>
-            <motion.p
-              variants={buttonsVariants}
-              className="font-thin text-center  my-2 w-3/4 mx-auto"
-            >
-              {sub}
-            </motion.p>
-            {buttonText && (
-              <motion.button
+            <div className="items-start  flex flex-col  w-3/4 gap-4">
+              <motion.p variants={buttonsVariants} className="my-0  ">
+                {prevText}
+              </motion.p>
+
+              <motion.h1 variants={buttonsVariants} className="  ">
+                {first} <br /> <span className="text-accent ">{accent}</span>
+              </motion.h1>
+
+              <motion.p
                 variants={buttonsVariants}
-                whileHover={'hover'}
-                className="text-center mx-auto my-2 h-10 btn-accent text-white font-normal  w-48 rounded-full"
+                className="font-thin w-1/2  "
               >
-                {buttonText}
-              </motion.button>
-            )}
+                {sub}
+              </motion.p>
+
+              {buttonText && (
+                <motion.button
+                  variants={buttonsVariants}
+                  whileHover={'hover'}
+                  className="my-2 h-10 btn-accent text-white font-normal  w-48 rounded-full"
+                >
+                  {buttonText}
+                </motion.button>
+              )}
+            </div>
           </motion.div>
           <div className="absolute  h-full w-full">
             <video

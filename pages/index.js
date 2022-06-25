@@ -12,6 +12,7 @@ import { BoxWithImageRight } from '../components/Boxes/BoxWithImageRight'
 import { AnimatedTextBox } from '../components/AnimatedBoxes/AnimatedTextBox'
 import { AnimatedBox3 } from '../components/AnimatedBoxes/AnimatedBox3'
 import { RotatingCirclesIntoCellphone } from '../components/AnimatedBoxes/Experiments/RotatingCirclesIntoCellphone'
+import { AnimatedTextBox2 } from '../components/AnimatedBoxes/AnimatedTextBox2'
 
 
 export default function Home() {
@@ -33,15 +34,15 @@ export default function Home() {
       />
       <AnimatedTextBox text='Sanos, Motivados y Felices' from='left' />
       <BoxWithImageLeft
-        image={'/images/pexels-julia-avamotive.jpg'}
-        text={"Have you ever needed to matrix your cutting-edge feature set? Free? Think B2C2B. The capability to implement wirelessly leads to the ability to whiteboard without lessening our power to benchmark. "}
-        title={'Sanos,Motivados y Felices left'}
+        image={'/img/home/familia-zen.png'}
+        text={"Contar con personas sanas, motivadas y felices es fundamental para enfrentar los diferentes desafíos. Un cambio de hábitos a una cultura de bienestar, puede llevar a las compañías a generar mayor eficiencia, productividad y menor ausentismo. "}
+        title={'Sanos,Motivados y Felices '}
         imagePosition='left'
       />
-      <AnimatedTextBox text='Nuestro propósito' from='right' />
+      <AnimatedTextBox2 text='Nuestro propósito' from='right' />
 
-      <AnimatedBox3
-        text='Mejorar el bienestar de las personas a través de programas de acompañamiento para la adopción de hábitos saludables.' />
+      {/* <AnimatedBox3
+        text='Mejorar el bienestar de las personas a través de programas de acompañamiento para la adopción de hábitos saludables.' /> */}
       <BoxWhiteBGImage />
       {/* <AnimatedBox1 text='Experiencia única' /> */}
       <BoxWithImageRight image={'/images/pexels-julia-avamotive.jpg'}

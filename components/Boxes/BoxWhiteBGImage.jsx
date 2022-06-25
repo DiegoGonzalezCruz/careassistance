@@ -14,7 +14,7 @@ export const BoxWhiteBGImage = () => {
   const sizeTransformation = useTransform(
     scrollYProgress,
     [xValue, yValue * 0.95],
-    [100, 1]
+    [50, 1]
   )
 
   const boxVariants = {
@@ -34,17 +34,25 @@ export const BoxWhiteBGImage = () => {
   // scrollY.onChange((v) => console.log(v))
 
   return (
-    <div className="">
+    <div className=" ">
       <section ref={ref}>
         <div
-          className="container bg-white max-w-full"
+          className="container bg-white max-w-full "
           style={{ height: '600vh' }}
         >
+          <div className=" h-[100vh] absolute z-10 flex flex-col items-center justify-center w-3/4 px-20">
+            <p className="text-white text-2xl">
+              Mejorar el bienestar de las personas a través de programas de
+              acompañamiento para la{' '}
+              <span className="text-accent">
+                adopción de hábitos saludables.
+              </span>
+            </p>
+          </div>
           <div className="sticky-wrapper sticky top-0 h-[100vh] w-full flex flex-col items-start justify-center overflow-hidden">
             <motion.div
               initial={false}
               variants={boxVariants}
-              // style={{ scale: forwardY }}
               className="overflow-hidden flex flex-row items-center justify-center  h-full"
             >
               <motion.div
@@ -52,15 +60,17 @@ export const BoxWhiteBGImage = () => {
                 className="w-1/2 flex items-center justify-center h-full px-10"
               >
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-                  beatae id consequuntur, alias necessitatibus laudantium fuga
-                  vitae ea aut nesciunt aperiam eligendi. Quos eius rem quia eum
-                  quibusdam impedit placeat.
+                  Mejorar el bienestar de las personas a través de programas de
+                  acompañamiento para la adopción de hábitos saludables.
                 </p>
               </motion.div>
 
               <motion.div
-                style={{ scale: sizeTransformation }}
+                style={{
+                  scale: sizeTransformation,
+                  originY: '25%',
+                  originX: '53%'
+                }}
                 variants={boxVariants}
                 className="relative w-1/2 h-96 overflow-hidden "
               >

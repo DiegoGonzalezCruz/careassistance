@@ -6,19 +6,19 @@ import { Mobile } from './NavBar/Mobile'
 
 export const NavBar = () => {
   return (
-    <div className=" navbar bg-primary flex flex-row justify-between h-[10vh]  ">
+    <div className="navbar flex flex-row h-[10vh] w-screen ">
       <div className="md:hidden ">
         <Mobile />
       </div>
-      <div className="relative w-24 h-full mx-4">
+      <div className="relative w-24 h-full mx-4 ">
         <Image
-          src="/images/Logo_Care_Assistance.svg"
+          src="/img/logo/logo.svg"
           layout="fill"
           className=""
           alt="logo care assistance"
         />
       </div>
-      <div className="hidden md:flex  h-full">
+      <div className="hidden md:flex h-full w-full ">
         <Desktop />
       </div>
     </div>

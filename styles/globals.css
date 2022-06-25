@@ -14,6 +14,9 @@
   .form-control {
     @apply rounded-xl border-accent border-2;
   }
+  .giant-text {
+    @apply text-[150px] uppercase font-bold;
+  }
 }
 
 @layer base {
