@@ -34,7 +34,7 @@ export const BoxWhiteBGImage = () => {
   // scrollY.onChange((v) => console.log(v))
 
   return (
-    <div className=" ">
+    <div className="w-screen ">
       <section ref={ref}>
         <div
           className="container bg-white max-w-full "
@@ -49,20 +49,32 @@ export const BoxWhiteBGImage = () => {
               </span>
             </p>
           </div>
-          <div className="sticky-wrapper sticky top-0 h-[100vh] w-full flex flex-col items-start justify-center overflow-hidden">
+          <div className="sticky-wrapper sticky top-0 h-[100vh] w-full flex flex-col items-start justify-center overflow-hidden ">
             <motion.div
               initial={false}
               variants={boxVariants}
-              className="overflow-hidden flex flex-row items-center justify-center  h-full"
+              className="overflow-hidden flex flex-row items-center justify-center w-full h-full"
             >
               <motion.div
                 variants={boxVariants}
-                className="w-1/2 flex items-center justify-center h-full px-10"
+                className="w-1/2 flex items-center justify-center h-full flex-col"
               >
-                <p>
-                  Mejorar el bienestar de las personas a través de programas de
-                  acompañamiento para la adopción de hábitos saludables.
-                </p>
+                <div className="w-3/4 flex flex-col gap-4 ">
+                  <h2 className="text-primary">¿Cómo lo hacemos?</h2>
+                  <ul className="gap-2 flex flex-col">
+                    <li>Know how.</li>
+                    <li>Profesionales propios inhouse.</li>
+                    <li>Seguimiento y derivación.</li>
+                    <li>Tecnología.</li>
+                    <li>Trabajo multidisciplinario</li>
+                  </ul>
+                  <h2 className="text-primary">¿Qué ofrecemos?</h2>
+                  <p>
+                    Por medio de programas complementarios entre sí, ofrecemos
+                    el ecosistema de salud y bienestar más avanzado de
+                    Latinoamérica.
+                  </p>
+                </div>
               </motion.div>
 
               <motion.div
