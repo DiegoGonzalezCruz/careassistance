@@ -7,18 +7,31 @@ import { useElementViewportPosition } from '../../hooks/useElementViewPortPositi
 
 export const RotatingCirclesIntoCellphone = () => {
   const ref = useRef(null)
-  const { position } = useElementViewportPosition(ref)
+  const {
+    position: [start, end]
+  } = useElementViewportPosition(ref)
 
   const { scrollYProgress } = useViewportScroll()
 
-  const movementFromLeft = useTransform(scrollYProgress, position, [
-    '-100vw',
-    '100vw'
-  ])
-  const movementFromRigth = useTransform(scrollYProgress, position, [
-    '100vw',
-    '-100vw'
-  ])
+  const range = [start, end * 0.95, end]
+  const movementFromLeft = [-2000, -100, 0]
+  const movementFromRight = [2000, 100, 0]
+
+  const movementFromLeftAnimation = useTransform(
+    scrollYProgress,
+    range,
+    movementFromLeft
+  )
+  const movementFromRightAnimation = useTransform(
+    scrollYProgress,
+    range,
+    movementFromRight
+  )
+  const movementFromTopAnimation = useTransform(
+    scrollYProgress,
+    range,
+    movementFromRight
+  )
 
   const boxVariant = {
     hidden: {
@@ -36,7 +49,7 @@ export const RotatingCirclesIntoCellphone = () => {
     }
   }
 
-  const images = [
+  const imagesTop = [
     {
       src: '/img/canales/tl.png',
       text: 'Profesionales Propios'
@@ -44,13 +57,17 @@ export const RotatingCirclesIntoCellphone = () => {
     {
       src: '/img/canales/tr.png',
       text: 'Canales exclusivos Omnicanal'
-    },
+    }
+  ]
+  const imagesCenter = [
     {
       src: '/img/canales/c.png',
       text: 'Tecnología'
-    },
+    }
+  ]
+  const imagesBottom = [
     {
-      src: '/img/canales/br.png',
+      src: '/img/canales/bl.png',
       text: 'Seguimiento permanente'
     },
     {
@@ -59,91 +76,71 @@ export const RotatingCirclesIntoCellphone = () => {
     }
   ]
   return (
-    <div className="">
+    <div className="w-screen">
       <section ref={ref}>
-        <div
-          className="container bg-primary max-w-full"
-          style={{ height: '400vh' }}
-        >
-          <div className="debug2 sticky-wrapper sticky top-0 h-[100vh] w-full flex flex-col items-start justify-center overflow-hidden">
-            <motion.div
-              variants={boxVariant}
-              className="debug1 w-3/4 h-full mx-auto flex flex-col justify-between text-center text-white"
-            >
-              <motion.div
-                variants={boxVariant}
-                className="debug1 flex flex-row justify-around  "
-              >
+        <div className="container max-w-full h-[400vh] bg-primary ">
+          <div className=" sticky-wrapper sticky top-0 w-screen h-screen flex flex-col items-start justify-center overflow-hidden 1">
+            <div className="bg-[url('/img/canales/cellphone.svg')] bg-center bg-no-repeat bg-contain h-2/3 w-full flex flex-col items-center justify-around 1">
+              <div className="flex flex-row justify-around w-1/3 ">
                 <motion.div
-                  variants={boxVariant}
-                  style={{ x: movementFromLeft }}
-                  className="debug2 w-1/3 flex flex-col items-center"
+                  className="flex flex-col items-center w-24"
+                  style={{ x: movementFromLeftAnimation }}
                 >
-                  <div className="relative h-36 w-36">
-                    <Image
-                      src={'/img/canales/tl.png'}
-                      layout="fill"
-                      className="w-full h-full"
-                      alt="vector"
-                    />
+                  <div className="relative h-24 w-24">
+                    <Image src={imagesTop[0].src} layout="fill" />
                   </div>
-                  <p>Profesionales Propios</p>
+                  <p className="text-white text-center">{imagesTop[0].text}</p>
                 </motion.div>
                 <motion.div
-                  style={{ x: movementFromRigth }}
-                  className="w-1/3 flex  flex-col items-center "
+                  className="flex flex-col items-center w-24"
+                  style={{ x: movementFromRightAnimation }}
                 >
-                  <div className="relative h-36 w-36">
-                    <Image
-                      src={'/img/canales/tr.png'}
-                      layout="fill"
-                      className="w-full h-full"
-                      alt="vector"
-                    />
+                  <div className="relative h-24 w-24">
+                    <Image src={imagesTop[1].src} layout="fill" />
                   </div>
-                  <p>
-                    Canales exclusivos <br /> Omnicanal
+                  <p className="text-white text-center">{imagesTop[1].text}</p>
+                </motion.div>
+              </div>
+
+              <div className="flex flex-row justify-around w-1/3 ">
+                <motion.div
+                  style={{ y: movementFromLeftAnimation }}
+                  className="flex flex-col items-center w-24"
+                >
+                  <div className="relative h-24 w-24">
+                    <Image src={imagesCenter[0].src} layout="fill" />
+                  </div>
+                  <p className="text-white text-center">
+                    {imagesCenter[0].text}
                   </p>
                 </motion.div>
-              </motion.div>
-              <motion.div className=" self-center  flex flex-row">
-                <motion.div className="  flex flex-col items-center">
-                  <div className="relative h-36 w-36">
-                    <Image
-                      src={'/img/canales/bl.png'}
-                      layout="fill"
-                      className="w-full h-full"
-                      alt="vector"
-                    />
+              </div>
+
+              <div className="flex flex-row justify-around w-1/3 ">
+                <motion.div
+                  style={{ x: movementFromLeftAnimation }}
+                  className="flex flex-col items-center w-24"
+                >
+                  <div className="relative h-24 w-24">
+                    <Image src={imagesBottom[0].src} layout="fill" />
                   </div>
-                  <p>Tecnología</p>
+                  <p className="text-white text-center">
+                    {imagesBottom[0].text}
+                  </p>
                 </motion.div>
-              </motion.div>
-              <motion.div className="flex flex-row justify-around">
-                <motion.div className=" w-1/3 flex flex-col items-center">
-                  <div className="relative h-36 w-36">
-                    <Image
-                      src={'/img/canales/bl.png'}
-                      layout="fill"
-                      className="w-full h-full"
-                      alt="vector"
-                    />
+                <motion.div
+                  style={{ x: movementFromRightAnimation }}
+                  className="flex flex-col items-center w-24"
+                >
+                  <div className="relative h-24 w-24">
+                    <Image src={imagesBottom[1].src} layout="fill" />
                   </div>
-                  <p>Seguimiento Permanente</p>
+                  <p className="text-white text-center">
+                    {imagesBottom[1].text}
+                  </p>
                 </motion.div>
-                <motion.div className="w-1/3  flex flex-col items-center ">
-                  <div className="relative h-36 w-36 ">
-                    <Image
-                      src={'/img/canales/br.png'}
-                      layout="fill"
-                      className="w-full h-full"
-                      alt="vector"
-                    />
-                  </div>
-                  <p>Experiencia de usuario (ux)</p>
-                </motion.div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

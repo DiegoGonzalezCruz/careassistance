@@ -46,7 +46,7 @@ export const BoxWithImageRight = ({
         <motion.div
           variants={iconVariants}
           whileInView="onscreen"
-          viewport={{ once: false, amount: 0.8 }}
+          viewport={{ once: false, amount: 0.1 }}
           initial="offscreen"
           className=" text-white w-full h-full ml-5 px-5 flex flex-col items-center justify-center"
         >
