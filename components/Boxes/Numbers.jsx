@@ -52,7 +52,7 @@ export const Numbers = () => {
           initial="hidden"
           whileInView="visible"
           variants={boxVariant}
-          className="debug1 w-full text-white relative flex flex-col h-full items-center justify-center"
+          className=" w-full text-white relative flex flex-col h-full items-center justify-center"
         >
           <div className="flex flex-col items-center md:-translate-y-10 -translate-y-5">
             <h2 className="text-accent lg:text-[100px]">+1.000.000</h2>
