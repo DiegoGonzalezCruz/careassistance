@@ -31,7 +31,7 @@ export const AnimatedBox2 = ({ text }) => {
   )
   const { scrollYProgress } = useElementScroll(ref)
 
-  scrollYProgress.onChange((val) => console.log(val, 'scroll progress'))
+  // scrollYProgress.onChange((val) => console.log(val, 'scroll progress'))
 
   // const size = useWindowSize()
 

@@ -14,8 +14,8 @@ export const RotatingCirclesIntoCellphone = () => {
   const { scrollYProgress } = useViewportScroll()
 
   const range = [start, end * 0.95, end]
-  const movementFromLeft = [-2000, -100, 0]
-  const movementFromRight = [2000, 100, 0]
+  const movementFromLeft = [-1000, -100, 0]
+  const movementFromRight = [1000, 100, 0]
 
   const movementFromLeftAnimation = useTransform(
     scrollYProgress,
@@ -78,9 +78,9 @@ export const RotatingCirclesIntoCellphone = () => {
   return (
     <div className="w-screen">
       <section ref={ref}>
-        <div className="container max-w-full h-[400vh] bg-primary ">
-          <div className=" sticky-wrapper sticky top-0 w-screen h-screen flex flex-col items-start justify-center overflow-hidden 1">
-            <div className="bg-[url('/img/canales/cellphone.svg')] bg-center bg-no-repeat bg-contain h-2/3 w-full flex flex-col items-center justify-around 1">
+        <div className="container max-w-full h-[450vh] bg-primary ">
+          <div className=" sticky-wrapper sticky top-0 w-screen h-screen flex flex-col items-start justify-center overflow-hidden ">
+            <div className="bg-[url('/img/canales/cellphone.svg')] bg-center bg-no-repeat bg-contain h-2/3 w-full flex flex-col items-center justify-around ">
               <div className="flex flex-row justify-around w-1/3 ">
                 <motion.div
                   className="flex flex-col items-center w-24"

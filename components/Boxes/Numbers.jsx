@@ -39,11 +39,11 @@ export const Numbers = () => {
   return (
     <div className="h-screen ">
       <div className="relative h-screen w-full flex flex-col items-center">
-        <div className="absolute w-full object-cover h-full ">
+        <div className="absolute w-full h-full">
           <Image
-            src={'/images/IMG_13.jpg'}
+            src={'/img/home/FondoCifras1.png'}
             layout="fill"
-            objectFit="cover"
+            objectFit="contain"
             className=""
             alt="experiencia unica"
           />
@@ -52,24 +52,12 @@ export const Numbers = () => {
           initial="hidden"
           whileInView="visible"
           variants={boxVariant}
-          className="bg-primary/80 w-full text-white relative flex flex-col h-full items-center justify-center"
+          className="debug1 w-full text-white relative flex flex-col h-full items-center justify-center"
         >
-          {stats.map((stat, index) => {
-            return (
-              <motion.div
-                variants={boxVariant}
-                key={stat.sub}
-                className="my-10 flex flex-col items-center"
-              >
-                <p>
-                  <span className="text-accent font-bold text-5xl">
-                    {stat.number}
-                  </span>
-                </p>
-                <p className="text-sm">{stat.sub}</p>
-              </motion.div>
-            )
-          })}
+          <div className="flex flex-col items-center md:-translate-y-10 -translate-y-5">
+            <h2 className="text-accent lg:text-[100px]">+1.000.000</h2>
+            <p>de beneficiarios</p>
+          </div>
         </motion.div>
       </div>
     </div>

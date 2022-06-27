@@ -31,11 +31,6 @@ export const AnimatedCarouselScroll = ({ text }) => {
   const xVar = useTransform(scrollYProgress, position, [0, carouselEndPosition])
 
   useEffect(() => {
-    window.addEventListener('scroll', () =>
-      console.log({ scrollYProgress: scrollYProgress.current, scrollY })
-    )
-  }, [])
-  useEffect(() => {
     if (!carouselRef || !carouselRef.current) return
     const parent = carouselRef.current.parentElement
     const scrollbarWidth =

@@ -13,6 +13,7 @@ import { AnimatedTextBox } from '../components/AnimatedBoxes/AnimatedTextBox'
 import { AnimatedBox3 } from '../components/AnimatedBoxes/AnimatedBox3'
 import { RotatingCirclesIntoCellphone } from '../components/AnimatedBoxes/Experiments/RotatingCirclesIntoCellphone'
 import { AnimatedTextBox2, AnimatedTextBoxOutlined } from '../components/AnimatedBoxes/AnimatedTextBoxOutlined'
+import { CalltoActionHome } from '../components/Boxes/CalltoActionHome'
 
 
 export default function Home() {
@@ -36,17 +37,14 @@ export default function Home() {
       <BoxWithImageLeft
         image={'/img/home/familia-zen.png'}
         text={"Contar con personas sanas, motivadas y felices es fundamental para enfrentar los diferentes desafíos. Un cambio de hábitos a una cultura de bienestar, puede llevar a las compañías a generar mayor eficiencia, productividad y menor ausentismo. "}
-        title={'Sanos,Motivados y Felices '}
+        title={'Sanos, Motivados y Felices '}
         imagePosition='left'
       />
       <AnimatedTextBoxOutlined text='Nuestro propósito' from='right' bg='primary' />
 
-      {/* <AnimatedBox3
-        text='Mejorar el bienestar de las personas a través de programas de acompañamiento para la adopción de hábitos saludables.' /> */}
       <BoxWhiteBGImage />
       <AnimatedTextBoxOutlined text='Experiencia única' from='right' bg='primary' />
 
-      {/* <AnimatedBox1 text='Experiencia única' /> */}
       <BoxWithImageRight image={'/img/home/experienciaunica.png'}
         text={"Con el objetivo de brindar un servicio integral, nuestro ecosistema de salud y bienestar está compuesto por diversos programas complementarios entre sí."}
         title={'Experiencia única '}
@@ -56,7 +54,7 @@ export default function Home() {
 
       <NuestrosProgramas />
       <Numbers />
-      <CalltoAction buttonText={box1.buttonText} question={box1.question} />
+      <CalltoActionHome buttonText={box1.buttonText} question={'¿Quieres sumar estos beneficios a tu empresa?'} />
     </>
   )
 }
