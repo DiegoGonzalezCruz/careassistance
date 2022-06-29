@@ -1,22 +1,20 @@
 import Head from 'next/head'
-import { CalltoAction } from '../components/Boxes/CalltoAction'
+
 import { box1 } from '../components/Boxes/boxesContent'
 import { BoxWithImageLeft } from '../components/Boxes/BoxWithImageLeft'
 
 import { BoxWhiteBGImage } from '../components/Boxes/BoxWhiteBGImage'
-import { BoxRotatingElements } from '../components/Boxes/BoxRotatingElements'
 import { NuestrosProgramas } from '../components/Boxes/Programas/NuestrosProgramas'
 import { Numbers } from '../components/Boxes/Numbers'
 import { HeroBoxVideo } from '../components/Boxes/HeroBoxVideo'
 import { BoxWithImageRight } from '../components/Boxes/BoxWithImageRight'
 import { AnimatedTextBox } from '../components/AnimatedBoxes/AnimatedTextBox'
-import { AnimatedBox3 } from '../components/AnimatedBoxes/AnimatedBox3'
 import { RotatingCirclesIntoCellphone } from '../components/AnimatedBoxes/Experiments/RotatingCirclesIntoCellphone'
-import { AnimatedTextBox2, AnimatedTextBoxOutlined } from '../components/AnimatedBoxes/AnimatedTextBoxOutlined'
+import { AnimatedTextBoxOutlined } from '../components/AnimatedBoxes/AnimatedTextBoxOutlined'
 import { CalltoActionHome } from '../components/Boxes/CalltoActionHome'
+import { getProgramas } from '../laboratory/lib/getProgramas'
 
-
-export default function Home() {
+export default function Home({ programs }) {
   return (
     <>
       <Head>
@@ -43,6 +41,7 @@ export default function Home() {
       <AnimatedTextBoxOutlined text='Nuestro propósito' from='right' bg='primary' />
 
       <BoxWhiteBGImage />
+
       <AnimatedTextBoxOutlined text='Experiencia única' from='right' bg='primary' />
 
       <BoxWithImageRight image={'/img/home/experienciaunica.png'}
@@ -52,9 +51,19 @@ export default function Home() {
       />
       <RotatingCirclesIntoCellphone />
 
-      <NuestrosProgramas />
+      <NuestrosProgramas programs={programs} />
       <Numbers />
       <CalltoActionHome buttonText={box1.buttonText} question={'¿Quieres sumar estos beneficios a tu empresa?'} />
     </>
   )
+}
+
+export async function getStaticProps() {
+
+  const programs = await getProgramas()
+  console.log(programs, 'programs')
+
+  return {
+    props: { programs }, // will be passed to the page component as props
+  }
 }

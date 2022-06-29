@@ -5,7 +5,7 @@ import React from 'react'
 export const InfiniteBox = () => {
   return (
     <div className="w-screen h-[80vh] main overflow-auto">
-      <div className="w-screen h-full  debug1 flex flex-row wrap">
+      <div className="w-screen h-full flex flex-row wrap">
         <div className="relative w-screen h-full flex flex-row overflow-scroll ">
           <div className="relative h-full w-full ">
             <Image

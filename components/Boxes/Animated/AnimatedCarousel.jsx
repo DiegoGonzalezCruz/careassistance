@@ -1,14 +1,12 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 
 import {
   AnimatePresence,
   motion,
-  MotionProps,
   useTransform,
   useViewportScroll
 } from 'framer-motion'
 
-import { throttle } from 'throttle-debounce'
 import { useElementViewportPosition } from '../../hooks/useElementViewPortPosition'
 import Image from 'next/image'
 
@@ -22,40 +20,9 @@ const slideAnimation = {
   viewport: { amount: 1 }
 }
 
-const menu = [
-  {
-    label: 'Consulta médica Telemedicina 1',
-    icon: '🧠',
-    image: '/img/programas/IMG_11_TELEMEDICINA.jpg'
-  },
-  {
-    label: 'Programa de Asistencia Emocional 1',
-    icon: '🚀',
-    image: '/img/programas/IMG_1_EMOCIONAL.jpg'
-  },
-  {
-    label: 'Asistencia Emocional 1',
-    icon: '⚡️',
-    image: '/img/programas/IMG_21_NUTRICION.jpg'
-  },
-  {
-    label: 'Consulta médica Telemedicina',
-    icon: '📞',
-    image: '/img/programas/IMG_11_TELEMEDICINA.jpg'
-  },
-  {
-    label: 'Programa de Asistencia Emocional',
-    icon: '🤮',
-    image: '/img/programas/IMG_1_EMOCIONAL.jpg'
-  },
-  {
-    label: 'Asistencia Emocional',
-    icon: '🐷',
-    image: '/img/programas/IMG_21_NUTRICION.jpg'
-  }
-]
+export const AnimatedCarousel = ({ programs }) => {
+  console.log(programs, 'programs')
 
-export const AnimatedCarousel = ({}) => {
   const carouselRef = useRef()
   const innerCarouselRef = useRef()
 
@@ -69,7 +36,7 @@ export const AnimatedCarousel = ({}) => {
   const { scrollYProgress, scrollY } = useViewportScroll()
   const xVar = useTransform(
     scrollYProgress,
-    [start + start * 0.05, carouselEnds + carouselEnds * 0.1],
+    [start + start * 0.05, carouselEnds + carouselEnds * 0.2],
     [0, -2000]
   )
 
@@ -96,23 +63,40 @@ export const AnimatedCarousel = ({}) => {
               className=" flex gap-12 h-full w-full"
               style={{ x: xVar }}
             >
-              {menu.map((item, idx) => (
-                <motion.div
-                  {...slideAnimation}
-                  key={item.label}
-                  className="min-w-[300px]  flex flex-col items-center justify-center"
-                >
-                  <div className="relative w-full h-full">
-                    <Image
-                      src={item.image}
-                      layout="fill"
-                      className="w-full h-full"
-                      objectFit="cover"
-                      objectPosition="center"
-                    />
-                  </div>
-                </motion.div>
-              ))}
+              {programs &&
+                programs.map((item, idx) => (
+                  <motion.div
+                    {...slideAnimation}
+                    key={item.id}
+                    className="min-w-[300px] min-h-[300px] flex flex-col items-center justify-center relative"
+                  >
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={item._embedded['wp:featuredmedia'][0].source_url}
+                        layout="fill"
+                        className="w-full h-full"
+                        objectFit="cover"
+                        objectPosition="center"
+                      />
+                      <div className="absolute h-full w-full bg-primary/50"></div>
+                      <div className="w-full h-16 flex flex-row items-center justify-center bg-primary absolute bottom-5">
+                        <div className="h-24 w-24 bg-white border-primary rounded-3xl relative">
+                          <Image
+                            src={item.acf.icon.url}
+                            layout="fill"
+                            objectFit="contain"
+                          />
+                        </div>
+                        <p>
+                          {item.acf.labelBlue}
+                          <span className="text-accent">
+                            {item.acf.labelAccent}
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
             </motion.div>
           </AnimatePresence>
         </div>

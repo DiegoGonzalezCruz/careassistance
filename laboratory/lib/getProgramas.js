@@ -6,5 +6,4 @@ export const getProgramas = () => {
 
   console.log(programasList, 'programasList')
   return programasList
-
 }

@@ -1,9 +1,7 @@
-import React from 'react'
-import { ProgramCard } from './ProgramCard'
 import { motion } from 'framer-motion'
 import { AnimatedCarousel } from '../Animated/AnimatedCarousel'
 
-export const NuestrosProgramas = () => {
+export const NuestrosProgramas = ({ programs }) => {
   const programasVariant = {
     hidden: {
       opacity: 0
@@ -23,7 +21,7 @@ export const NuestrosProgramas = () => {
       whileInView="visible"
       className="bg-white min-h-screen w-screen py-10 flex flex-col items-center"
     >
-      <AnimatedCarousel variants={programasVariant} />
+      <AnimatedCarousel variants={programasVariant} programs={programs} />
     </motion.div>
   )
 }

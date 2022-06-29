@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Head from 'next/head'
 import { HeroBox } from '../components/Boxes/HeroBox'
 import { ComoFuncionanNuestrosProgramas } from '../components/Boxes/Animated/ComoFuncionanNuestrosProgramas'
@@ -7,7 +7,9 @@ import { NuestroProposito } from '../components/Boxes/NuestroProposito'
 import { CanalesAtencion } from '../components/Boxes/CanalesAtencion'
 import { CalltoAction } from '../components/Boxes/CalltoAction'
 
-const Programas = () => {
+import { getProgramas } from '../laboratory/lib/getProgramas'
+
+const Programas = ({ programs }) => {
   return (
     <div>
       <Head>
@@ -24,7 +26,7 @@ const Programas = () => {
         buttonText='Ver programas'
         buttonHref='/programas'
       />
-      <ComoFuncionanNuestrosProgramas />
+      <ComoFuncionanNuestrosProgramas programs={programs} />
       <NuestrosProgramas />
       <NuestroProposito />
       <CanalesAtencion />
@@ -35,3 +37,14 @@ const Programas = () => {
 }
 
 export default Programas
+
+
+export async function getStaticProps() {
+
+  const programs = await getProgramas()
+  console.log(programs, 'programs')
+
+  return {
+    props: { programs }, // will be passed to the page component as props
+  }
+}

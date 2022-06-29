@@ -42,8 +42,8 @@ export const AnimatedBox2 = ({ text }) => {
   const backwardsX = useTransform(scrollYProgress, [0, 1], ['-100%', '0%'])
 
   return (
-    <div ref={ref} className="h-[300vh] debug1 bg-primary">
-      <div className="sticky-wrapper sticky top-0 h-[100vh] w-screen flex flex-col items-start justify-center overflow-hidden debug2">
+    <div ref={ref} className="h-[300vh] bg-primary">
+      <div className="sticky-wrapper sticky top-0 h-[100vh] w-screen flex flex-col items-start justify-center overflow-hidden">
         <motion.p
           className="motion-paragraph text-white text-7xl font-bold uppercase"
           style={{ x: forwardX, WebkitTextStrokeColor: rainbowColors }}

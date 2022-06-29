@@ -17,6 +17,9 @@ export const RotatingCirclesIntoCellphone = () => {
   const movementFromLeft = [-1000, -100, 0]
   const movementFromRight = [1000, 100, 0]
 
+  const rotationRange = [start, end - end * 0.05]
+  const rotationArray = [0, 360]
+
   const movementFromLeftAnimation = useTransform(
     scrollYProgress,
     range,
@@ -27,10 +30,10 @@ export const RotatingCirclesIntoCellphone = () => {
     range,
     movementFromRight
   )
-  const movementFromTopAnimation = useTransform(
+  const rotationMovement = useTransform(
     scrollYProgress,
-    range,
-    movementFromRight
+    rotationRange,
+    rotationArray
   )
 
   const boxVariant = {
@@ -84,7 +87,10 @@ export const RotatingCirclesIntoCellphone = () => {
               <div className="flex flex-row justify-around w-1/3 ">
                 <motion.div
                   className="flex flex-col items-center w-24"
-                  style={{ x: movementFromLeftAnimation }}
+                  style={{
+                    x: movementFromLeftAnimation,
+                    rotate: rotationMovement
+                  }}
                 >
                   <div className="relative h-24 w-24">
                     <Image src={imagesTop[0].src} layout="fill" />
@@ -93,7 +99,10 @@ export const RotatingCirclesIntoCellphone = () => {
                 </motion.div>
                 <motion.div
                   className="flex flex-col items-center w-24"
-                  style={{ x: movementFromRightAnimation }}
+                  style={{
+                    x: movementFromRightAnimation,
+                    rotate: rotationMovement
+                  }}
                 >
                   <div className="relative h-24 w-24">
                     <Image src={imagesTop[1].src} layout="fill" />
@@ -104,7 +113,10 @@ export const RotatingCirclesIntoCellphone = () => {
 
               <div className="flex flex-row justify-around w-1/3 ">
                 <motion.div
-                  style={{ y: movementFromLeftAnimation }}
+                  style={{
+                    y: movementFromLeftAnimation,
+                    rotate: rotationMovement
+                  }}
                   className="flex flex-col items-center w-24"
                 >
                   <div className="relative h-24 w-24">
@@ -118,7 +130,10 @@ export const RotatingCirclesIntoCellphone = () => {
 
               <div className="flex flex-row justify-around w-1/3 ">
                 <motion.div
-                  style={{ x: movementFromLeftAnimation }}
+                  style={{
+                    x: movementFromLeftAnimation,
+                    rotate: rotationMovement
+                  }}
                   className="flex flex-col items-center w-24"
                 >
                   <div className="relative h-24 w-24">
@@ -129,7 +144,10 @@ export const RotatingCirclesIntoCellphone = () => {
                   </p>
                 </motion.div>
                 <motion.div
-                  style={{ x: movementFromRightAnimation }}
+                  style={{
+                    x: movementFromRightAnimation,
+                    rotate: rotationMovement
+                  }}
                   className="flex flex-col items-center w-24"
                 >
                   <div className="relative h-24 w-24">

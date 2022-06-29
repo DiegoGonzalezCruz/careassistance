@@ -24,12 +24,12 @@ const historia = [
 
 export const ComoFuncionanNuestrosProgramas = () => {
   return (
-    <div className="w-screen h-[120vh] py-24 ">
+    <div className="w-screen h-[120vh] py-24 debug1">
       <motion.div
         variants={studyCase}
         initial="hidden"
         animate="visible"
-        className="h-full w-3/4 mx-auto flex flex-col items-center gap-5"
+        className="h-full w-full mx-auto flex flex-col items-center gap-5"
       >
         <h2 className="text-primary">Como funcionan nuestros programas</h2>
         <motion.div

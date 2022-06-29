@@ -4,16 +4,19 @@ import React from 'react'
 import { footer1, footer2, socialNetworks } from './footerItems'
 export const Footer = () => {
   return (
-    <footer className="footer md:p-10 pb-10 bg-base-200 flex flex-row text-white w-screen h-[40vh] min-h-[40vh] ">
-      <div className="logo w-1/3 h-full flex flex-col items-center relative debug1">
-        <div className="forma max-w-full min-w-[20rem] absolute left-0 top-0 -translate-x-1/3 -rotate-45 translate-y-1/2 shadow-xl rounded-full">
-          <div className=" bg-primary  rounded-full min-w-[10rem]  h-12 -translate-y-full translate-x-1/2"></div>
+    <footer className=" footer md:p-10 pb-10 bg-base-200 flex flex-row text-white w-screen h-[50vh] min-h-[40vh] overflow-hidden">
+      <div className="logo w-1/4 h-full flex flex-col items-center  relative ">
+        {/* //Forma */}
+        <div className="  forma max-w-full min-w-[20rem] w-[30rem] absolute -translate-x-1/2 -rotate-45 origin-top-right shadow-xl rounded-full">
+          <div className=" bg-primary  rounded-full min-w-[10rem]  h-6 -translate-y-full -translate-x-1/3"></div>
           <div className="border-primary  rounded-full w-[25rem] h-24 flex items-center justify-center">
-            <div className="border-accent bg-accent border-4 rounded-full w-[10rem] h-12 translate-y-full"></div>
+            <div className="border-accent bg-accent border-4 rounded-full w-[10rem] h-6 translate-y-11 ">
+              <div className="border-accent bg-accent rounded-full w-[5rem] h-1 translate-y-8 translate-x-10"></div>
+              <div className="border-primary bg-primary rounded-full w-[3rem] h-1 -translate-y-5 translate-x-20"></div>
+            </div>
           </div>
         </div>
-
-        <div className="w-24 h-24 relative ">
+        <div className=" w-24 h-24 relative ">
           <Image
             src="/images/Logo_Care_Assistance.svg"
             layout="fill"
@@ -23,31 +26,41 @@ export const Footer = () => {
         </div>
       </div>
       {/* <div className="w-3 border-2 border-white self-center"></div> */}
-      <div className="links flex md:flex-row flex-col gap-10 md:items-start px-10 justify-between w-1/3">
-        <div>
-          <span className="footer-title">Servicios</span>
-
+      <div className=" links w-2/4 flex flex-col gap-10 md:items-start px-10 justify-between h-full ">
+        <div className="wrapper  h-full flex flex-col items-start justify-between">
           {footer1.map((link) => {
             return (
               <Link href={link.href} passHref key={link.title}>
-                <p className="link link-hover">{link.title}</p>
+                <div className="flex flex-row gap-10 justify-start">
+                  <p className="link link-hover hover:underline hover:opacity-100 opacity-50 text-xl">
+                    {link.title}
+                  </p>
+                </div>
               </Link>
             )
           })}
         </div>
-        <div>
-          <span className="footer-title">Legales</span>
+        <div className="legales flex flex-row  items-center justify-between  w-full">
           {footer2.map((link) => {
             return (
               <Link href={link.href} passHref key={link.title}>
-                <p className="link link-hover">{link.title}</p>
+                <p className="link link-hover text-xs font-bold text-accent">
+                  {link.title}
+                </p>
               </Link>
             )
           })}
         </div>
       </div>
-      <div className="social w-1/3">
-        <span className="footer-title">Social</span>
+
+      <div className="social w-1/4  flex flex-col justify-center items-center self-end">
+        <div className="relative  w-full h-20">
+          <Image
+            src={'/img/home/massanos.svg'}
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
         <div className="grid grid-flow-col gap-4">
           <div className="cursor-pointer">
             <Link passHref href={'https://twitter.com'}>

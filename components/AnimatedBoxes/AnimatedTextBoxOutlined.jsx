@@ -27,7 +27,7 @@ export const AnimatedTextBoxOutlined = ({ text, from, bg }) => {
         >
           <div className="sticky-wrapper sticky top-0 h-[100vh] w-full flex flex-col items-start justify-center overflow-hidden ">
             <motion.div
-              className={` text-[100px] ${textColor}  uppercase h-1/3 flex items-center justify-center w-[150vw] `}
+              className={` text-[100px] ${textColor}  uppercase h-1/3 flex items-center justify-center w-max `}
               style={{ x: xVar }}
               {...slideAnimation}
             >

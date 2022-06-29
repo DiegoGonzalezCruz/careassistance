@@ -40,8 +40,8 @@ export const BoxWhiteBGImage = () => {
           className="container bg-white max-w-full "
           style={{ height: '600vh' }}
         >
-          <div className=" h-[100vh] absolute z-10 flex flex-col items-center justify-center w-3/4 px-20">
-            <p className="text-white text-2xl">
+          <div className=" h-[100vh] absolute z-10 flex flex-col items-center justify-center px-20  w-1/2">
+            <p className="text-white text-5xl">
               Mejorar el bienestar de las personas a través de programas de
               acompañamiento para la{' '}
               <span className="text-accent">

@@ -6,7 +6,7 @@ export const ProgramCard = ({ variants }) => {
   return (
     <motion.div
       variants={variants}
-      className="w-96 h-96 bg-white shadow-xl debug1 relative">
+      className="w-96 h-96 bg-white shadow-xl  relative">
       <div className='absolute w-full h-full shadow-xl'>
         <Image
           src={'/images/programas/IMG_1_EMOCIONAL.jpg'}
@@ -17,7 +17,7 @@ export const ProgramCard = ({ variants }) => {
         />
       </div>
 
-      <div className="debug2 relative h-full w-full flex flex-col items-center bg-black/20">
+      <div className=" relative h-full w-full flex flex-col items-center bg-black/20">
         <div className="h-full w-full px-4 my-auto  relative">
           <h2 className="text-lg  absolute bottom-0 ">Programa de consulta médica</h2>
           {/* <div className="card-actions justify-end">

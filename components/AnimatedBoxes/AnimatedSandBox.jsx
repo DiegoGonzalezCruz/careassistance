@@ -77,7 +77,7 @@ export const AnimatedSandBox = ({ text }) => {
                 <motion.div
                   {...slideAnimation}
                   key={i}
-                  className="carousel__slide w-[300px] h-[300px] bg-primary debug1 flex items-center justify-center border-xl"
+                  className="carousel__slide w-[300px] h-[300px] bg-primary flex items-center justify-center border-xl"
                 >
                   {i + 1}
                 </motion.div>
