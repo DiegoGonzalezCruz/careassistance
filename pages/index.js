@@ -61,7 +61,7 @@ export default function Home({ programs }) {
 export async function getStaticProps() {
 
   const programs = await getProgramas()
-  console.log(programs, 'programs')
+  // console.log(programs, 'programs')
 
   return {
     props: { programs }, // will be passed to the page component as props

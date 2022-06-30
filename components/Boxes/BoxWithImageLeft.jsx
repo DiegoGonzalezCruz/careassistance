@@ -24,13 +24,13 @@ export const BoxWithImageLeft = ({
 
   return (
     <div className="bg-white flex overflow-hidden min-h-[100vh] w-screen">
-      <div className="flex flex-col md:flex-row w-full items-center justify-center">
+      <div className="flex flex-col md:flex-row w-full items-center justify-center debug1">
         <motion.div
           whileInView="onscreen"
           viewport={{ once: false, amount: 0.3 }}
           initial="offscreen"
           variants={iconVariants}
-          className="relative h-56 lg:h-full w-full -translate-x-14  flex items-center"
+          className="relative h-56 lg:h-full w-full -translate-x-14 debug2 flex items-center"
         >
           <div className="relative h-1/2 w-full ">
             <Image
