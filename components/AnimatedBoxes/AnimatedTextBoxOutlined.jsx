@@ -19,7 +19,7 @@ export const AnimatedTextBoxOutlined = ({ text, from, bg }) => {
   const xVar = useTransform(scrollYProgress, position, textAppearsFrom)
 
   return (
-    <div className="">
+    <div className="w-screen">
       <section ref={ref}>
         <div
           className={`container  max-w-full ${bgColor} `}
@@ -32,7 +32,7 @@ export const AnimatedTextBoxOutlined = ({ text, from, bg }) => {
               {...slideAnimation}
             >
               {' '}
-              <span className=" "> {text}</span>
+              <span className="stroke-red-500 "> {text}</span>
             </motion.div>
           </div>
         </div>

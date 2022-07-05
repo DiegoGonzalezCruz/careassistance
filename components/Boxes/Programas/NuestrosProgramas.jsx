@@ -19,7 +19,7 @@ export const NuestrosProgramas = ({ programs }) => {
       variants={programasVariant}
       initial="hidden"
       whileInView="visible"
-      className="bg-white min-h-screen w-screen py-10 flex flex-col items-center"
+      className="bg-white min-h-screen w-screen py-10 flex flex-col items-center debug1 "
     >
       <AnimatedCarousel variants={programasVariant} programs={programs} />
     </motion.div>

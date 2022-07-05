@@ -13,23 +13,70 @@ export const RotatingCirclesIntoCellphone = () => {
 
   const { scrollYProgress } = useViewportScroll()
 
-  const range = [start, end * 0.95, end]
-  const movementFromLeft = [-1000, -100, 0]
-  const movementFromRight = [1000, 100, 0]
+  const range = [start - start * 0.1, end - end * 0.02]
+  const opacityRange = useTransform(scrollYProgress, range, [0, 1])
+
+  const initialInhouseMovementX = [-500, 0]
+  const initialInhouseMovementY = [-500, 0]
+  const inhouseMovementX = useTransform(
+    scrollYProgress,
+    range,
+    initialInhouseMovementX
+  )
+  const inhouseMovementY = useTransform(
+    scrollYProgress,
+    range,
+    initialInhouseMovementY
+  )
+
+  const initialCanalesMovementX = [300, 0]
+  const initialCanalesMovementY = [-500, 0]
+  const canalesMovementX = useTransform(
+    scrollYProgress,
+    range,
+    initialCanalesMovementX
+  )
+  const canalesMovementY = useTransform(
+    scrollYProgress,
+    range,
+    initialCanalesMovementY
+  )
+
+  const initialTecnologiaMovementX = [-50, 0]
+  const initialTecnologiaMovementY = [-500, 0]
+  const tecnologiaMovementX = useTransform(
+    scrollYProgress,
+    range,
+    initialTecnologiaMovementX
+  )
+  const tecnologiaMovementY = useTransform(
+    scrollYProgress,
+    range,
+    initialTecnologiaMovementY
+  )
+
+  const initialSeguimientoMovementX = [-300, 0]
+  const initialSeguimientoMovementY = [100, 0]
+  const seguimientoMovementX = useTransform(
+    scrollYProgress,
+    range,
+    initialSeguimientoMovementX
+  )
+  const seguimientoMovementY = useTransform(
+    scrollYProgress,
+    range,
+    initialSeguimientoMovementY
+  )
+  const initialUxMovementX = [300, 0]
+  const initiallUxMovementY = [100, 0]
+  const uxScale = [2, 1]
+  const uxMovementX = useTransform(scrollYProgress, range, initialUxMovementX)
+  const uxMovementY = useTransform(scrollYProgress, range, initiallUxMovementY)
+  const objectScaling = useTransform(scrollYProgress, range, uxScale)
 
   const rotationRange = [start, end - end * 0.05]
   const rotationArray = [0, 360]
 
-  const movementFromLeftAnimation = useTransform(
-    scrollYProgress,
-    range,
-    movementFromLeft
-  )
-  const movementFromRightAnimation = useTransform(
-    scrollYProgress,
-    range,
-    movementFromRight
-  )
   const rotationMovement = useTransform(
     scrollYProgress,
     rotationRange,
@@ -81,27 +128,37 @@ export const RotatingCirclesIntoCellphone = () => {
   return (
     <div className="w-screen">
       <section ref={ref}>
-        <div className="container max-w-full h-[450vh] bg-primary ">
-          <div className=" sticky-wrapper sticky top-0 w-screen h-screen flex flex-col items-start justify-center overflow-hidden ">
+        <div className="container max-w-full h-[450vh] bg-primary overflow-visible">
+          <div className=" sticky-wrapper sticky top-0 w-screen h-screen flex flex-col items-start justify-center  ">
             <div className="bg-[url('/img/canales/cellphone.svg')] bg-center bg-no-repeat bg-contain h-2/3 w-full flex flex-col items-center justify-around ">
-              <div className="flex flex-row justify-around w-1/3 ">
+              <div className="iconLine flex flex-row justify-around w-1/3  ">
                 <motion.div
-                  className="flex flex-col items-center w-24"
+                  className="flex flex-col items-center w-24 -translate-y-[500px] -translate-x-[300px] "
+                  id="inhouse"
                   style={{
-                    x: movementFromLeftAnimation,
-                    rotate: rotationMovement
+                    translateX: inhouseMovementX,
+                    translateY: inhouseMovementY,
+                    scale: objectScaling
                   }}
                 >
-                  <div className="relative h-24 w-24">
+                  <motion.div
+                    // initial={{ opacity: 0 }}
+                    className="relative h-24 w-24"
+                  >
                     <Image src={imagesTop[0].src} layout="fill" />
-                  </div>
-                  <p className="text-white text-center">{imagesTop[0].text}</p>
+                  </motion.div>
+                  <motion.p className="text-white text-center">
+                    {imagesTop[0].text}
+                  </motion.p>
                 </motion.div>
+
                 <motion.div
-                  className="flex flex-col items-center w-24"
+                  className="flex flex-col items-center w-24  -translate-y-[500px] translate-x-[300px]  "
+                  id="canales"
                   style={{
-                    x: movementFromRightAnimation,
-                    rotate: rotationMovement
+                    translateX: canalesMovementX,
+                    translateY: canalesMovementY,
+                    scale: objectScaling
                   }}
                 >
                   <div className="relative h-24 w-24">
@@ -114,10 +171,12 @@ export const RotatingCirclesIntoCellphone = () => {
               <div className="flex flex-row justify-around w-1/3 ">
                 <motion.div
                   style={{
-                    y: movementFromLeftAnimation,
-                    rotate: rotationMovement
+                    translateX: tecnologiaMovementX,
+                    translateY: tecnologiaMovementY,
+                    scale: objectScaling
                   }}
-                  className="flex flex-col items-center w-24"
+                  id="tecnologia"
+                  className="flex flex-col items-center w-24 -translate-y-[500px] "
                 >
                   <div className="relative h-24 w-24">
                     <Image src={imagesCenter[0].src} layout="fill" />
@@ -131,10 +190,11 @@ export const RotatingCirclesIntoCellphone = () => {
               <div className="flex flex-row justify-around w-1/3 ">
                 <motion.div
                   style={{
-                    x: movementFromLeftAnimation,
-                    rotate: rotationMovement
+                    translateX: seguimientoMovementX,
+                    translateY: seguimientoMovementY,
+                    scale: objectScaling
                   }}
-                  className="flex flex-col items-center w-24"
+                  className="flex flex-col items-center w-24 translate-y-[100px] -translate-x-[300px] "
                 >
                   <div className="relative h-24 w-24">
                     <Image src={imagesBottom[0].src} layout="fill" />
@@ -145,10 +205,11 @@ export const RotatingCirclesIntoCellphone = () => {
                 </motion.div>
                 <motion.div
                   style={{
-                    x: movementFromRightAnimation,
-                    rotate: rotationMovement
+                    translateX: uxMovementX,
+                    translateY: uxMovementY,
+                    scale: objectScaling
                   }}
-                  className="flex flex-col items-center w-24"
+                  className="flex flex-col items-center w-24  translate-y-[100px] translate-x-[300px] "
                 >
                   <div className="relative h-24 w-24">
                     <Image src={imagesBottom[1].src} layout="fill" />
