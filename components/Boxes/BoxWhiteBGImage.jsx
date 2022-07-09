@@ -40,8 +40,8 @@ export const BoxWhiteBGImage = () => {
           className="container bg-white max-w-full "
           style={{ height: '600vh' }}
         >
-          <div className=" h-[100vh] absolute z-10 flex flex-col items-center justify-center px-20  w-1/2">
-            <p className="text-white text-5xl">
+          <div className=" h-[100vh] absolute z-10 flex flex-col items-center justify-center px-20 w-1/2 ">
+            <p className="text-white text-4xl font-FiraSans font-normal">
               Mejorar el bienestar de las personas a través de programas de
               acompañamiento para la{' '}
               <span className="text-accent">
@@ -61,7 +61,7 @@ export const BoxWhiteBGImage = () => {
               >
                 <div className="w-3/4 flex flex-col gap-4 ">
                   <h2 className="text-primary">¿Cómo lo hacemos?</h2>
-                  <ul className="gap-2 flex flex-col">
+                  <ul className="gap-2 flex flex-col list-disc list-inside">
                     <li>Know how.</li>
                     <li>Profesionales propios inhouse.</li>
                     <li>Seguimiento y derivación.</li>

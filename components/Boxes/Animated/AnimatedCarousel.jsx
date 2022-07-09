@@ -21,7 +21,7 @@ const slideAnimation = {
 }
 
 export const AnimatedCarousel = ({ programs }) => {
-  console.log(programs, 'programs')
+  // console.log(programs, 'programs')
 
   const carouselRef = useRef()
   const innerCarouselRef = useRef()
@@ -38,7 +38,7 @@ export const AnimatedCarousel = ({ programs }) => {
   const xVar = useTransform(
     scrollYProgress,
     [carouselStart + carouselStart * 0.05, carouselEnds],
-    ['0vw', '-240vw']
+    ['10vw', '-400vw']
   )
 
   return (
@@ -46,7 +46,7 @@ export const AnimatedCarousel = ({ programs }) => {
       <section ref={carouselRef} className="bg-white w-full h-[300vh]">
         <div
           ref={innerCarouselRef}
-          className="sticky-wrapper debug1 sticky top-0 h-[80vh] w-full flex flex-col items-start justify-center overflow-hidden"
+          className="sticky-wrapper  sticky top-0 h-[80vh] w-full flex flex-col items-start justify-center "
         >
           <div className="md:w-1/2 text-primary flex flex-col items-center justify-center py-10  mx-auto">
             <h2 className="text-primary">Nuestros programas</h2>
@@ -56,50 +56,53 @@ export const AnimatedCarousel = ({ programs }) => {
               programas complementarios entre si.
             </p>
           </div>
-          <AnimatePresence>
-            <motion.div
-              drag="x"
-              dragConstraints={carouselRef}
-              className=" flex gap-12 h-full w-full"
-              style={{ x: xVar }}
-            >
-              {programs &&
-                programs.map((item, idx) => (
-                  <motion.div
-                    {...slideAnimation}
-                    key={item.id}
-                    className="min-w-[30vw] min-h-[30vh] flex flex-col items-center justify-center relative debug2"
-                  >
-                    <div className="relative w-full h-full debug1">
-                      <Image
-                        src={item._embedded['wp:featuredmedia'][0].source_url}
-                        layout="fill"
-                        objectFit="cover"
-                        objectPosition="center"
-                      />
-                    </div>
-                    <div className="w-full h-16 flex flex-row items-center justify-center bg-primary absolute bottom-5 px-2 gap-5 ">
-                      <div className="h-20 w-20  debug1 rounded-2xl relative bg-primary  ">
-                        <Image
-                          src={item.acf.icon.url}
-                          layout="fill"
-                          objectFit="contain"
-                          className=""
-                        />
-                      </div>
-                      <div className="">
-                        <p>
-                          {item.acf.labelBlue + ' '}
-                          <span className="text-accent">
-                            {item.acf.labelAccent}
-                          </span>
-                        </p>
+
+          <motion.div
+            drag="x"
+            dragConstraints={carouselRef}
+            className="flex gap-12 h-full w-screen "
+            style={{ x: xVar }}
+          >
+            {programs &&
+              programs.map((item, idx) => (
+                <motion.div
+                  {...slideAnimation}
+                  key={item.id}
+                  className="h-64 w-96 relative  "
+                >
+                  <div className="relative h-64 w-96">
+                    <Image
+                      src={item._embedded['wp:featuredmedia'][0].source_url}
+                      layout="fill"
+                      objectFit="cover"
+                      className=""
+                    />
+                  </div>
+                  <div className="w-full h-12 flex flex-row items-center justify-between bg-white absolute bottom-5  gap-5  ">
+                    <div className="rounded-2xl relative bg-primary  -translate-x-1/2">
+                      <div className="h-14 w-14 flex items-center justify-center">
+                        <div className="h-12 w-12 relative ">
+                          <Image
+                            src={item.acf.icon.url}
+                            layout="fill"
+                            objectFit="contain"
+                            className=""
+                          />
+                        </div>
                       </div>
                     </div>
-                  </motion.div>
-                ))}
-            </motion.div>
-          </AnimatePresence>
+                    <div className=" w-full">
+                      <p className="text-primary">
+                        {item.acf.labelBlue + ' '}
+                        <span className="text-primary font-bold">
+                          {item.acf.labelAccent}
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+          </motion.div>
         </div>
       </section>
     </div>

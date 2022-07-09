@@ -6,7 +6,7 @@ import { Mobile } from './NavBar/Mobile'
 
 export const NavBar = () => {
   return (
-    <div className="navbar flex flex-row h-[10vh] w-screen ">
+    <div className="navbar flex flex-row h-[10vh] w-screen  sticky bg-gradient-to-b from-white/45 to-blue-500">
       <div className="md:hidden ">
         <Mobile />
       </div>

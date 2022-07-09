@@ -32,7 +32,7 @@ export const Footer = () => {
             return (
               <Link href={link.href} passHref key={link.title}>
                 <div className="flex flex-row gap-10 justify-start">
-                  <p className="link link-hover hover:underline hover:opacity-100 opacity-50 text-xl">
+                  <p className="link link-hover hover:underline hover:opacity-100 opacity-50 text-base">
                     {link.title}
                   </p>
                 </div>

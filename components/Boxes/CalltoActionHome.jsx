@@ -49,13 +49,13 @@ export const CalltoActionHome = ({ question, buttonText }) => {
           whileInView="visible"
           className="flex flex-col items-center justify-center gap-10  w-full max-w-3xl mx-auto h-full px-4"
         >
-          <h1 className="text-5xl font-semibold ">{question}</h1>
+          <h1 className="text-4xl font-semibold ">{question}</h1>
           <Link href="/contacto">
             <motion.button
               variants={buttonsVariants}
               whileHover={'hover'}
               whileInView="visible"
-              className="rounded-full h-10 btn-primary w-48"
+              className="rounded-full h-10 btn-primary w-fit px-5"
             >
               {buttonText}
             </motion.button>

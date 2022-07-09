@@ -1,6 +1,7 @@
 import Image from 'next/image'
-import React from 'react'
-import { motion } from 'framer-motion'
+import { useRef } from 'react'
+import { motion, useTransform, useViewportScroll } from 'framer-motion'
+import { useElementViewportPosition } from '../hooks/useElementViewPortPosition'
 
 const stats = [
   {
@@ -23,6 +24,21 @@ const stats = [
 ]
 
 export const Numbers = () => {
+  const ref = useRef(null)
+
+  const {
+    position: [start, end]
+  } = useElementViewportPosition(ref)
+  const { scrollYProgress } = useViewportScroll()
+  const range = [
+    ((start + end) / 4) * 1,
+    ((start + end) / 4) * 2,
+    ((start + end) / 4) * 3,
+    ((start + end) / 4) * 4
+  ]
+
+  const numbersAnimation = useTransform(scrollYProgress, range, [1, 2, 3, 4])
+
   const boxVariant = {
     hidden: {
       opacity: 0
@@ -37,29 +53,33 @@ export const Numbers = () => {
     }
   }
   return (
-    <div className="h-screen ">
-      <div className="relative h-screen w-full flex flex-col items-center">
-        <div className="absolute w-full h-full">
-          <Image
-            src={'/img/home/FondoCifras1.png'}
-            layout="fill"
-            objectFit="contain"
-            className=""
-            alt="experiencia unica"
-          />
-        </div>
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          variants={boxVariant}
-          className=" w-full text-white relative flex flex-col h-full items-center justify-center"
-        >
-          <div className="flex flex-col items-center md:-translate-y-10 -translate-y-5">
-            <h2 className="text-accent lg:text-[100px]">+1.000.000</h2>
-            <p>de beneficiarios</p>
+    <div className="w-screen">
+      <section ref={ref}>
+        <div className="container max-w-full h-[450vh] bg-white overflow-visible">
+          <div className=" sticky-wrapper sticky top-0 w-screen h-screen flex flex-col items-start justify-center  ">
+            <div className="absolute w-full h-full">
+              <Image
+                src={'/img/home/FondoCifras1.png'}
+                layout="fill"
+                objectFit="contain"
+                className=""
+                alt="experiencia unica"
+              />
+            </div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              variants={boxVariant}
+              className=" w-full text-white relative flex flex-col h-full items-center justify-center"
+            >
+              <div className="flex flex-col items-center md:-translate-y-10 -translate-y-5">
+                <h2 className="text-accent lg:text-[100px]">+1.000.000</h2>
+                <p>de beneficiarios</p>
+              </div>
+            </motion.div>
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </section>
     </div>
   )
 }

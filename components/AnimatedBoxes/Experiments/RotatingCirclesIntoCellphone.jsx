@@ -13,11 +13,12 @@ export const RotatingCirclesIntoCellphone = () => {
 
   const { scrollYProgress } = useViewportScroll()
 
-  const range = [start - start * 0.1, end - end * 0.02]
-  const opacityRange = useTransform(scrollYProgress, range, [0, 1])
+  const range = [start - start * 0.1, (start + end) / 2, end - end * 0.02]
+  const rangeOpacity = [start, ((start + end) / 100) * 99, end - end * 0.05]
+  const opacityRange = useTransform(scrollYProgress, range, [0, 1, 1])
 
-  const initialInhouseMovementX = [-500, 0]
-  const initialInhouseMovementY = [-500, 0]
+  const initialInhouseMovementX = ['-40vw', '-25vw', '0vw']
+  const initialInhouseMovementY = ['-10vh', '-5vh', '0vh']
   const inhouseMovementX = useTransform(
     scrollYProgress,
     range,
@@ -29,8 +30,8 @@ export const RotatingCirclesIntoCellphone = () => {
     initialInhouseMovementY
   )
 
-  const initialCanalesMovementX = [300, 0]
-  const initialCanalesMovementY = [-500, 0]
+  const initialCanalesMovementX = ['50vw', '25vw', '0vw']
+  const initialCanalesMovementY = ['-40vh', '-5vh', '0vh']
   const canalesMovementX = useTransform(
     scrollYProgress,
     range,
@@ -42,8 +43,8 @@ export const RotatingCirclesIntoCellphone = () => {
     initialCanalesMovementY
   )
 
-  const initialTecnologiaMovementX = [-50, 0]
-  const initialTecnologiaMovementY = [-500, 0]
+  const initialTecnologiaMovementX = ['-50vw', '-15vw', '0vw']
+  const initialTecnologiaMovementY = ['-150vh', '-25vh', '0vh']
   const tecnologiaMovementX = useTransform(
     scrollYProgress,
     range,
@@ -55,8 +56,8 @@ export const RotatingCirclesIntoCellphone = () => {
     initialTecnologiaMovementY
   )
 
-  const initialSeguimientoMovementX = [-300, 0]
-  const initialSeguimientoMovementY = [100, 0]
+  const initialSeguimientoMovementX = ['-50vw', '-20vw', '0vw']
+  const initialSeguimientoMovementY = ['10vh', '5vh', '0vh']
   const seguimientoMovementX = useTransform(
     scrollYProgress,
     range,
@@ -67,9 +68,9 @@ export const RotatingCirclesIntoCellphone = () => {
     range,
     initialSeguimientoMovementY
   )
-  const initialUxMovementX = [300, 0]
-  const initiallUxMovementY = [100, 0]
-  const uxScale = [2, 1]
+  const initialUxMovementX = ['30vw', '10vw', '0vw']
+  const initiallUxMovementY = ['30vh', '5vh', '0vh']
+  const uxScale = [2, 1.2, 1]
   const uxMovementX = useTransform(scrollYProgress, range, initialUxMovementX)
   const uxMovementY = useTransform(scrollYProgress, range, initiallUxMovementY)
   const objectScaling = useTransform(scrollYProgress, range, uxScale)
@@ -128,24 +129,23 @@ export const RotatingCirclesIntoCellphone = () => {
   return (
     <div className="w-screen">
       <section ref={ref}>
-        <div className="container max-w-full h-[450vh] bg-primary overflow-visible">
+        <div className="container max-w-full h-[350vh] bg-primary overflow-visible">
           <div className=" sticky-wrapper sticky top-0 w-screen h-screen flex flex-col items-start justify-center  ">
             <div className="bg-[url('/img/canales/cellphone.svg')] bg-center bg-no-repeat bg-contain h-2/3 w-full flex flex-col items-center justify-around ">
               <div className="iconLine flex flex-row justify-around w-1/3  ">
                 <motion.div
-                  className="flex flex-col items-center w-24 -translate-y-[500px] -translate-x-[300px] "
+                  className="flex flex-col items-center w-24 debug1"
                   id="inhouse"
                   style={{
                     translateX: inhouseMovementX,
                     translateY: inhouseMovementY,
                     scale: objectScaling
+                    // rotate: rotationMovement,
+                    // opacity: opacityRange
                   }}
                 >
-                  <motion.div
-                    // initial={{ opacity: 0 }}
-                    className="relative h-24 w-24"
-                  >
-                    <Image src={imagesTop[0].src} layout="fill" />
+                  <motion.div className="relative h-24 w-24 debug2 rounded-full bg-accent">
+                    <Image src={imagesTop[0].src} layout="fill" className="" />
                   </motion.div>
                   <motion.p className="text-white text-center">
                     {imagesTop[0].text}
@@ -159,6 +159,8 @@ export const RotatingCirclesIntoCellphone = () => {
                     translateX: canalesMovementX,
                     translateY: canalesMovementY,
                     scale: objectScaling
+                    // rotate: rotationMovement,
+                    // opacity: opacityRange
                   }}
                 >
                   <div className="relative h-24 w-24">
@@ -174,6 +176,8 @@ export const RotatingCirclesIntoCellphone = () => {
                     translateX: tecnologiaMovementX,
                     translateY: tecnologiaMovementY,
                     scale: objectScaling
+                    // rotate: rotationMovement,
+                    // opacity: opacityRange
                   }}
                   id="tecnologia"
                   className="flex flex-col items-center w-24 -translate-y-[500px] "
@@ -193,21 +197,35 @@ export const RotatingCirclesIntoCellphone = () => {
                     translateX: seguimientoMovementX,
                     translateY: seguimientoMovementY,
                     scale: objectScaling
+                    // rotate: rotationMovement
                   }}
-                  className="flex flex-col items-center w-24 translate-y-[100px] -translate-x-[300px] "
+                  className="flex flex-col items-center w-24 translate-y-[100px] -translate-x-[300px]  relative"
                 >
-                  <div className="relative h-24 w-24">
+                  <div className=" absolute h-24 w-24 rounded-full bg-[#00EEFF]"></div>
+                  <motion.div
+                    style={{
+                      opacity: opacityRange
+                    }}
+                    className="relative h-24 w-24"
+                  >
                     <Image src={imagesBottom[0].src} layout="fill" />
-                  </div>
-                  <p className="text-white text-center">
+                  </motion.div>
+                  <motion.p
+                    style={{
+                      opacity: opacityRange
+                    }}
+                    className="text-white text-center"
+                  >
                     {imagesBottom[0].text}
-                  </p>
+                  </motion.p>
                 </motion.div>
                 <motion.div
                   style={{
                     translateX: uxMovementX,
                     translateY: uxMovementY,
                     scale: objectScaling
+                    // rotate: rotationMovement,
+                    // opacity: opacityRange
                   }}
                   className="flex flex-col items-center w-24  translate-y-[100px] translate-x-[300px] "
                 >

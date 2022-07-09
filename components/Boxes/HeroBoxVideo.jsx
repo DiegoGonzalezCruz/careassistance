@@ -24,14 +24,17 @@ export const HeroBoxVideo = ({
         <div className="text-white flex flex-col z-20 w-full h-full relative ">
           <motion.div
             variants={buttonsVariants}
-            className="text-white flex flex-col z-20 relative  py-4 h-full w-screen  bg-primary/50 items-center justify-center "
+            className="text-white flex flex-col z-20 relative h-full w-screen  bg-primary/50 items-center justify-center "
           >
-            <div className="items-start  flex flex-col  w-3/4 gap-4">
+            <div className="items-start  flex flex-col  w-3/4 gap-2 ">
               <motion.p variants={buttonsVariants} className="my-0  ">
                 {prevText}
               </motion.p>
 
-              <motion.h1 variants={buttonsVariants} className="  ">
+              <motion.h1
+                variants={buttonsVariants}
+                className="font-Comfortaa  "
+              >
                 {first} <br /> <span className="text-accent ">{accent}</span>
               </motion.h1>
 
