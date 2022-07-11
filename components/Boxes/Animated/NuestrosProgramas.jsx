@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 export const NuestrosProgramas = ({ programs }) => {
   const [program, setProgram] = useState(0)
 
-  console.log(programs)
+  // console.log(programs)
   return (
     <div className="min-h-[100vh] h-auto w-s  creen bg-primary debug1">
       <div className="wrapper h-full w-10/12 mx-auto debug1">

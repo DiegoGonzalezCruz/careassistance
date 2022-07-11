@@ -44,8 +44,8 @@ export const AnimatedCarousel = ({ programs }) => {
   )
 
   useEffect(() => {
-    console.log(innerCarouselRef.current.offsetWidth, 'innerCarouselRef')
-    console.log(innerCarouselRef.current.scrollWidth, 'innerCarouselRef')
+    // console.log(innerCarouselRef.current.offsetWidth, 'innerCarouselRef')
+    // console.log(innerCarouselRef.current.scrollWidth, 'innerCarouselRef')
 
     setWidth(
       innerCarouselRef.current.scrollWidth -

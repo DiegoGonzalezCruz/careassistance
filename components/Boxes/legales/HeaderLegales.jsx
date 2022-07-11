@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 
 export const HeaderLegales = ({ title }) => {
-  console.log(title, 'title')
+  // console.log(title, 'title')
   return (
     <div className="w-screen h-[50vh] bg-white relative">
       <div className="relative w-full h-full">

@@ -7,7 +7,7 @@ import { overlayVariants } from '../styles/animations'
 
 const Contacto = () => {
   const handleSubmit = (values) => {
-    console.log(values)
+    // console.log(values)
   }
   return (
     <div className='w-screen'>

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 export const Testimonios = ({ testimonials }) => {
-  console.log(testimonials, 'testimonials received')
+  // console.log(testimonials, 'testimonials received')
   // const [activeTestimonial, setActiveTestimonial] = useState(testimonials[0])
 
   // const paginate = (newDirection) => {

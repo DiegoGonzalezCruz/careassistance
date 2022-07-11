@@ -13,12 +13,12 @@ const PoliticasPrivacidad = ({ pages }) => {
 
   useEffect(() => {
     const text = pages.filter(page => page.slug === legales)
-    console.log(text, 'textLegales')
+    // console.log(text, 'textLegales')
     setTextLegales(text[0])
 
   }, [legales, pages])
 
-  console.log(textLegales, 'textLegales ***')
+  // console.log(textLegales, 'textLegales ***')
 
 
   return (
@@ -38,6 +38,6 @@ export async function getStaticProps() {
   // console.log(programs, 'programs')
 
   return {
-    props: { pages }, // will be passed to the page component as props
+    props: pages, // will be passed to the page component as props
   }
 }

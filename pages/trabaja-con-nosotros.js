@@ -1,5 +1,5 @@
 import React from 'react'
-import { Legales } from '../components/Boxes/legales/legales'
+
 import { FormSimple } from '../components/Forms/FormSimple'
 
 const text =
@@ -58,10 +58,10 @@ const text =
 const TrabajaNosotros = () => {
   return (
     <div className='w-screen mx-auto bg-primary'>
-      <Legales title='Trabaja con nosotros' text={text} />
+      {/* <Legales title='Trabaja con nosotros' text={text} /> */}
 
 
-      <FormSimple />
+      {/* <FormSimple /> */}
 
     </div>
   )

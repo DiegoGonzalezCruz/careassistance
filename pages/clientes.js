@@ -8,7 +8,7 @@ import { Testimonios } from '../components/Boxes/Testimonios/Testimonios'
 import { getTestimonials } from '../laboratory/lib/getTestimonials'
 
 const Clientes = ({ testimonials }) => {
-  console.log(testimonials)
+  // console.log(testimonials)
   return (
     <div>
       <Head>

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 
 export function useElementViewportPosition(inputRef) {
-  const ref = inputRef || useRef()
+  const ref = inputRef
 
   const [position, setPosition] = useState([0, 0])
 
