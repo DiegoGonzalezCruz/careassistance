@@ -18,7 +18,11 @@ export const Testimonios = ({ testimonials }) => {
     <div className="bg-white text-center min-h-[50vh] w-screen ">
       <div className="h-full w-3/4 mx-auto flex flex-col items-center justify-center ">
         <div className="h-24 w-24 relative self-start">
-          <Image src={'/img/clientes/ClientesIcon.png'} layout="fill" />
+          <Image
+            src={'/img/clientes/ClientesIcon.png'}
+            layout="fill"
+            alt="clientes"
+          />
         </div>
         <div className="divider"></div>
         {testimonials &&

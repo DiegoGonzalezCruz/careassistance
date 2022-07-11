@@ -145,7 +145,12 @@ export const RotatingCirclesIntoCellphone = () => {
                   }}
                 >
                   <motion.div className="relative h-24 w-24 debug2 rounded-full bg-accent">
-                    <Image src={imagesTop[0].src} layout="fill" className="" />
+                    <Image
+                      src={imagesTop[0].src}
+                      layout="fill"
+                      className=""
+                      alt=""
+                    />
                   </motion.div>
                   <motion.p className="text-white text-center">
                     {imagesTop[0].text}
@@ -164,7 +169,7 @@ export const RotatingCirclesIntoCellphone = () => {
                   }}
                 >
                   <div className="relative h-24 w-24">
-                    <Image src={imagesTop[1].src} layout="fill" />
+                    <Image src={imagesTop[1].src} layout="fill" alt="" />
                   </div>
                   <p className="text-white text-center">{imagesTop[1].text}</p>
                 </motion.div>
@@ -183,7 +188,7 @@ export const RotatingCirclesIntoCellphone = () => {
                   className="flex flex-col items-center w-24 -translate-y-[500px] "
                 >
                   <div className="relative h-24 w-24">
-                    <Image src={imagesCenter[0].src} layout="fill" />
+                    <Image src={imagesCenter[0].src} layout="fill" alt="" />
                   </div>
                   <p className="text-white text-center">
                     {imagesCenter[0].text}
@@ -208,7 +213,7 @@ export const RotatingCirclesIntoCellphone = () => {
                     }}
                     className="relative h-24 w-24"
                   >
-                    <Image src={imagesBottom[0].src} layout="fill" />
+                    <Image src={imagesBottom[0].src} layout="fill" alt="" />
                   </motion.div>
                   <motion.p
                     style={{
@@ -230,7 +235,7 @@ export const RotatingCirclesIntoCellphone = () => {
                   className="flex flex-col items-center w-24  translate-y-[100px] translate-x-[300px] "
                 >
                   <div className="relative h-24 w-24">
-                    <Image src={imagesBottom[1].src} layout="fill" />
+                    <Image src={imagesBottom[1].src} layout="fill" alt="" />
                   </div>
                   <p className="text-white text-center">
                     {imagesBottom[1].text}

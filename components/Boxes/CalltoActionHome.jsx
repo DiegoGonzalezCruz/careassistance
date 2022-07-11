@@ -19,7 +19,7 @@ const fig1 = (
       rx="149.5"
       transform="rotate(-45 -716.879 781.578)"
       stroke="#6666FF"
-      stroke-width="3"
+      strokeWidth="3"
     />
     <rect
       y="-4.24264"
@@ -29,7 +29,7 @@ const fig1 = (
       transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 -141.001 662.793)"
       fill="white"
       stroke="#6666FF"
-      stroke-width="6"
+      strokeWidth="6"
     />
   </svg>
 )

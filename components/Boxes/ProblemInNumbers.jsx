@@ -36,6 +36,7 @@ export const ProblemInNumbers = () => {
                     src={`${problem.img}`}
                     layout="fill"
                     objectFit="contain"
+                    alt=""
                   />
                 </div>
                 <h2 className="text-primary text-5xl">{problem.percentage}</h2>

@@ -14,7 +14,11 @@ export const NuestrosProgramas = ({ programs }) => {
               Nuestros <br /> Programas
             </h2>
             <div className="w-40 h-40 relative">
-              <Image src="/img/programas/clinicavirtual.svg" layout="fill" />
+              <Image
+                src="/img/programas/clinicavirtual.svg"
+                layout="fill"
+                alt=""
+              />
             </div>
           </div>
           <p>

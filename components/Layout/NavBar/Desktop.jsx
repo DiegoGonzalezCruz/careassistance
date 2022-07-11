@@ -28,6 +28,7 @@ export const Desktop = () => {
             src="/img/logo/Flag_of_Chile.svg"
             layout="fill"
             className="rounded-full"
+            alt="desktop"
           />
         </div>
         <div className="relative">{caretDown}</div>

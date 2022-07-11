@@ -59,6 +59,7 @@ export const Footer = () => {
             src={'/img/home/massanos.svg'}
             layout="fill"
             objectFit="contain"
+            alt="footer"
           />
         </div>
         <div className="grid grid-flow-col gap-4">

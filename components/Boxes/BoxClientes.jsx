@@ -12,6 +12,7 @@ export const BoxClientes = () => {
             layout="fill"
             objectFit="contain"
             className=""
+            alt="clientes"
           />
         </div>
       </div>

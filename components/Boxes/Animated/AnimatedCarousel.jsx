@@ -86,6 +86,7 @@ export const AnimatedCarousel = ({ programs }) => {
                       layout="fill"
                       objectFit="cover"
                       className=""
+                      alt="programa"
                     />
                   </div>
                   <div className="w-full h-12 flex flex-row items-center justify-between bg-white absolute bottom-5  gap-5  ">
@@ -97,6 +98,7 @@ export const AnimatedCarousel = ({ programs }) => {
                             layout="fill"
                             objectFit="contain"
                             className=""
+                            alt="programa"
                           />
                         </div>
                       </div>

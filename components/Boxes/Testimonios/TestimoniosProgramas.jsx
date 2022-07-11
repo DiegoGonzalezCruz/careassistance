@@ -6,14 +6,19 @@ export const TestimoniosProgramas = () => {
     <div className="w-screen h-[30vh] ">
       <div className="w-3/4 mx-auto h-full flex flex-row items-center justify-center  ">
         <div className="w-1/5 h-full relative  mx-5">
-          <Image src="/img/programas/satisfaccion.svg" layout="fill" />
+          <Image
+            src="/img/programas/satisfaccion.svg"
+            layout="fill"
+            alt="testimonios"
+          />
         </div>
         <div className="w-4/5 h-full relative flex flex-col gap-1">
           <h2 className="text-base text-primary">Ricardo Tapia</h2>
           <p className="text-primary">Beneficiario desde el 2019</p>
           <div className="divider"></div>
           <div className="h-full w-full flex flex-row gap-5">
-            <div className="text-accent text-[10rem] self-start "> "</div>
+            <div className="text-accent text-[10rem] self-start "> &quot;</div>{' '}
+            {/* //TODO: Maybe fix */}
             <div>
               <p>
                 Nuestra experiencia con los Servicios de la Clínica Virtual ha

@@ -16,7 +16,7 @@ const PoliticasPrivacidad = ({ pages }) => {
     console.log(text, 'textLegales')
     setTextLegales(text[0])
 
-  }, [legales])
+  }, [legales, pages])
 
   console.log(textLegales, 'textLegales ***')
 
