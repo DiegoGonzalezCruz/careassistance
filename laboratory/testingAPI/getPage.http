@@ -1,0 +1,2 @@
+GET http://54.161.240.140/wp-json/wp/v2/pages
+content-type: application/json

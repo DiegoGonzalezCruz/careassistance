@@ -7,7 +7,8 @@ export const BoxWithImageRight = ({
   title,
   text,
   imagePosition,
-  button = ''
+  button = '',
+  bgColor = 'bg-primary'
 }) => {
   const iconVariants = {
     onscreen: {
@@ -24,7 +25,7 @@ export const BoxWithImageRight = ({
   }
 
   return (
-    <div className=" bg-primary flex overflow-hidden min-h-[80vh] w-screen">
+    <div className={`${bgColor}  flex overflow-hidden min-h-[80vh] w-screen`}>
       <div className="flex flex-col md:flex-row-reverse w-full items-center justify-center ">
         <motion.div
           whileInView="onscreen"
@@ -48,7 +49,9 @@ export const BoxWithImageRight = ({
           whileInView="onscreen"
           viewport={{ once: false, amount: 0.1 }}
           initial="offscreen"
-          className=" text-white w-full h-full px-5 flex flex-col items-center justify-center "
+          className={`${
+            bgColor === 'bg-primary' ? 'text-white' : 'text-black'
+          } w-full h-full px-5 flex flex-col items-center justify-center `}
         >
           <div className=" w-3/4 mx-auto">
             <h2 className="font-bold text-accent">{title}</h2>

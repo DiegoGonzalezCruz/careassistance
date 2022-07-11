@@ -4,10 +4,12 @@ import { ComoFuncionanNuestrosProgramas } from '../components/Boxes/Animated/Com
 import { NuestrosProgramas } from '../components/Boxes/Animated/NuestrosProgramas'
 import { NuestroProposito } from '../components/Boxes/NuestroProposito'
 import { CanalesAtencion } from '../components/Boxes/CanalesAtencion'
-import { CalltoAction } from '../components/Boxes/CalltoAction'
+
 
 import { getProgramas } from '../laboratory/lib/getProgramas'
 import { HeroBoxProgramas } from '../components/Boxes/HeroBoxProgramas'
+import { TestimoniosProgramas } from '../components/Boxes/Testimonios/TestimoniosProgramas'
+import { CalltoActionHome } from '../components/Boxes/CalltoActionHome'
 
 const Programas = ({ programs }) => {
   return (
@@ -27,9 +29,11 @@ const Programas = ({ programs }) => {
       />
       <ComoFuncionanNuestrosProgramas programs={programs} />
       <NuestrosProgramas programs={programs} />
-      <NuestroProposito />
+      {/* <NuestroProposito /> */}
       <CanalesAtencion />
-      <CalltoAction question={'¿Quieres sumar estos beneficios a tu empresa?'} buttonText={'Contáctenme'} />
+      <TestimoniosProgramas />
+      <CalltoActionHome buttonText={'Quiero que me contacten'} question={'Te gustaría más información de nuestros programas de Salud y Bienestar?'} />
+
 
     </div>
   )

@@ -1,8 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
-import { HeroBox } from '../components/Boxes/HeroBox'
 import { NoticiasDestacadas } from '../components/Blog/Destacadas'
 import { MasNoticias } from '../components/Blog/MasNoticias'
+import { HeroBoxBlog } from '../components/Boxes/HeroBoxBlog'
 
 const Noticias = () => {
   return (
@@ -13,12 +13,12 @@ const Noticias = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <HeroBox
-        prevText='Noticias'
-        first='Bienvenidos a nuestro'
+      <HeroBoxBlog
+        prevText='Bienvenidos a nuestro'
+        first='blog'
         accent='blog'
         sub='Te intivamos a conocer más de nosotros a través de nuestras noticias y artículos de interés.'
-        image='/images/manos-unidas.png'
+        image='/img/blog/headerblog.png'
       // buttonText='Ver programas'
       // buttonHref='/programas'
       />

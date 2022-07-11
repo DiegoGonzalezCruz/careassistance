@@ -27,7 +27,7 @@ export const Footer = () => {
       </div>
       {/* <div className="w-3 border-2 border-white self-center"></div> */}
       <div className=" links w-2/4 flex flex-col gap-10 md:items-start px-10 justify-between h-full ">
-        <div className="wrapper  h-full flex flex-col items-start justify-between">
+        <div className="wrapper w-full h-full my-5 flex flex-col items-start justify-between">
           {footer1.map((link) => {
             return (
               <Link href={link.href} passHref key={link.title}>

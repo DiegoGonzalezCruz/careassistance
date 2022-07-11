@@ -3,7 +3,7 @@ import React from 'react'
 
 const canales = [
   {
-    title: 'Portal Web',
+    title: 'Diseño responsivo',
     image: '/images/iconos_canales_atencion/Portal_Web.svg'
   },
   {
@@ -30,34 +30,32 @@ const canales = [
 
 export const CanalesAtencion = () => {
   return (
-    <div className="w-screen py-14 bg-primary text-white h-full ">
-      <div className="w-full px-10 flex flex-col gap-10 items-center mx-auto xl:w-1/2">
-        <h2>Nuestros canales de atención</h2>
+    <div className="w-screen py-14 bg-white text-black h-full ">
+      <div className="px-10 flex flex-col gap-10 items-center mx-auto xl:w-1/2 w-3/4">
+        <h2 className="text-primary">Nuestros canales de atención</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. A porro non
-          tenetur placeat sit? Eligendi beatae commodi optio cum culpa ipsam
-          odio neque voluptatibus quibusdam!
+          Además ponemos a disposición de nuestros socios, canales de atención
+          exclusivos y recursos de comunicación estratégica, creados a la medida
+          de sus necesidades.
         </p>
       </div>
-      <div className="md:w-3/4 lg:w-3/4 xl:w-full mx-auto flex flex-wrap gap-4 my-10  items-center justify-center ">
+      <div className="md:w-3/4 lg:w-3/4 mx-auto flex flex-wrap gap-4 my-10  items-center justify-center ">
         {canales.map((canal) => {
           return (
             <div
               key={canal.title}
-              className=" flex flex-row items-center w-48 xl:w-96 bg-accent rounded-xl"
+              className=" flex flex-col items-center justify-center w-1/3 h-48 xl:w-96 hover:bg-secondary rounded-xl gap-4"
             >
-              <div className="relative bg-white h-20 w-20 rounded-l-xl py-4 min-w-48">
-                <div className="relative bg-white h-full w-full rounded-l-xl">
-                  <Image
-                    src={canal.image}
-                    layout="fill"
-                    objectFit="contain"
-                    className="rounded"
-                    alt="Icono de canal de atención"
-                  />
-                </div>
+              <div className="relative h-20 w-20 rounded-l-xl">
+                <Image
+                  src={canal.image}
+                  layout="fill"
+                  objectFit="contain"
+                  className="rounded"
+                  alt="Icono de canal de atención"
+                />
               </div>
-              <div className="w-3/4 text-center">
+              <div className="w-3/4 text-center text-accent">
                 <p>{canal.title}</p>
               </div>
             </div>

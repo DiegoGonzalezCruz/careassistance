@@ -1,12 +1,16 @@
+import Image from 'next/image'
 import React from 'react'
 
-export const TestimoniosBox = ({ name, title, text }) => {
+export const TestimoniosBox = ({ name, title, text, img }) => {
   return (
-    <div className="card w-96 bg-base-100 shadow-xl  m-10">
-      <div className="card-body flex flex-col items-start ">
-        <p className="text-neutral text-left">{text}</p>
-        <h3 className="card-title ">{name}</h3>
-        <h4>{title}</h4>
+    <div className="w-full bg-base-100 ">
+      <div className=" flex flex-col items-start ">
+        <p className="text-left">{text.replace(/<[^>]*>?/gm, '')}</p>
+        <div className="relative w-24 h-24">
+          <Image src={img} layout="fill" objectFit="contain" />
+        </div>
+        <h3 className=" text-base font-bold">{name}</h3>
+        <p className="text-base font-bold text-primary">{title}</p>
       </div>
     </div>
   )
