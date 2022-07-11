@@ -14,11 +14,12 @@ const Nosotros = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HeroBox
-        prevText='Hola,'
-        first='Somos'
-        accent='Care Assistance'
-        sub='Y contamos con la plataforma de salud y bienestar más avanzada de Latinoamérica'
-        image='/images/IMG_12.jpg'
+        prevText='Buscamos'
+        text='paradigmas'
+        accent='revolucionar'
+        sub='Transformamos los desafíos en oportunidades.'
+        image='/img/nosotros/Nosotros-Banner1.png'
+        buttonText='Nuestros clientes'
       />
       <InfiniteBox />
       <MapBox />

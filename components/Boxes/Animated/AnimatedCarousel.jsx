@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import {
   AnimatePresence,
@@ -12,8 +12,8 @@ import Image from 'next/image'
 
 const slideAnimation = {
   variants: {
-    full: { opacity: 1, color: '#fff' },
-    partial: { opacity: 0.5 }
+    full: { opacity: 1, scale: 1.1 },
+    partial: { opacity: 0.5, scale: 0.8 }
   },
   initial: 'partial',
   whileInView: 'full',
@@ -22,6 +22,8 @@ const slideAnimation = {
 
 export const AnimatedCarousel = ({ programs }) => {
   // console.log(programs, 'programs')
+
+  const [width, setWidth] = useState(0)
 
   const carouselRef = useRef()
   const innerCarouselRef = useRef()
@@ -38,17 +40,24 @@ export const AnimatedCarousel = ({ programs }) => {
   const xVar = useTransform(
     scrollYProgress,
     [carouselStart + carouselStart * 0.05, carouselEnds],
-    ['10vw', '-400vw']
+    [10, width * -1]
   )
+
+  useEffect(() => {
+    console.log(innerCarouselRef.current.offsetWidth, 'innerCarouselRef')
+    console.log(innerCarouselRef.current.scrollWidth, 'innerCarouselRef')
+
+    setWidth(
+      innerCarouselRef.current.scrollWidth -
+        innerCarouselRef.current.offsetWidth
+    )
+  }, [])
 
   return (
     <div className=" w-screen">
-      <section ref={carouselRef} className="bg-white w-full h-[300vh]">
-        <div
-          ref={innerCarouselRef}
-          className="sticky-wrapper  sticky top-0 h-[80vh] w-full flex flex-col items-start justify-center "
-        >
-          <div className="md:w-1/2 text-primary flex flex-col items-center justify-center py-10  mx-auto">
+      <section ref={carouselRef} className="bg-white w-full h-[300vh] ">
+        <div className="sticky-wrapper  sticky top-0 h-[80vh] w-full flex flex-col items-start justify-center ">
+          <div className="md:w-1/2 text-primary flex flex-col items-center justify-center py-10 mx-auto ">
             <h2 className="text-primary">Nuestros programas</h2>
             <p className="my-5 text-center">
               Con el objetivo de brindar un servicio integral, nuestro
@@ -62,15 +71,16 @@ export const AnimatedCarousel = ({ programs }) => {
             dragConstraints={carouselRef}
             className="flex gap-12 h-full w-screen "
             style={{ x: xVar }}
+            ref={innerCarouselRef}
           >
             {programs &&
               programs.map((item, idx) => (
                 <motion.div
-                  {...slideAnimation}
                   key={item.id}
+                  {...slideAnimation}
                   className="h-64 w-96 relative  "
                 >
-                  <div className="relative h-64 w-96">
+                  <div key={item.id} className="relative h-64 w-96">
                     <Image
                       src={item._embedded['wp:featuredmedia'][0].source_url}
                       layout="fill"

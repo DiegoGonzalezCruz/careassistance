@@ -27,7 +27,10 @@ export const ProblemInNumbers = () => {
         <div className="flex flex-row gap-5 h-full">
           {problems.map((problem) => {
             return (
-              <div className="w-1/3  flex flex-col items-center gap-5">
+              <div
+                key={problem.percentage}
+                className="w-1/3  flex flex-col items-center gap-5"
+              >
                 <div className="relative w-24 h-24">
                   <Image
                     src={`${problem.img}`}

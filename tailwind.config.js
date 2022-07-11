@@ -16,15 +16,16 @@ module.exports = {
     require("daisyui"),
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/typography'),
   ],
   daisyui: {
     styled: true,
     themes: [
       {
         mytheme: {
-          primary: "#6265F3",
-          secondary: "#9D3FD7",
-          accent: "#FBAE48",
+          primary: "#6666FF",
+          secondary: "#A63AE6",
+          accent: "#FFC01F",
           neutral: "#4d4d4c",
           "base-100": "#ffffff",
           "base-200": "#181874",

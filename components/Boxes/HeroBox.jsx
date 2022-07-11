@@ -5,7 +5,7 @@ import { buttonsVariants, overlayVariants } from '../../styles/animations'
 
 export const HeroBox = ({
   prevText,
-  first,
+  text,
   accent,
   sub,
   image = '',
@@ -14,35 +14,30 @@ export const HeroBox = ({
 }) => {
   return (
     <div className="w-screen md:h-[60vh] relative">
-      <header className="py-10 relative flex flex-row items-center justify-center h-full w-full bg-primary/50">
+      <header className="py-10 relative flex flex-row items-center justify-center h-full w-full bg-white ">
         <div className="text-white flex flex-col z-20 w-full h-full relative ">
           <motion.div
             initial="hidden"
             whileInView="visible"
             variants={overlayVariants}
-            className=" text-white flex flex-col z-20 relative mx-auto my-auto md:px-20"
+            className=" text-white flex flex-col z-20 relative mx-auto my-auto md:px-10  items-start gap-2"
           >
-            <motion.p variants={overlayVariants} className="my-0 text-center  ">
-              {prevText}
-            </motion.p>
-            <motion.h1
-              variants={overlayVariants}
-              className=" text-center my-2  mx-auto "
-            >
-              {first} <span className="text-accent ">{accent}</span>
-            </motion.h1>
-            <motion.p
-              variants={overlayVariants}
-              className="font-thin text-center text-sm my-2 sm:w-3/4 lg:text-xl mx-auto"
-            >
+            <h1 className="text-primary font-Comfortaa font-thin text-xl">
+              {prevText} <br />
+              <span className="text-accent text-4xl">{accent}</span>
+              <br />
+              {text}
+            </h1>
+            <p variants={overlayVariants} className=" text-black w-full ">
               {sub}
-            </motion.p>
+            </p>
+
             {buttonText && (
               <motion.button
                 variants={buttonsVariants}
                 whileHover={'hover'}
                 whileInView="visible"
-                className="text-center mx-auto my-2 h-10 lg:h-16 btn-accent text-white font-normal text-xs lg:text-xl w-48 lg:w-56 rounded-full"
+                className=" my-2 h-10 lg:h-16 btn-accent text-white font-normal text-xs lg:text-xl w-48 lg:w-56 rounded-full"
               >
                 {buttonText}
               </motion.button>
@@ -54,15 +49,9 @@ export const HeroBox = ({
           variants={overlayVariants}
           initial="hidden"
           whileInView="visible"
-          className="relative sm:min-h-[50vh] h-48 w-1/2 translate-y-28"
+          className="relative min-h-[50vh] h-full w-full "
         >
-          <Image
-            src={image}
-            layout="fill"
-            objectFit="cover"
-            className="rounded-xl"
-            alt={accent}
-          />
+          <Image src={image} layout="fill" objectFit="contain" alt={accent} />
         </motion.div>
       </header>
     </div>

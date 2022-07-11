@@ -1,52 +1,70 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 
-const menu = [
-  'Telemedicina',
-  'Asesoría psicológica en salud sexual',
-  'Asistencia Emocional'
-]
+export const NuestrosProgramas = ({ programs }) => {
+  const [program, setProgram] = useState(0)
 
-export const NuestrosProgramas = () => {
+  console.log(programs)
   return (
-    <div className="min-h-screen w-screen bg-primary ">
-      <div className="flex flex-col text-white lg:max-w-3xl mx-auto p-10 gap-10">
-        <h2>
-          Nuestros <span className="text-accent">Programas</span>
-        </h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, sit
-          porro soluta harum iure voluptas in tempora repellendus. Aperiam quasi
-          nemo ea delectus illum doloribus totam atque provident minima eum.
-        </p>
-      </div>
-      <div className="w-full h-full flex flex-col items-center ">
-        <div className="card sm:w-3/4 bg-base-100 shadow-xl flex flex-row w-full h-full">
-          <div className="card-body sm:w-1/3">
-            <ul>
-              {menu.map((item) => {
-                return (
-                  <li
-                    key={item}
-                    className="text-xs sm:text-lg  border-b-2 hover:border-b-accent cursor-pointer text-primary py-4"
-                  >
-                    {item}
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
-          <figure className="w-full sm:p-4 ">
-            <div className="relative h-full w-full rounded-2xl">
-              <Image
-                src="/images/programas/IMG_7_SALUD_SEXUAL.jpg"
-                alt="Shoes"
-                layout="fill"
-                objectFit="cover"
-                className="rounded-2xl"
-              />
+    <div className="min-h-[100vh] h-auto w-s  creen bg-primary debug1">
+      <div className="wrapper h-full w-10/12 mx-auto debug1">
+        <div className="flex flex-col text-white lg:max-w-3xl mx-auto p-10 gap-10 debug2">
+          <div className="flex flex-row justify-between items-center">
+            <h2 className="text-accent">
+              Nuestros <br /> Programas
+            </h2>
+            <div className="w-40 h-40 relative">
+              <Image src="/img/programas/clinicavirtual.svg" layout="fill" />
             </div>
-          </figure>
+          </div>
+          <p>
+            Clínica Virtual funciona a través de un ecosistema de programas
+            complementarios que, por medio de un seguimiento permanente y la
+            orientación de nuestro equipo de profesionales, promueve una vida
+            sana y la adopción de hábitos saludables.
+          </p>
+        </div>
+        <div className="w-full h-full flex flex-col items-center debug2">
+          <div className="card bg-base-100 shadow-xl flex flex-row w-full h-full debug2">
+            <div className="card-body w-1/3">
+              <ul>
+                {programs.map((item, idx) => {
+                  return (
+                    <li
+                      key={item.id}
+                      className="text-xs sm:text-xs border-b-2 hover:border-b-accent cursor-pointer text-primary py-4 hover:font-extrabold"
+                      onClick={() => setProgram(idx)}
+                    >
+                      {item.acf.labelBlue + ' ' + item.acf.labelAccent}
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
+            <figure className="w-full sm:p-4 relative debug1">
+              <div className="relative h-full w-full rounded-2xl debug1 overflow-hidden">
+                <div className="absolute bg-base-200/70 w-full h-full prose flex z-20 ">
+                  <p
+                    className="debug1 self-end mb-10 mx-5 text-white"
+                    dangerouslySetInnerHTML={{
+                      __html: programs[program].content.rendered
+                    }}
+                  ></p>
+                </div>
+                <Image
+                  src={
+                    programs[program]._embedded['wp:featuredmedia'][0]
+                      .source_url
+                  }
+                  alt="Shoes"
+                  layout="fill"
+                  objectFit="contain"
+                  className="rounded-2xl"
+                  priority
+                />
+              </div>
+            </figure>
+          </div>
         </div>
       </div>
     </div>
