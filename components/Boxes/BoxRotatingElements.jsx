@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import React, { useRef } from 'react'
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
-import { useElementViewportPosition } from '../hooks/useElementViewPortPosition'
+import { useElementViewPortPosition } from '../hooks/useElementViewPortPosition'
 
 export const BoxRotatingElements = () => {
   const ref = useRef(null)
-  const { position } = useElementViewportPosition(ref)
+  const { position } = useElementViewPortPosition(ref)
 
   const { scrollYProgress } = useViewportScroll()
 

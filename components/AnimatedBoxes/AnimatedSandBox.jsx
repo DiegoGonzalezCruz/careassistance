@@ -9,7 +9,7 @@ import {
 
 import { useWindowSize } from '../hooks/useWindowSize'
 import { throttle } from 'throttle-debounce'
-import { useElementViewportPosition } from '../hooks/useElementViewPortPosition'
+import { useElementViewPortPosition } from '../hooks/useElementViewPortPosition'
 
 const slideAnimation = {
   variants: {
@@ -24,7 +24,7 @@ const slideAnimation = {
 export const AnimatedSandBox = ({ text }) => {
   const ref = useRef(null)
   const carouselRef = useRef(null)
-  const { position } = useElementViewportPosition(ref)
+  const { position } = useElementViewPortPosition(ref)
 
   const [carouselEndPosition, setCarouselEndPosition] = useState(0)
   const { scrollYProgress, scrollY } = useViewportScroll()

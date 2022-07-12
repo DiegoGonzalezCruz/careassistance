@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React, { useRef } from 'react'
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
-import { useElementViewportPosition } from '../../hooks/useElementViewPortPosition'
+import { useElementViewPortPosition } from '../../hooks/useElementViewPortPosition'
 
 // TODO: https://codesandbox.io/s/framer-motion-scroll-forked-eiomo1?file=/src/App.js
 
@@ -9,7 +9,7 @@ export const RotatingCirclesIntoCellphone = () => {
   const ref = useRef(null)
   const {
     position: [start, end]
-  } = useElementViewportPosition(ref)
+  } = useElementViewPortPosition(ref)
 
   const { scrollYProgress } = useViewportScroll()
 

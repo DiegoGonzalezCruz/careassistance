@@ -3,12 +3,12 @@ import { useEffect, useRef, useState } from 'react'
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
 
 import { throttle } from 'throttle-debounce'
-import { useElementViewportPosition } from '../hooks/useElementViewPortPosition'
+import { useElementViewPortPosition } from '../hooks/useElementViewPortPosition'
 import { slideAnimation } from '../../styles/animations'
 
 export const AnimatedTextBox = ({ text, from }) => {
   const ref = useRef(null)
-  const { position } = useElementViewportPosition(ref)
+  const { position } = useElementViewPortPosition(ref)
   const textAppearsFrom =
     from === 'right' ? ['-100vw', '150vw'] : ['100vw', '-150vw']
 

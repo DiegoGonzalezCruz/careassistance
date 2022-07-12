@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useRef } from 'react'
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
-import { useElementViewportPosition } from '../hooks/useElementViewPortPosition'
+import { useElementViewPortPosition } from '../hooks/useElementViewPortPosition'
 
 const stats = [
   {
@@ -28,7 +28,7 @@ export const Numbers = () => {
 
   const {
     position: [start, end]
-  } = useElementViewportPosition(ref)
+  } = useElementViewPortPosition(ref)
   const { scrollYProgress } = useViewportScroll()
   const range = [
     ((start + end) / 4) * 1,

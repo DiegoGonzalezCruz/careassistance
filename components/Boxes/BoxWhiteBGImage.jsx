@@ -1,14 +1,14 @@
 import React, { useRef } from 'react'
 import Image from 'next/image'
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
-import { useElementViewportPosition } from '../hooks/useElementViewPortPosition'
+import { useElementViewPortPosition } from '../hooks/useElementViewPortPosition'
 
 export const BoxWhiteBGImage = () => {
   const ref = useRef(null)
 
   const {
     position: [xValue, yValue]
-  } = useElementViewportPosition(ref)
+  } = useElementViewPortPosition(ref)
 
   const { scrollYProgress } = useViewportScroll()
   const sizeTransformation = useTransform(

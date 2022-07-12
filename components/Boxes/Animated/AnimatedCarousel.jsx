@@ -7,7 +7,7 @@ import {
   useViewportScroll
 } from 'framer-motion'
 
-import { useElementViewportPosition } from '../../hooks/useElementViewPortPosition'
+import { useElementViewPortPosition } from '../../hooks/useElementViewPortPosition'
 import Image from 'next/image'
 
 const slideAnimation = {
@@ -30,11 +30,11 @@ export const AnimatedCarousel = ({ programs }) => {
 
   const {
     position: [carouselStart, carouselEnds]
-  } = useElementViewportPosition(carouselRef)
+  } = useElementViewPortPosition(carouselRef)
 
   const {
     position: [start, end]
-  } = useElementViewportPosition(carouselRef)
+  } = useElementViewPortPosition(carouselRef)
 
   const { scrollYProgress, scrollY } = useViewportScroll()
   const xVar = useTransform(

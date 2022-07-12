@@ -2,12 +2,12 @@ import { useRef } from 'react'
 
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
 
-import { useElementViewportPosition } from '../hooks/useElementViewPortPosition'
+import { useElementViewPortPosition } from '../hooks/useElementViewPortPosition'
 import { slideAnimation } from '../../styles/animations'
 
 export const AnimatedTextBoxOutlined = ({ text, from, bg }) => {
   const ref = useRef(null)
-  const { position } = useElementViewportPosition(ref)
+  const { position } = useElementViewPortPosition(ref)
   const textAppearsFrom =
     from === 'right' ? ['-100vw', '150vw'] : ['100vw', '-150vw']
 
