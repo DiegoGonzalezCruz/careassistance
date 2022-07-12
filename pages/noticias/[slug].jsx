@@ -12,11 +12,11 @@ import {
 } from '../../laboratory/lib/getPosts'
 
 const BlogPost = ({ post, postByCategory }) => {
-  console.log(post, 'post')
+  // console.log(post, 'post')
   const router = useRouter()
   const { slug } = router.query
 
-  console.log(slug, 'slug')
+  // console.log(slug, 'slug')
 
   return (
     <>
@@ -55,12 +55,12 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params: { slug } }) {
   const fetchPostBySlug = await getPostBySlug(slug)
-  console.log(fetchPostBySlug, 'fetchPostBySlug')
+  // console.log(fetchPostBySlug, 'fetchPostBySlug')
 
   const fetchPostsByCategory = await getPostByCategories(
     fetchPostBySlug.categories[0]
   )
-  console.log(fetchPostBySlug.categories[0], 'fetchPostBySlug.categories[0]')
+  // console.log(fetchPostBySlug.categories[0], 'fetchPostBySlug.categories[0]')
 
   return {
     props: {

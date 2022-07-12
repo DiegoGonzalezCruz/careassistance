@@ -3,7 +3,7 @@ import { useRef } from 'react'
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
 
 import { slideAnimation } from '../../styles/animations'
-import useElementViewPortPosition from '../hooks/useElementViewPortPosition'
+import useElementViewPortPosition from '../Hooks/useElementViewPortPosition'
 
 export const AnimatedTextBoxOutlined = ({ text, from, bg }) => {
   const ref = useRef(null)

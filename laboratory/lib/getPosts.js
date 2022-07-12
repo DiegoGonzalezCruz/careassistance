@@ -19,7 +19,7 @@ export const getLastPost = async () => {
 
 
 export const getPostBySlug = async (slug) => {
-  console.log(slug, 'slug')
+  // console.log(slug, 'slug')
   const baseURL = process.env.URL
   const url = `${baseURL}/wp-json/wp/v2/posts?slug=${slug}&_embed`
 

@@ -7,7 +7,7 @@ import { useRouter } from 'next/router'
 
 export const BlogRelated = ({ postByCategory }) => {
   const router = useRouter()
-  console.log(postByCategory, 'postByCategory')
+  // console.log(postByCategory, 'postByCategory')
   return (
     <div className="w-screen min-h-[40vh] bg-accent py-10">
       <div className="w-3/4 h-full mx-auto">
