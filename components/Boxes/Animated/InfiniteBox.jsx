@@ -8,7 +8,7 @@ export const InfiniteBox = () => {
     <div className="w-screen h-[80vh] main overflow-auto">
       <div className="w-screen h-full flex flex-row wrap ">
         <div className="relative w-screen h-full flex flex-row ">
-          <div drag className="relative h-full w-full ">
+          <div className="relative h-full w-full ">
             <Image
               src={'/img/nosotros/vector.svg'}
               layout="fill"
