@@ -1,6 +1,6 @@
 //TODO : https://codesandbox.io/s/framer-motion-scroll-linked-animation-useviewportscroll-usetransform-and-custom-useelementviewportposition-hook-forked-btv02e
 
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 
 import {
   motion,
@@ -10,7 +10,6 @@ import {
   useTransform,
   useViewportScroll
 } from 'framer-motion'
-import { useWindowSize } from '../hooks/useWindowSize'
 
 export const AnimatedBox2 = ({ text }) => {
   // const { scrollYProgress } = useViewportScroll()

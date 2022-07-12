@@ -1,8 +1,6 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
-
-import { throttle } from 'throttle-debounce'
 
 import { slideAnimation } from '../../styles/animations'
 import useElementViewPortPosition from '../hooks/useElementViewPortPosition'

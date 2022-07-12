@@ -4,7 +4,7 @@ import {
   useTransform,
   useViewportScroll
 } from 'framer-motion'
-import { useWindowSize } from '../hooks/useWindowSize'
+import { useWindowSize } from '../Hooks/useWindowSize'
 
 export const AnimatedBox3 = ({ text }) => {
   const { scrollY } = useViewportScroll()

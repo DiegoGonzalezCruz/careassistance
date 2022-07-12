@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React, { useRef } from 'react'
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
-import useElementViewPortPosition from '../../hooks/useElementViewPortPosition'
+import useElementViewPortPosition from '../../Hooks/useElementViewPortPosition'
 
 // TODO: https://codesandbox.io/s/framer-motion-scroll-forked-eiomo1?file=/src/App.js
 

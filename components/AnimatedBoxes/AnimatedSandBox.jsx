@@ -1,15 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 
-import {
-  motion,
-  MotionProps,
-  useTransform,
-  useViewportScroll
-} from 'framer-motion'
+import { motion, useTransform, useViewportScroll } from 'framer-motion'
 
-import { useWindowSize } from '../hooks/useWindowSize'
 import { throttle } from 'throttle-debounce'
-import { useElementViewPortPosition } from '../hooks/useElementViewPortPosition'
+import { useElementViewPortPosition } from '../Hooks/useElementViewPortPosition'
 
 const slideAnimation = {
   variants: {

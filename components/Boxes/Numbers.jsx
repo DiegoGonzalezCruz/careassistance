@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useRef } from 'react'
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
-import useElementViewPortPosition from '../hooks/useElementViewPortPosition'
+import useElementViewPortPosition from '../Hooks/useElementViewPortPosition'
 
 const stats = [
   {
