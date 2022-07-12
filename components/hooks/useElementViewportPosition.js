@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 
 export function useElementViewPortPosition(inputRef) {
   const ref = inputRef

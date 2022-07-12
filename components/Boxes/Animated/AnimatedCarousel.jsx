@@ -7,8 +7,8 @@ import {
   useViewportScroll
 } from 'framer-motion'
 
-import { useElementViewPortPosition } from '../../hooks/useElementViewPortPosition'
 import Image from 'next/image'
+import { useElementViewPortPosition } from '../../hooks/useElementViewPortPosition'
 
 const slideAnimation = {
   variants: {
