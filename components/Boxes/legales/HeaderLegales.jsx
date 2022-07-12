@@ -13,7 +13,7 @@ export const HeaderLegales = ({ title }) => {
         />
       </div>
       <div className="w-full h-full flex flex-row items-center justify-center text-secondary absolute top-0 left-0">
-        <h1>{title.title.rendered}</h1>
+        <h1>{title && title.title.rendered}</h1>
       </div>
     </div>
   )

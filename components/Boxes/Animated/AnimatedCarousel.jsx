@@ -12,8 +12,8 @@ import Image from 'next/image'
 
 const slideAnimation = {
   variants: {
-    full: { opacity: 1, scale: 1.1 },
-    partial: { opacity: 0.5, scale: 0.8 }
+    full: { opacity: 1 },
+    partial: { opacity: 0.5 }
   },
   initial: 'partial',
   whileInView: 'full',
@@ -67,7 +67,6 @@ export const AnimatedCarousel = ({ programs }) => {
           </div>
 
           <motion.div
-            drag="x"
             dragConstraints={carouselRef}
             className="flex gap-12 h-full w-screen "
             style={{ x: xVar }}

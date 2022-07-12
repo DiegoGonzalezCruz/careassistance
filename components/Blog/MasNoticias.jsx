@@ -29,7 +29,7 @@ export const MasNoticias = ({ categories, posts }) => {
 
     setFilteredPosts(categorySelector(catSelected))
     // console.log(filteredPosts, 'filteredPosts')
-  }, [catSelected])
+  }, [catSelected, posts])
 
   // console.log(categorySelector('General'), '<--- categorySelector')
 

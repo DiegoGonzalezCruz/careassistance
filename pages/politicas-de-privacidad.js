@@ -35,9 +35,10 @@ export default PoliticasPrivacidad
 export async function getStaticProps() {
 
   const pages = await getPages()
-  // console.log(programs, 'programs')
+
+
 
   return {
-    props: pages, // will be passed to the page component as props
+    props: { pages }, // will be passed to the page component as props
   }
 }

@@ -134,7 +134,7 @@ export const RotatingCirclesIntoCellphone = () => {
             <div className="bg-[url('/img/canales/cellphone.svg')] bg-center bg-no-repeat bg-contain h-2/3 w-full flex flex-col items-center justify-around ">
               <div className="iconLine flex flex-row justify-around w-1/3  ">
                 <motion.div
-                  className="flex flex-col items-center w-24 debug1"
+                  className="flex flex-col items-center w-24 "
                   id="inhouse"
                   style={{
                     translateX: inhouseMovementX,
@@ -144,7 +144,7 @@ export const RotatingCirclesIntoCellphone = () => {
                     // opacity: opacityRange
                   }}
                 >
-                  <motion.div className="relative h-24 w-24 debug2 rounded-full bg-accent">
+                  <motion.div className="relative h-24 w-24  rounded-full bg-accent">
                     <Image
                       src={imagesTop[0].src}
                       layout="fill"
