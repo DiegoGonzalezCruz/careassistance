@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     domains: ['54.161.240.140', 'careassistance.com', 'careassistance.co'],
   },
+  experimental: { images: { allowFutureImage: true } }
 
 }
 

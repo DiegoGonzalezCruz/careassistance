@@ -2,6 +2,11 @@ import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
 
+import { Date } from './Date'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useRouter } from 'next/router'
+
 const overlayVariants = {
   hidden: {
     opacity: 0
@@ -14,9 +19,10 @@ const overlayVariants = {
   }
 }
 
-const blogposts = {}
-
-export const BlogPost = (variants) => {
+export const BlogPost = ({ variants, post, date }) => {
+  const router = useRouter()
+  // console.log(post, 'post')
+  // console.log(date, 'date')
   return (
     <motion.div
       variants={variants}
@@ -24,9 +30,10 @@ export const BlogPost = (variants) => {
     >
       <motion.div variants={variants} className="relative h-48 w-full">
         <Image
-          src="/images/IMG_3.jpg"
+          src={post._embedded['wp:featuredmedia'][0].source_url}
           layout="fill"
           objectFit="cover"
+          objectPosition={'center'}
           className="rounded-xl"
           alt="blog post"
         />
@@ -35,14 +42,21 @@ export const BlogPost = (variants) => {
         variants={variants}
         className="text-primary w-full py-4 flex flex-col gap-4"
       >
-        <motion.p variants={variants}>8 Junio 2022</motion.p>
-        <motion.h3 variants={variants} className="text-primary text-sm">
-          Tendencias tecnológicas en el sector salud que van a revolucionar este
-          2020.
+        <Date date={date} />
+        <motion.h3
+          variants={variants}
+          className="text-primary text-xl font-bold"
+        >
+          {post.title.rendered}
         </motion.h3>
-        <motion.button variants={variants} className="btn btn-primary">
-          Leer noticia completa
-        </motion.button>
+        <motion.div
+          variants={variants}
+          className="flex flex-row items-center justify-start gap-2 text-accent hover:text-primary hover:cursor-pointer"
+          onClick={() => router.push(`/noticias/${post.slug}`)}
+        >
+          <p>Ver más</p>
+          <FontAwesomeIcon icon={faArrowRight} className="cursor-pointer" />
+        </motion.div>
       </motion.div>
     </motion.div>
   )

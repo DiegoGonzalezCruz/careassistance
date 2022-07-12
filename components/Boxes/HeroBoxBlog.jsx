@@ -1,4 +1,4 @@
-import Image from 'next/future/image'
+import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
 import { buttonsVariants, overlayVariants } from '../../styles/animations'
@@ -7,7 +7,7 @@ export const HeroBoxBlog = ({ prevText, text, accent, sub, image = '' }) => {
   return (
     <div className="w-screen md:h-[30vh] relative debug1">
       <header className="py-10 relative flex flex-row items-center justify-center h-full w-full bg-secondary ">
-        <div className="text-white flex flex-col z-20 w-full h-full relative ">
+        <div className="text-white flex flex-col z-20 w-2/3 h-full relative ">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -30,14 +30,14 @@ export const HeroBoxBlog = ({ prevText, text, accent, sub, image = '' }) => {
           variants={overlayVariants}
           initial="hidden"
           whileInView="visible"
-          className="relative h-full w-full debug2 object-cover"
+          className="relative h-96 w-1/3  object-none translate-y-1/4"
         >
           <Image
             src={image}
             layout="fill"
-            objectFit="cover"
+            objectFit="contain"
             alt={accent}
-            className="rounded-xl object-cover"
+            className="rounded-xl object-cover w-full h-auto"
           />
         </motion.div>
       </header>
