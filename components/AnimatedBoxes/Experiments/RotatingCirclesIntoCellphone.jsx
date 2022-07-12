@@ -127,7 +127,7 @@ export const RotatingCirclesIntoCellphone = () => {
     }
   ]
   return (
-    <div className="w-screen">
+    <div className="w-screen -z-10 ">
       <section ref={ref}>
         <div className="container max-w-full h-[350vh] bg-primary overflow-visible">
           <div className=" sticky-wrapper sticky top-0 w-screen h-screen flex flex-col items-start justify-center  ">
@@ -175,7 +175,7 @@ export const RotatingCirclesIntoCellphone = () => {
                 </motion.div>
               </div>
 
-              <div className="flex flex-row justify-around w-1/3 ">
+              <div className="flex flex-row justify-around w-1/3 -z-10">
                 <motion.div
                   style={{
                     translateX: tecnologiaMovementX,

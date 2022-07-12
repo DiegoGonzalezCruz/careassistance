@@ -35,13 +35,6 @@ export default function Home({ programs }) {
       <AnimatedTextBox text='Sanos, Motivados y Felices' from='left' bg='primary' />
       <ProblemInNumbers />
       <AnimatedTextBoxOutlined text='Nuestro propósito' from='right' bg='primary' />
-      {/* <BoxWithImageLeft
-        image={'/img/home/familia-zen.png'}
-        text={"Contar con personas sanas, motivadas y felices es fundamental para enfrentar los diferentes desafíos. Un cambio de hábitos a una cultura de bienestar, puede llevar a las compañías a generar mayor eficiencia, productividad y menor ausentismo. "}
-        title={'Sanos, Motivados y Felices '}
-        imagePosition='left'
-      /> */}
-
       <BoxWhiteBGImage />
 
       <AnimatedTextBoxOutlined text='Experiencia única' from='right' bg='primary' />

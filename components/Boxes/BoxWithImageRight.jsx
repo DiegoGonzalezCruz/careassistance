@@ -25,7 +25,9 @@ export const BoxWithImageRight = ({
   }
 
   return (
-    <div className={`${bgColor}  flex overflow-hidden min-h-[80vh] w-screen`}>
+    <div
+      className={`${bgColor}  flex overflow-hidden min-h-[80vh] w-screen z-50`}
+    >
       <div className="flex flex-col md:flex-row-reverse w-full items-center justify-center ">
         <motion.div
           whileInView="onscreen"
