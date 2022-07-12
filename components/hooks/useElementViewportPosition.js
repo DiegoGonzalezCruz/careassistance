@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 
-export function useElementViewPortPosition(inputRef) {
-  const ref = inputRef
+const useElementViewPortPosition = (ref) => {
 
   const [position, setPosition] = useState([0, 0])
 
@@ -18,3 +17,5 @@ export function useElementViewPortPosition(inputRef) {
 
   return { position }
 }
+
+export default useElementViewPortPosition

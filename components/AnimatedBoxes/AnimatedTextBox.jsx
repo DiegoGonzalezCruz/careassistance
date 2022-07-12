@@ -3,8 +3,9 @@ import { useEffect, useRef, useState } from 'react'
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
 
 import { throttle } from 'throttle-debounce'
-import { useElementViewPortPosition } from '../hooks/useElementViewPortPosition'
+
 import { slideAnimation } from '../../styles/animations'
+import useElementViewPortPosition from '../hooks/useElementViewPortPosition'
 
 export const AnimatedTextBox = ({ text, from }) => {
   const ref = useRef(null)
