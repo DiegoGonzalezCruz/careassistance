@@ -6,9 +6,9 @@ export const NuestrosProgramas = ({ programs }) => {
 
   // console.log(programs)
   return (
-    <div className="min-h-[100vh] h-auto w-s  creen bg-primary debug1">
-      <div className="wrapper h-full w-10/12 mx-auto debug1">
-        <div className="flex flex-col text-white lg:max-w-3xl mx-auto p-10 gap-10 debug2">
+    <div className="min-h-[100vh] h-auto w-screen bg-primary ">
+      <div className="wrapper h-full w-10/12 mx-auto ">
+        <div className="flex flex-col text-white lg:max-w-3xl mx-auto p-10 gap-10 ">
           <div className="flex flex-row justify-between items-center">
             <h2 className="text-accent">
               Nuestros <br /> Programas
@@ -28,8 +28,8 @@ export const NuestrosProgramas = ({ programs }) => {
             sana y la adopción de hábitos saludables.
           </p>
         </div>
-        <div className="w-full h-full flex flex-col items-center debug2">
-          <div className="card bg-base-100 shadow-xl flex flex-row w-full h-full debug2">
+        <div className="w-full h-full flex flex-col items-center">
+          <div className="card bg-base-100 shadow-xl flex flex-row w-full h-full ">
             <div className="card-body w-1/3">
               <ul>
                 {programs.map((item, idx) => {
@@ -46,26 +46,28 @@ export const NuestrosProgramas = ({ programs }) => {
               </ul>
             </div>
             <figure className="w-full sm:p-4 relative debug1">
-              <div className="relative h-full w-full rounded-2xl debug1 overflow-hidden">
-                <div className="absolute bg-base-200/70 w-full h-full prose flex z-20 ">
-                  <p
-                    className="debug1 self-end mb-10 mx-5 text-white"
-                    dangerouslySetInnerHTML={{
-                      __html: programs[program].content.rendered
-                    }}
-                  ></p>
+              <div className="relative h-full w-full rounded-2xl overflow-hidden debug2">
+                <div className="absolute bg-base-200/70 w-full right-0  h-full prose flex z-20 debug1 ">
+                  <p className=" self-end mb-10 mx-5 text-white">
+                    {programs[program].content.rendered.replace(
+                      /<[^>]*>?/gm,
+                      ''
+                    )}
+                  </p>
                 </div>
-                <Image
-                  src={
-                    programs[program]._embedded['wp:featuredmedia'][0]
-                      .source_url
-                  }
-                  alt="Shoes"
-                  layout="fill"
-                  objectFit="contain"
-                  className="rounded-2xl"
-                  priority
-                />
+                <div className="relative h-full w-full">
+                  <Image
+                    src={
+                      programs[program]._embedded['wp:featuredmedia'][0]
+                        .source_url
+                    }
+                    alt="Shoes"
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-2xl"
+                    priority
+                  />
+                </div>
               </div>
             </figure>
           </div>

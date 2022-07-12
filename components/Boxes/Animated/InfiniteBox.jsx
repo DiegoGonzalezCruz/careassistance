@@ -19,10 +19,10 @@ export const InfiniteBox = () => {
   return (
     <div className="w-screen -z-10 ">
       <section ref={ref}>
-        <div className="container max-w-full h-[350vh] bg-white debug1">
+        <div className="container max-w-full h-[350vh] bg-white ">
           <div className=" sticky-wrapper sticky top-0 w-screen h-screen flex flex-col items-start justify-center ">
             <motion.div
-              className="relative h-full w-[500vw] debug1"
+              className="relative h-full w-[500vw] "
               style={{ translateX: xMove }}
             >
               <Image
