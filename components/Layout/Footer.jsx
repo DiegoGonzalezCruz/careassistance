@@ -18,6 +18,7 @@ export const Footer = () => {
               layout="fill"
               objectFit="cover "
               objectPosition={'70%'}
+              alt="logo"
             />
           </div>
         </div>
