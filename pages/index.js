@@ -39,11 +39,7 @@ export default function Home({ programs }) {
 
       <AnimatedTextBoxOutlined text='Experiencia única' from='right' bg='primary' />
 
-      <BoxWithImageRight image={'/img/home/experienciaunica.png'}
-        text={"Con el objetivo de brindar un servicio integral, nuestro ecosistema de salud y bienestar está compuesto por diversos programas complementarios entre sí."}
-        title={'Experiencia única '}
-        imagePosition='right'
-      />
+
       <RotatingCirclesIntoCellphone />
 
       <NuestrosProgramas programs={programs} />

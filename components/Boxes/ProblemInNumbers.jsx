@@ -16,8 +16,7 @@ export const ProblemInNumbers = () => {
     {
       img: '/img/numbers/3.svg',
       percentage: '25%',
-      subtitle:
-        'de empleados más sanos y motivados rinden más, baja su ausentismo y es más productivo'
+      subtitle: 'es lo que pueden rendir empleados más sanos y motivados.'
     }
   ]
 
@@ -25,7 +24,7 @@ export const ProblemInNumbers = () => {
     <div className="w-screen min-h-[60vh] flex flex-col gap-10 my-20">
       <div className="w-3/4 h-1/2 mx-auto my-auto">
         <div className="flex flex-row gap-5 h-full">
-          {problems.map((problem) => {
+          {problems.map((problem, idx) => {
             return (
               <div
                 key={problem.percentage}
@@ -39,7 +38,10 @@ export const ProblemInNumbers = () => {
                     alt=""
                   />
                 </div>
-                <h2 className="text-primary text-5xl">{problem.percentage}</h2>
+                <h2 className="text-primary text-5xl">
+                  {problem.percentage}{' '}
+                  {idx === 2 ? <span className="text-accent">Más</span> : ''}
+                </h2>
                 <p className="text-center">{problem.subtitle}</p>
               </div>
             )
@@ -53,7 +55,7 @@ export const ProblemInNumbers = () => {
           personas juegan un rol muy importante en la productividad y
           rentabilidad de las empresas.
         </p>
-        <p className="text-primary">
+        <p className="text-primary font-bold">
           En Care Assistance nos proyectamos como el mejor aliado para
           desarrollar una cultura de hábitos saludables.
         </p>

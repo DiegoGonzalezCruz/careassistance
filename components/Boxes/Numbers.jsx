@@ -36,9 +36,13 @@ export const Numbers = () => {
     ((start + end) / 4) * 3,
     ((start + end) / 4) * 4
   ]
+  // console.log(range, 'range')
+  // console.log(start, 'start')
+  // console.log(end, 'end')
 
   const numbersAnimation = useTransform(scrollYProgress, range, [1, 2, 3, 4])
 
+  // console.log(numbersAnimation.current, 'numbersAnimation')
   const boxVariant = {
     hidden: {
       opacity: 0

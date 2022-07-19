@@ -4,29 +4,26 @@ import React from 'react'
 import { footer1, footer2, socialNetworks } from './footerItems'
 export const Footer = () => {
   return (
-    <footer className=" footer md:p-10 pb-10 bg-base-200 flex flex-row text-white w-screen h-[50vh] min-h-[40vh] overflow-hidden">
-      <div className="logo w-1/4 h-full flex flex-col items-center  relative ">
-        {/* //Forma */}
-        <div className="  forma max-w-full min-w-[20rem] w-[30rem] absolute -translate-x-1/2 -rotate-45 origin-top-right shadow-xl rounded-full">
-          <div className=" bg-primary  rounded-full min-w-[10rem]  h-6 -translate-y-full -translate-x-1/3"></div>
-          <div className="border-primary  rounded-full w-[25rem] h-24 flex items-center justify-center">
-            <div className="border-accent bg-accent border-4 rounded-full w-[10rem] h-6 translate-y-11 ">
-              <div className="border-accent bg-accent rounded-full w-[5rem] h-1 translate-y-8 translate-x-10"></div>
-              <div className="border-primary bg-primary rounded-full w-[3rem] h-1 -translate-y-5 translate-x-20"></div>
-            </div>
+    <footer
+      className=" footer  flex md:flex-row flex-col text-white w-screen h-[50vh] min-h-[40vh]   "
+      style={{
+        background: 'linear-gradient(180deg, #9B66FF -154.02%, #181874 33.43%)'
+      }}
+    >
+      <div className="logo md:w-1/4 h-full hidden md:flex flex-col items-center relative">
+        <div className="w-full h-full absolute right-0 ">
+          <div className="relative w-full h-full ">
+            <Image
+              src={'/img/logo/formaFooter.svg'}
+              layout="fill"
+              objectFit="cover "
+              objectPosition={'70%'}
+            />
           </div>
-        </div>
-        <div className=" w-24 h-24 relative ">
-          <Image
-            src="/images/Logo_Care_Assistance.svg"
-            layout="fill"
-            className=""
-            alt="footer logo"
-          />
         </div>
       </div>
       {/* <div className="w-3 border-2 border-white self-center"></div> */}
-      <div className=" links w-2/4 flex flex-col gap-10 md:items-start px-10 justify-between h-full ">
+      <div className=" links md:w-2/4 flex flex-col gap-10 md:items-start p-10 justify-between h-full ">
         <div className="wrapper w-full h-full my-5 flex flex-col items-start justify-between">
           {footer1.map((link) => {
             return (
@@ -52,9 +49,8 @@ export const Footer = () => {
           })}
         </div>
       </div>
-
-      <div className="social w-1/4  flex flex-col justify-center items-center self-end">
-        <div className="relative  w-full h-20">
+      <div className="social md:w-1/4 hidden md:flex flex-col justify-center items-center self-end p-10">
+        <div className="relative w-full h-20">
           <Image
             src={'/img/home/massanos.svg'}
             layout="fill"

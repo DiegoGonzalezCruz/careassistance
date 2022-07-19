@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { navbarItems } from '../navbarItems'
+import { faAngleDown, faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const caretDown = (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
@@ -11,27 +13,33 @@ const caretDown = (
 
 export const Desktop = () => {
   return (
-    <div className="navbar-center md:flex md:flex-row text-primary w-full ">
-      <ul className="menu menu-horizontal w-full h-full flex flex-row pl-10 justify-end ">
+    <div className="md:flex md:flex-row text-primary items-center w-3/4 gap-10 ">
+      <ul className=" w-full h-full flex flex-row items-center justify-end gap-10">
         {navbarItems.map((item, index) => {
           return (
-            <li key={item.title} className="hover:text-accent xl:text-2xl">
+            <li key={item.title} className="hover:text-accent">
               <Link href={item.href}>{item.title}</Link>
             </li>
           )
         })}
       </ul>
 
-      <div className="border border-primary rounded-3xl flex-row flex items-center px-3  ">
-        <div className="h-8 w-8 relative ">
+      <div className="border border-primary rounded-full flex-row flex items-center gap-3 p-1">
+        <div className="h-10 w-10 relative">
           <Image
             src="/img/logo/Flag_of_Chile.svg"
             layout="fill"
             className="rounded-full"
+            objectFit="cover"
             alt="desktop"
           />
         </div>
-        <div className="relative">{caretDown}</div>
+        <div className="relative flex items-center">
+          <FontAwesomeIcon
+            icon={faAngleDown}
+            className="cursor-pointer text-2xl"
+          />
+        </div>
       </div>
     </div>
   )

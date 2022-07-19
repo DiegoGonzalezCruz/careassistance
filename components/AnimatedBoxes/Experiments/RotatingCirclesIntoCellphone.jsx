@@ -2,6 +2,9 @@ import Image from 'next/image'
 import React, { useRef } from 'react'
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
 import useElementViewPortPosition from '../../Hooks/useElementViewPortPosition'
+import { MiddleLane } from './MiddleLane'
+import { TopLane } from './TopLane'
+import { BottomLane } from './BottomLane'
 
 // TODO: https://codesandbox.io/s/framer-motion-scroll-forked-eiomo1?file=/src/App.js
 
@@ -15,10 +18,11 @@ export const RotatingCirclesIntoCellphone = () => {
 
   const range = [start - start * 0.1, (start + end) / 2, end - end * 0.02]
   const rangeOpacity = [start, ((start + end) / 100) * 99, end - end * 0.05]
-  const opacityRange = useTransform(scrollYProgress, range, [0, 1, 1])
+  const opacityRange = useTransform(scrollYProgress, range, [0, 0, 1])
+  const opacityRangeInverted = useTransform(scrollYProgress, range, [1, 1, 0])
 
-  const initialInhouseMovementX = ['-40vw', '-25vw', '0vw']
-  const initialInhouseMovementY = ['-10vh', '-5vh', '0vh']
+  const initialInhouseMovementX = ['-40vw', '-5vw', '0vw']
+  const initialInhouseMovementY = ['-100vh', '-10vh', '0vh']
   const inhouseMovementX = useTransform(
     scrollYProgress,
     range,
@@ -31,7 +35,7 @@ export const RotatingCirclesIntoCellphone = () => {
   )
 
   const initialCanalesMovementX = ['50vw', '25vw', '0vw']
-  const initialCanalesMovementY = ['-40vh', '-5vh', '0vh']
+  const initialCanalesMovementY = ['-70vh', '-5vh', '0vh']
   const canalesMovementX = useTransform(
     scrollYProgress,
     range,
@@ -43,8 +47,8 @@ export const RotatingCirclesIntoCellphone = () => {
     initialCanalesMovementY
   )
 
-  const initialTecnologiaMovementX = ['-50vw', '-15vw', '0vw']
-  const initialTecnologiaMovementY = ['-150vh', '-25vh', '0vh']
+  const initialTecnologiaMovementX = ['0vw', '5vw', '0vw']
+  const initialTecnologiaMovementY = ['-70vh', '-15vh', '0vh']
   const tecnologiaMovementX = useTransform(
     scrollYProgress,
     range,
@@ -57,7 +61,7 @@ export const RotatingCirclesIntoCellphone = () => {
   )
 
   const initialSeguimientoMovementX = ['-50vw', '-20vw', '0vw']
-  const initialSeguimientoMovementY = ['10vh', '5vh', '0vh']
+  const initialSeguimientoMovementY = ['-30vh', '5vh', '0vh']
   const seguimientoMovementX = useTransform(
     scrollYProgress,
     range,
@@ -68,9 +72,9 @@ export const RotatingCirclesIntoCellphone = () => {
     range,
     initialSeguimientoMovementY
   )
-  const initialUxMovementX = ['30vw', '10vw', '0vw']
-  const initiallUxMovementY = ['30vh', '5vh', '0vh']
-  const uxScale = [2, 1.2, 1]
+  const initialUxMovementX = ['40vw', '20vw', '0vw']
+  const initiallUxMovementY = ['20vh', '5vh', '0vh']
+  const uxScale = [3, 1.2, 1]
   const uxMovementX = useTransform(scrollYProgress, range, initialUxMovementX)
   const uxMovementY = useTransform(scrollYProgress, range, initiallUxMovementY)
   const objectScaling = useTransform(scrollYProgress, range, uxScale)
@@ -126,122 +130,99 @@ export const RotatingCirclesIntoCellphone = () => {
       text: 'Experiencia de usuario (ux)'
     }
   ]
+  const iconVariants = {
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: 'tween'
+      }
+    },
+    offscreen: {
+      opacity: 0,
+      x: -100
+    }
+  }
+
+  const image = '/img/home/experienciaunica.png'
+  const text =
+    'Con el objetivo de brindar un servicio integral, nuestro ecosistema de salud y bienestar está compuesto por diversos programas complementarios entre sí.'
+  const title = 'Experiencia única '
+
   return (
-    <div className="w-screen -z-10 ">
+    <div className="w-screen  ">
+      <div
+        className={`bg-primary flex overflow-hidden min-h-[80vh] w-screen relative`}
+      >
+        <div className="flex flex-col md:flex-row-reverse w-full items-center justify-center ">
+          <motion.div
+            whileInView="onscreen"
+            viewport={{ once: false, amount: 0.1 }}
+            initial="offscreen"
+            variants={iconVariants}
+            className="relative h-full w-full  translate-x-10 flex items-center  "
+          >
+            <div className="w-full h-1/2 rounded-l-2xl relative overflow-hidden ">
+              <Image
+                src={image}
+                className="max-w-sm shadow-2xl "
+                layout="fill"
+                objectFit="cover"
+                alt={title}
+              />
+            </div>
+          </motion.div>
+          <motion.div
+            variants={iconVariants}
+            whileInView="onscreen"
+            viewport={{ once: false, amount: 0.1 }}
+            initial="offscreen"
+            className={` text-white w-full h-full px-5 flex flex-col items-center justify-center `}
+          >
+            <div className=" w-3/4 mx-auto z-40">
+              <h2 className="font-bold text-accent">{title}</h2>
+              <p className="py-6">{text}</p>
+            </div>
+          </motion.div>
+        </div>
+      </div>
       <section ref={ref}>
-        <div className="container max-w-full h-[350vh] bg-primary overflow-visible">
+        <div className="container max-w-full h-[350vh] bg-primary  overflow-y-visible overflow-x-clip ">
           <div className=" sticky-wrapper sticky top-0 w-screen h-screen flex flex-col items-start justify-center  ">
             <div className="bg-[url('/img/canales/cellphone.svg')] bg-center bg-no-repeat bg-contain h-2/3 w-full flex flex-col items-center justify-around ">
-              <div className="iconLine flex flex-row justify-around w-1/3  ">
-                <motion.div
-                  className="flex flex-col items-center w-24 "
-                  id="inhouse"
-                  style={{
-                    translateX: inhouseMovementX,
-                    translateY: inhouseMovementY,
-                    scale: objectScaling
-                    // rotate: rotationMovement,
-                    // opacity: opacityRange
-                  }}
-                >
-                  <motion.div className="relative h-24 w-24  rounded-full bg-accent">
-                    <Image
-                      src={imagesTop[0].src}
-                      layout="fill"
-                      className=""
-                      alt=""
-                    />
-                  </motion.div>
-                  <motion.p className="text-white text-center">
-                    {imagesTop[0].text}
-                  </motion.p>
-                </motion.div>
+              {/* Primera Linea */}
+              {/* Profesionales Propios */}
+              <TopLane
+                imagesTop={imagesTop}
+                objectScaling={objectScaling}
+                opacityRangeInverted={opacityRangeInverted}
+                opacityRange={opacityRange}
+                inhouseMovementX={inhouseMovementX}
+                inhouseMovementY={inhouseMovementY}
+                canalesMovementX={canalesMovementX}
+                canalesMovementY={canalesMovementY}
+              />
+              {/* Fila Tecnología */}
+              {/* Figura Tecnologia */}
+              <MiddleLane
+                imagesCenter={imagesCenter}
+                tecnologiaMovementX={tecnologiaMovementX}
+                tecnologiaMovementY={tecnologiaMovementY}
+                objectScaling={objectScaling}
+                opacityRange={opacityRange}
+                opacityRangeInverted={opacityRangeInverted}
+              />
 
-                <motion.div
-                  className="flex flex-col items-center w-24  -translate-y-[500px] translate-x-[300px]  "
-                  id="canales"
-                  style={{
-                    translateX: canalesMovementX,
-                    translateY: canalesMovementY,
-                    scale: objectScaling
-                    // rotate: rotationMovement,
-                    // opacity: opacityRange
-                  }}
-                >
-                  <div className="relative h-24 w-24">
-                    <Image src={imagesTop[1].src} layout="fill" alt="" />
-                  </div>
-                  <p className="text-white text-center">{imagesTop[1].text}</p>
-                </motion.div>
-              </div>
-
-              <div className="flex flex-row justify-around w-1/3 -z-10">
-                <motion.div
-                  style={{
-                    translateX: tecnologiaMovementX,
-                    translateY: tecnologiaMovementY,
-                    scale: objectScaling
-                    // rotate: rotationMovement,
-                    // opacity: opacityRange
-                  }}
-                  id="tecnologia"
-                  className="flex flex-col items-center w-24 -translate-y-[500px] "
-                >
-                  <div className="relative h-24 w-24">
-                    <Image src={imagesCenter[0].src} layout="fill" alt="" />
-                  </div>
-                  <p className="text-white text-center">
-                    {imagesCenter[0].text}
-                  </p>
-                </motion.div>
-              </div>
-
-              <div className="flex flex-row justify-around w-1/3 ">
-                <motion.div
-                  style={{
-                    translateX: seguimientoMovementX,
-                    translateY: seguimientoMovementY,
-                    scale: objectScaling
-                    // rotate: rotationMovement
-                  }}
-                  className="flex flex-col items-center w-24 translate-y-[100px] -translate-x-[300px]  relative"
-                >
-                  <div className=" absolute h-24 w-24 rounded-full bg-[#00EEFF]"></div>
-                  <motion.div
-                    style={{
-                      opacity: opacityRange
-                    }}
-                    className="relative h-24 w-24"
-                  >
-                    <Image src={imagesBottom[0].src} layout="fill" alt="" />
-                  </motion.div>
-                  <motion.p
-                    style={{
-                      opacity: opacityRange
-                    }}
-                    className="text-white text-center"
-                  >
-                    {imagesBottom[0].text}
-                  </motion.p>
-                </motion.div>
-                <motion.div
-                  style={{
-                    translateX: uxMovementX,
-                    translateY: uxMovementY,
-                    scale: objectScaling
-                    // rotate: rotationMovement,
-                    // opacity: opacityRange
-                  }}
-                  className="flex flex-col items-center w-24  translate-y-[100px] translate-x-[300px] "
-                >
-                  <div className="relative h-24 w-24">
-                    <Image src={imagesBottom[1].src} layout="fill" alt="" />
-                  </div>
-                  <p className="text-white text-center">
-                    {imagesBottom[1].text}
-                  </p>
-                </motion.div>
-              </div>
+              <BottomLane
+                seguimientoMovementX={seguimientoMovementX}
+                seguimientoMovementY={seguimientoMovementY}
+                objectScaling={objectScaling}
+                opacityRange={opacityRange}
+                imagesBottom={imagesBottom}
+                uxMovementX={uxMovementX}
+                uxMovementY={uxMovementY}
+                opacityRangeInverted={opacityRangeInverted}
+              />
             </div>
           </div>
         </div>

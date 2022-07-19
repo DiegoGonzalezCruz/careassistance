@@ -34,7 +34,7 @@ export const BoxWhiteBGImage = () => {
   // scrollY.onChange((v) => console.log(v))
 
   return (
-    <div className="w-screen ">
+    <div className="w-screen debug1 ">
       <section ref={ref}>
         <div
           className="container bg-white max-w-full "
@@ -81,7 +81,7 @@ export const BoxWhiteBGImage = () => {
                 style={{
                   scale: sizeTransformation,
                   originY: '25%',
-                  originX: '53%'
+                  originX: '54%'
                 }}
                 variants={boxVariants}
                 className="relative w-1/2 h-96 overflow-hidden "

@@ -54,9 +54,9 @@ export const AnimatedCarousel = ({ programs }) => {
   }, [])
 
   return (
-    <div className=" w-screen">
+    <div className=" w-full">
       <section ref={carouselRef} className="bg-white w-full h-[300vh] ">
-        <div className="sticky-wrapper  sticky top-0 h-[80vh] w-full flex flex-col items-start justify-center ">
+        <div className="sticky-wrapper  sticky top-0 h-[80vh] w-full flex flex-col items-start justify-center overflow-hidden">
           <div className="md:w-1/2 text-primary flex flex-col items-center justify-center py-10 mx-auto ">
             <h2 className="text-primary">Nuestros programas</h2>
             <p className="my-5 text-center">
@@ -77,7 +77,7 @@ export const AnimatedCarousel = ({ programs }) => {
                 <motion.div
                   key={item.id}
                   {...slideAnimation}
-                  className="h-64 w-96 relative  "
+                  className="h-64 w-96 relative px-10 "
                 >
                   <div key={item.id} className="relative h-64 w-96">
                     <Image
@@ -91,7 +91,7 @@ export const AnimatedCarousel = ({ programs }) => {
                   <div className="w-full h-12 flex flex-row items-center justify-between bg-white absolute bottom-5  gap-5  ">
                     <div className="rounded-2xl relative bg-primary  -translate-x-1/2">
                       <div className="h-14 w-14 flex items-center justify-center">
-                        <div className="h-12 w-12 relative ">
+                        <div className="h-10 w-10 relative ">
                           <Image
                             src={item.acf.icon.url}
                             layout="fill"

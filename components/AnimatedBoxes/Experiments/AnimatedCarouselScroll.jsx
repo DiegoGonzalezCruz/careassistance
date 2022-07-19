@@ -61,7 +61,7 @@ export const AnimatedCarouselScroll = ({ text }) => {
           className="container bg-primary mx-4 max-w-full"
           style={{ height: '400vh' }}
         >
-          <div className="sticky-wrapper sticky top-0 h-[100vh] w-full flex flex-col items-start justify-center overflow-hidden">
+          <div className="sticky-wrapper sticky top-0 h-[100vh] w-full flex flex-col items-start justify-center ">
             <motion.div
               ref={carouselRef}
               className="carousel flex gap-48"

@@ -26,15 +26,15 @@ export const BoxWithImageRight = ({
 
   return (
     <div
-      className={`${bgColor}  flex overflow-hidden min-h-[80vh] w-screen z-50`}
+      className={`${bgColor}  flex overflow-hidden min-h-[80vh] w-screen debug2 relative`}
     >
-      <div className="flex flex-col md:flex-row-reverse w-full items-center justify-center ">
+      <div className="flex flex-col md:flex-row-reverse w-full items-center justify-center">
         <motion.div
           whileInView="onscreen"
           viewport={{ once: false, amount: 0.1 }}
           initial="offscreen"
           variants={iconVariants}
-          className="relative h-full w-full  translate-x-10 flex items-center "
+          className="relative h-full w-full  translate-x-10 flex items-center z- "
         >
           <div className="w-full h-1/2 rounded-l-2xl relative overflow-hidden ">
             <Image
