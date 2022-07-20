@@ -10,17 +10,17 @@ export const InfiniteBox = () => {
     position: [start, end]
   } = useElementViewPortPosition(ref)
   const range = [start - start * 0.1, (start + end) / 2, end - end * 0.02]
-  const movementX = ['0vw', '-200vw', '-350vw']
+  const movementX = ['0vw', '-200vw', '-400vw']
 
   const { scrollYProgress } = useViewportScroll()
 
   const xMove = useTransform(scrollYProgress, range, movementX)
 
   return (
-    <div className="w-screen -z-10 ">
+    <div className="w-screen">
       <section ref={ref}>
         <div className="container max-w-full h-[350vh] bg-white ">
-          <div className=" sticky-wrapper sticky top-0 w-screen h-screen flex flex-col items-start justify-center ">
+          <div className=" sticky-wrapper sticky top-0 w-screen h-screen flex flex-col items-start justify-center overflow-auto">
             <motion.div
               className="relative h-full w-[500vw] "
               style={{ translateX: xMove }}

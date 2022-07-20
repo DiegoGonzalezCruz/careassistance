@@ -14,8 +14,8 @@ export const HeroBox = ({
 }) => {
   return (
     <div className="w-screen md:h-[60vh] relative">
-      <header className="py-10 relative flex flex-row items-center justify-center h-full w-full bg-white ">
-        <div className="text-white flex flex-col z-20 w-full h-full relative ">
+      <header className="py-10 relative flex md:flex-row flex-col-reverse items-center justify-center h-full w-5/6 mx-auto bg-white ">
+        <div className="text-white flex flex-col z-20 md:w-1/2 w-full h-full relative ">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -49,7 +49,7 @@ export const HeroBox = ({
           variants={overlayVariants}
           initial="hidden"
           whileInView="visible"
-          className="relative min-h-[50vh] h-full w-full "
+          className="relative min-h-[20vh] h-full md:w-1/2 w-full  "
         >
           <Image src={image} layout="fill" objectFit="contain" alt={accent} />
         </motion.div>
