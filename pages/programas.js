@@ -29,7 +29,7 @@ const Programas = ({ programs }) => {
       />
       <ComoFuncionanNuestrosProgramas programs={programs} />
       <NuestrosProgramas programs={programs} />
-      {/* <NuestroProposito /> */}
+
       <CanalesAtencion />
       <TestimoniosProgramas />
       <CalltoActionHome buttonText={'Quiero que me contacten'} question={'Te gustaría más información de nuestros programas de Salud y Bienestar?'} />

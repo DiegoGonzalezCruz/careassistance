@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
-import { buttonsVariants, overlayVariants } from '../../styles/animations'
+import { overlayVariants } from '../../styles/animations'
 
 export const HeroBoxProgramas = ({
   prevText,
@@ -14,7 +14,7 @@ export const HeroBoxProgramas = ({
 }) => {
   return (
     <div className="w-screen h-[80vh] ">
-      <header className="relative flex flex-col items-center justify-center h-full w-full bg-white ">
+      <header className="relative flex flex-col items-center justify-center h-full w-3/4 mx-auto bg-white ">
         <div className="text-white flex flex-col z-20 w-full relative">
           <motion.div
             initial="hidden"
@@ -35,6 +35,7 @@ export const HeroBoxProgramas = ({
           variants={overlayVariants}
           initial="hidden"
           whileInView="visible"
+          whileHover="onHover"
           className="relative h-full w-full"
         >
           <Image src={image} layout="fill" objectFit="contain" alt={accent} />

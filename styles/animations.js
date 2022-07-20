@@ -1,6 +1,7 @@
 export const overlayVariants = {
   hidden: {
-    opacity: 0
+    opacity: 0.7,
+    scale: 1
   },
   visible: {
     opacity: 1,
@@ -8,7 +9,7 @@ export const overlayVariants = {
       when: 'beforeChildren',
       staggerChildren: 0.3
     }
-  }
+  },
 }
 
 export const buttonsVariants = {

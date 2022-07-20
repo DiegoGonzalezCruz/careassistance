@@ -101,7 +101,10 @@ export const Numbers = () => {
             className=" w-full text-white relative flex flex-col h-full items-center justify-center debug2 "
           >
             {stats.map((stat, index) => (
-              <div className="flex flex-col items-center md:-translate-y-10 -translate-y-5">
+              <div
+                key={stat.number}
+                className="flex flex-col items-center md:-translate-y-10 -translate-y-5"
+              >
                 <h2 className="text-accent lg:text-[100px]">{stat.number}</h2>
                 <p>{stat.sub}</p>
               </div>

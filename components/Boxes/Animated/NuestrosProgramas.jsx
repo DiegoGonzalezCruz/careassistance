@@ -6,9 +6,9 @@ export const NuestrosProgramas = ({ programs }) => {
 
   // console.log(programs)
   return (
-    <div className="min-h-[100vh] h-auto w-screen bg-primary ">
+    <div className="min-h-[100vh] h-auto w-screen bg-primary py-20">
       <div className="wrapper h-full w-10/12 mx-auto ">
-        <div className="flex flex-col text-white lg:max-w-3xl mx-auto p-10 gap-10 ">
+        <div className="flex flex-col text-white lg:max-w-3xl mx-auto  gap-10 ">
           <div className="flex flex-row justify-between items-center">
             <h2 className="text-accent">
               Nuestros <br /> Programas
@@ -45,17 +45,25 @@ export const NuestrosProgramas = ({ programs }) => {
                 })}
               </ul>
             </div>
-            <figure className="w-full sm:p-4 relative debug1">
-              <div className="relative h-full w-full rounded-2xl overflow-hidden debug2">
-                <div className="absolute bg-base-200/70 w-full right-0  h-full prose flex z-20 debug1 ">
-                  <p className=" self-end mb-10 mx-5 text-white">
-                    {programs[program].content.rendered.replace(
-                      /<[^>]*>?/gm,
-                      ''
-                    )}
-                  </p>
+            <figure className="w-3/4 sm:p-4 relative ">
+              <div className="relative h-full w-full rounded-2xl overflow-hidden ">
+                <div
+                  className="absolute bg-[#0082C7]/70 flex z-20  w-full h-full"
+                  // style={{
+                  //   mixBlendMode: 'screen',
+                  //   filter: `dropShadow('0px 4px 4px rgba(0, 0, 0, 0.25)')`
+                  // }}
+                >
+                  <div className="w-3/4 mx-auto h-full flex">
+                    <p className=" self-end mb-10 mx-5 text-white font-FiraSans font-normal">
+                      {programs[program].content.rendered.replace(
+                        /<[^>]*>?/gm,
+                        ''
+                      )}
+                    </p>
+                  </div>
                 </div>
-                <div className="relative h-full w-full">
+                <div className="relative h-full ">
                   <Image
                     src={
                       programs[program]._embedded['wp:featuredmedia'][0]
