@@ -26,7 +26,7 @@ export const BoxWithImageRight = ({
 
   return (
     <div
-      className={`${bgColor}  flex overflow-hidden min-h-[80vh] w-screen debug2 relative`}
+      className={`${bgColor}  flex overflow-hidden min-h-[80vh] w-screen relative `}
     >
       <div className="flex flex-col md:flex-row-reverse w-full items-center justify-center">
         <motion.div
@@ -36,7 +36,7 @@ export const BoxWithImageRight = ({
           variants={iconVariants}
           className="relative h-full w-full  translate-x-10 flex items-center z- "
         >
-          <div className="w-full h-1/2 rounded-l-2xl relative overflow-hidden ">
+          <div className="w-full h-[60vh] rounded-l-2xl relative overflow-hidden ">
             <Image
               src={image}
               className="max-w-sm shadow-2xl "
@@ -56,7 +56,7 @@ export const BoxWithImageRight = ({
           } w-full h-full px-5 flex flex-col items-center justify-center `}
         >
           <div className=" w-3/4 mx-auto">
-            <h2 className="font-bold text-accent">{title}</h2>
+            <h2 className="font-bold text-primary">{title}</h2>
             <p className="py-6">{text}</p>
           </div>
         </motion.div>

@@ -11,7 +11,7 @@ export const HeroBoxContacto = ({
   image = ''
 }) => {
   return (
-    <div className="w-screen md:h-[30vh] relative ">
+    <div className="w-screen md:h-[40vh] relative ">
       <header className="py-10 relative flex flex-row items-center justify-center h-full w-full bg-primary ">
         <div className="text-white flex flex-col z-20 w-2/3 h-full relative ">
           <motion.div
@@ -36,7 +36,7 @@ export const HeroBoxContacto = ({
           variants={overlayVariants}
           initial="hidden"
           whileInView="visible"
-          className="relative h-96 w-1/3  object-none translate-y-1/4 rounded-xl"
+          className="absolute right-0 -bottom-1/3 h-96 w-96  object-none translate-y-1/4 rounded-xl"
         >
           <Image
             src={image}

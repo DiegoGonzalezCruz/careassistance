@@ -8,7 +8,7 @@ import { Testimonios } from '../components/Boxes/Testimonios/Testimonios'
 import { getTestimonials } from '../laboratory/lib/getTestimonials'
 
 const Clientes = ({ testimonials }) => {
-  // console.log(testimonials)
+  console.log(testimonials)
   return (
     <div>
       <Head>
@@ -31,7 +31,7 @@ const Clientes = ({ testimonials }) => {
       />
       <Testimonios testimonials={testimonials} />
       <BoxClientes />
-      {/* <Testimonios /> */}
+
       <CalltoActionHome question={'Te gustaría tener más información de nuestros programas de salud y bienestar?'} buttonText={'Quiero que me contacten'} />
 
     </div>

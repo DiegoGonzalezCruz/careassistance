@@ -20,10 +20,10 @@ const Noticias = ({ posts, lastPost, categories }) => {
       </Head>
 
       <HeroBoxBlog
-        prevText='Bienvenidos a nuestro'
+        prevText='Bienvenidos a'
         first='blog'
-        accent='blog'
-        sub='Te intivamos a conocer más de nosotros a través de nuestras noticias y artículos de interés.'
+        accent='nuestro blog'
+        sub='Te invitamos a conocer más de nosotros a través de nuestras noticias y artículos de interés.'
         image='/img/blog/headerblog.png'
       // buttonText='Ver programas'
       // buttonHref='/programas'

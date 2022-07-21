@@ -46,12 +46,12 @@ export const CanalesAtencion = () => {
               key={canal.title}
               className=" flex flex-col items-center justify-center w-1/3 h-48 xl:w-96 hover:bg-secondary rounded-xl gap-4"
             >
-              <div className="relative h-20 w-20 rounded-l-xl">
+              <div className="relative h-20 w-20 rounded-l-xl ">
                 <Image
                   src={canal.image}
                   layout="fill"
                   objectFit="contain"
-                  className="rounded"
+                  className="rounded hover:fill-accent"
                   alt="Icono de canal de atención"
                 />
               </div>

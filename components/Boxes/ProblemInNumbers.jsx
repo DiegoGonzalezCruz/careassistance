@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 export const ProblemInNumbers = () => {
   const problems = [
@@ -23,7 +24,11 @@ export const ProblemInNumbers = () => {
   return (
     <div className="w-screen min-h-[60vh] flex flex-col gap-10 my-20">
       <div className="w-3/4 h-1/2 mx-auto my-auto">
-        <div className="flex flex-row gap-5 h-full">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="flex flex-row gap-5 h-full"
+        >
           {problems.map((problem, idx) => {
             return (
               <div
@@ -46,7 +51,7 @@ export const ProblemInNumbers = () => {
               </div>
             )
           })}
-        </div>
+        </motion.div>
       </div>
       <div className="w-3/4 mx-auto flex flex-col gap-5">
         <p>

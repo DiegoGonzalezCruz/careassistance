@@ -26,16 +26,11 @@ const Contacto = () => {
         image='/img/contacto/contactobanner.png'
         buttonText='Nuestros clientes'
       />
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        variants={overlayVariants}
-        className='bg-primary text-white flex flex-col items-center w-full '>
 
 
-        <FormSimple />
+      <FormSimple />
 
-      </motion.div>
+
     </div>
   )
 }

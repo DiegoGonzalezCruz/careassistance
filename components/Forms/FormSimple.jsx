@@ -1,15 +1,15 @@
 import { Field, Form, Formik } from 'formik'
+import Image from 'next/image'
 import React from 'react'
 import TextInput from './Input'
+import InputMsg from './InputMsg'
 
 export const FormSimple = () => {
   const handleSubmit = (val) => console.log(val, 'values')
   return (
     <div className="flex flex-col items-center w-screen min-h-[80vh] bg-white pt-20">
-      <div className="forma absolute left-0 top-1/2 -translate-x-60 -rotate-45 translate-y-1/2">
-        <div className="border-primary border-2 rounded-full w-[25rem] h-24 flex items-center justify-center">
-          <div className="border-primary border-4 rounded-full w-[10rem] h-12 translate-y-full"></div>
-        </div>
+      <div className="relative self-start h-full w-1/12 debug1">
+        <Image src="/images/contact/forma1.png" layout="fill" />
       </div>
       <Formik
         initialValues={{
@@ -22,7 +22,7 @@ export const FormSimple = () => {
         onSubmit={(values) => handleSubmit(values)}
       >
         <Form>
-          <h1 className="text-primary text-2xl">Déjanos tus datos</h1>
+          <h1 className="text-primary text-2xl my-20">Déjanos tus datos</h1>
           <div className="flex flex-col md:w-96 gap-10 ">
             <TextInput
               label="Nombre y apellidos"
@@ -37,7 +37,7 @@ export const FormSimple = () => {
               placeholder="Ingresa tu correo electrónico"
             />
             <TextInput
-              label="Telefono"
+              label="Teléfono"
               name="telefono"
               type="text"
               placeholder="Ingresa tu teléfono"
@@ -48,8 +48,9 @@ export const FormSimple = () => {
               type="text"
               placeholder="Ingresa tu país"
             />
-            <TextInput
+            <InputMsg
               label="Mensaje"
+              sublabel="(opcional)"
               name="mensaje"
               type="text"
               placeholder="Ingresa tu mensaje"

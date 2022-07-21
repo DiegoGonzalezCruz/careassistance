@@ -5,14 +5,14 @@ import { buttonsVariants, overlayVariants } from '../../styles/animations'
 
 export const HeroBoxBlog = ({ prevText, text, accent, sub, image = '' }) => {
   return (
-    <div className="w-screen md:h-[30vh] relative ">
-      <header className="py-10 relative flex flex-row items-center justify-center h-full w-full bg-secondary ">
-        <div className="text-white flex flex-col z-20 w-2/3 h-full relative ">
+    <div className="w-screen md:h-[40vh] relative  bg-secondary">
+      <header className=" flex flex-row items-center justify-center h-full w-full ">
+        <div className="text-white flex flex-col w-1/2 h-full    ">
           <motion.div
             initial="hidden"
             whileInView="visible"
             variants={overlayVariants}
-            className=" text-white flex flex-col z-20 relative mx-auto my-auto md:px-10  items-start gap-2"
+            className=" text-white flex flex-col z-20  mx-auto my-auto md:px-10 gap-2"
           >
             <h1 className="text-white font-Comfortaa font-thin text-xl">
               {prevText} <br />
@@ -30,15 +30,9 @@ export const HeroBoxBlog = ({ prevText, text, accent, sub, image = '' }) => {
           variants={overlayVariants}
           initial="hidden"
           whileInView="visible"
-          className="relative h-96 w-1/3  object-none translate-y-1/4 rounded-xl"
+          className="absolute right-0 h-96 w-96 rounded-xl -bottom-1/4 "
         >
-          <Image
-            src={image}
-            layout="fill"
-            objectFit="contain"
-            alt={accent}
-            className="rounded-xl object-cover w-full h-auto"
-          />
+          <Image src={image} layout="fill" objectFit="contain" alt={accent} />
         </motion.div>
       </header>
     </div>

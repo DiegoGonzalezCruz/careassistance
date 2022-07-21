@@ -7,8 +7,8 @@ import useElementViewPortPosition from '../../Hooks/useElementViewPortPosition'
 
 const slideAnimation = {
   variants: {
-    full: { opacity: 1 },
-    partial: { opacity: 0.5 }
+    full: { opacity: 1, filter: 'grayscale(0%)' },
+    partial: { opacity: 0.5, filter: 'grayscale(100%)' }
   },
   initial: 'partial',
   whileInView: 'full',
@@ -90,8 +90,8 @@ export const AnimatedCarousel = ({ programs }) => {
                         </div>
                       </div>
                     </div>
-                    <div className=" w-full">
-                      <p className="text-primary">
+                    <div className="w-full">
+                      <p className="text-primary font-FiraSans ">
                         {item.acf.labelBlue + ' '}
                         <span className="text-primary font-bold">
                           {item.acf.labelAccent}
