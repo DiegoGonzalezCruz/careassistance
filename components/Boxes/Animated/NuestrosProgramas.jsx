@@ -46,7 +46,11 @@ export const NuestrosProgramas = ({ programs }) => {
                       onClick={() => setProgram(idx)}
                     >
                       <div className="h-12 w-12 relative">
-                        <Image src={item.acf.icon.url} layout="fill" />
+                        <Image
+                          src={item.acf.icon.url}
+                          layout="fill"
+                          alt="programas careassistance"
+                        />
                       </div>
                       {item.acf.labelBlue + ' ' + item.acf.labelAccent}
                     </li>

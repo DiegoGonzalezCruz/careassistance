@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-export default function (req, res) {
+export default function sendEmail(req, res) {
   console.log(req.body)
   let nodemailer = require('nodemailer')
   const transporter = nodemailer.createTransport({
