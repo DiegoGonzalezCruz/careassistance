@@ -5,7 +5,7 @@ import { footer1, footer2, socialNetworks } from './footerItems'
 export const Footer = () => {
   return (
     <footer
-      className=" footer  flex md:flex-row flex-col text-white w-screen h-[50vh] min-h-[40vh]   "
+      className=" footer  flex md:flex-row flex-col text-white w-screen h-[40vh]"
       style={{
         background: 'linear-gradient(180deg, #9B66FF -154.02%, #181874 33.43%)'
       }}
@@ -24,7 +24,7 @@ export const Footer = () => {
         </div>
       </div>
       {/* <div className="w-3 border-2 border-white self-center"></div> */}
-      <div className=" links md:w-2/4 flex flex-col gap-10 md:items-start p-10 justify-between h-full ">
+      <div className=" links md:w-2/4 flex flex-col gap-5 md:items-start p-10 justify-between h-full ">
         <div className="wrapper w-full h-full my-5 flex flex-col items-start justify-between">
           {footer1.map((link) => {
             return (
@@ -42,7 +42,7 @@ export const Footer = () => {
           {footer2.map((link) => {
             return (
               <Link href={link.href} passHref key={link.title}>
-                <p className="link link-hover text-xs font-bold text-accent">
+                <p className="link link-hover text-base font-bold text-accent">
                   {link.title}
                 </p>
               </Link>
@@ -59,7 +59,7 @@ export const Footer = () => {
             alt="footer"
           />
         </div>
-        <div className="grid grid-flow-col gap-4">
+        <div className="grid grid-flow-col gap-4 mt-10">
           <div className="cursor-pointer">
             <Link passHref href={'https://twitter.com'}>
               <svg
@@ -89,5 +89,6 @@ export const Footer = () => {
         </div>
       </div>
     </footer>
+    //TODO: Agregar redes sociales
   )
 }

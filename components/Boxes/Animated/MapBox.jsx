@@ -4,6 +4,7 @@ import React, { useRef } from 'react'
 import useElementViewPortPosition from '../../Hooks/useElementViewPortPosition'
 
 export const MapBox = () => {
+  //TODO: Eliminar overflow del mapa
   const ref = useRef(null)
   const {
     position: [start, end]

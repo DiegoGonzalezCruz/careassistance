@@ -7,6 +7,7 @@ import { TopLane } from './TopLane'
 import { BottomLane } from './BottomLane'
 
 // TODO: https://codesandbox.io/s/framer-motion-scroll-forked-eiomo1?file=/src/App.js
+// TODO: Disminuir scroll a la mitad
 
 export const RotatingCirclesIntoCellphone = () => {
   const ref = useRef(null)

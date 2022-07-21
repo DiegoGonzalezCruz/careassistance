@@ -35,7 +35,7 @@ export default function Home({ programs }) {
       <AnimatedTextBox text='Sanos, Motivados y Felices' from='left' bg='primary' />
       <ProblemInNumbers />
       <AnimatedTextBoxOutlined text='Nuestro propósito' from='right' bg='primary' />
-      <BoxWhiteBGImage />
+      <BoxWhiteBGImage /> {/* //TODO: escalar desde el viewport totalmente azul */}
 
       <AnimatedTextBoxOutlined text='Experiencia única' from='right' bg='primary' />
 

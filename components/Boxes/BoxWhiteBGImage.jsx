@@ -38,7 +38,8 @@ export const BoxWhiteBGImage = () => {
       <section ref={ref}>
         <div
           className="container bg-white max-w-full "
-          style={{ height: '600vh' }}
+          style={{ height: '600vh' }} // TODO : Debe ser Fira
+          // Subir tamaño de la imagen principal
         >
           <div className=" h-[100vh] absolute z-10 flex flex-col items-center justify-center px-20 w-1/2 ">
             <p className="text-white text-4xl font-FiraSans font-normal">

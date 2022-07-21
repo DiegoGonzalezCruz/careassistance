@@ -3,6 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 export const ProblemInNumbers = () => {
+  //TODO : Staggerd children animation
   const problems = [
     {
       img: '/img/numbers/1.svg',
