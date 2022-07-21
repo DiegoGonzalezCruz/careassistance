@@ -9,7 +9,7 @@ export const AnimatedTextBox = ({ text, from }) => {
   const ref = useRef(null)
   const { position } = useElementViewPortPosition(ref)
   const textAppearsFrom =
-    from === 'right' ? ['-100vw', '150vw'] : ['100vw', '-150vw']
+    from === 'right' ? ['0vw', '150vw'] : ['50vw', '-150vw']
 
   const { scrollYProgress } = useViewportScroll()
   const xVar = useTransform(scrollYProgress, position, textAppearsFrom)
@@ -19,7 +19,7 @@ export const AnimatedTextBox = ({ text, from }) => {
       <section ref={ref}>
         <div
           className="container bg-white max-w-full "
-          style={{ height: '400vh' }}
+          style={{ height: '200vh' }}
         >
           <div className="sticky-wrapper sticky top-0 h-[100vh] w-full flex flex-col items-start justify-center overflow-hidden bg-[url('/img/home/familia.svg')] bg-no-repeat">
             <motion.div

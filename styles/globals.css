@@ -39,7 +39,7 @@
     @apply font-extralight font-Comfortaa text-sm lg:text-lg  xl:text-xl;
   }
   li {
-    @apply font-extralight font-Comfortaa text-sm lg:text-lg  xl:text-xl;
+    @apply font-extralight text-sm lg:text-lg  xl:text-xl font-FiraSans;
   }
   a {
     @apply font-extralight font-Comfortaa text-sm lg:text-lg  xl:text-xl;
