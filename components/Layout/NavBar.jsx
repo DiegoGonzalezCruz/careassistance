@@ -5,6 +5,7 @@ import { Mobile } from './NavBar/Mobile'
 
 export const NavBar = () => {
   return (
+    // TODO : Debe ser Fira
     <div className="h-[10vh] w-screen flex flex-row sticky top-0 z-50 bg-white">
       <div className="h-full w-3/4 mx-auto flex-row flex ">
         <div className="relative w-20 h-full mx-4 ">
