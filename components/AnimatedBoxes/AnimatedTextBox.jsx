@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
 
@@ -7,12 +7,25 @@ import useElementViewPortPosition from '../Hooks/useElementViewPortPosition'
 
 export const AnimatedTextBox = ({ text, from }) => {
   const ref = useRef(null)
-  const { position } = useElementViewPortPosition(ref)
-  const textAppearsFrom =
-    from === 'right' ? ['0vw', '150vw'] : ['50vw', '-150vw']
+  const [width, setWidth] = useState(0)
+
+  const {
+    position: [start, end]
+  } = useElementViewPortPosition(ref)
+
+  // const textAppearsFrom =
+  //   from === 'right' ? ['0vw', '150vw'] : ['50vw', '-150vw']
 
   const { scrollYProgress } = useViewportScroll()
-  const xVar = useTransform(scrollYProgress, position, textAppearsFrom)
+  // const xVar = useTransform(scrollYProgress, position, textAppearsFrom)
+  const xVar = useTransform(
+    scrollYProgress,
+    [start, end + end * 0.1],
+    ['50vw', '-400vw']
+  )
+  useEffect(() => {
+    setWidth(ref.current.scrollWidth - ref.current.offsetWidth)
+  }, [])
 
   return (
     <div className="">

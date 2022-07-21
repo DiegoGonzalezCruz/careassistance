@@ -37,11 +37,11 @@ export const BoxWhiteBGImage = () => {
     <div className="w-screen  ">
       <section ref={ref}>
         <div
-          className="container bg-white max-w-full "
+          className="container bg-white max-w-full debug1"
           style={{ height: '600vh' }} // TODO : Debe ser Fira
           // Subir tamaño de la imagen principal
         >
-          <div className=" h-[100vh] absolute z-10 flex flex-col items-center justify-center px-20 w-1/2 ">
+          <div className="h-[100vh] absolute z-10 flex flex-col items-center justify-center px-10 w-1/2 debug2 ">
             <p className="text-white text-4xl font-FiraSans font-normal">
               Mejorar el bienestar de las personas a través de programas de
               acompañamiento para la{' '}
@@ -61,15 +61,19 @@ export const BoxWhiteBGImage = () => {
                 className="w-1/2 flex items-center justify-center h-full flex-col"
               >
                 <div className="w-3/4 flex flex-col gap-4 ">
-                  <h2 className="text-primary">¿Cómo lo hacemos?</h2>
-                  <ul className="gap-2 flex flex-col list-disc list-inside">
+                  <h2 className="text-primary font-FiraSans">
+                    ¿Cómo lo hacemos?
+                  </h2>
+                  <ul className="gap-2 flex flex-col list-disc list-inside font-light">
                     <li>Know how.</li>
                     <li>Profesionales propios inhouse.</li>
                     <li>Seguimiento y derivación.</li>
                     <li>Tecnología.</li>
                     <li>Trabajo multidisciplinario</li>
                   </ul>
-                  <h2 className="text-primary">¿Qué ofrecemos?</h2>
+                  <h2 className="text-primary font-FiraSans">
+                    ¿Qué ofrecemos?
+                  </h2>
                   <p>
                     Por medio de programas complementarios entre sí, ofrecemos
                     el ecosistema de salud y bienestar más avanzado de

@@ -24,24 +24,24 @@
     font-family: FiraSans, Comfortaa, sans-serif;
   }
   h1 {
-    @apply font-semibold font-FiraSans text-3xl sm:text-4xl lg:text-5xl;
+    @apply font-semibold font-Comfortaa text-3xl sm:text-4xl lg:text-5xl;
   }
   h2 {
-    @apply font-bold text-white text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-FiraSans;
+    @apply font-bold text-white text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-Comfortaa;
   }
   h3 {
-    @apply text-primary text-2xl sm:text-3xl lg:text-4xl font-light xl:text-3xl font-FiraSans;
+    @apply text-primary text-2xl sm:text-3xl lg:text-4xl font-light xl:text-3xl font-Comfortaa;
   }
   h4 {
-    @apply text-primary font-light text-lg sm:text-xl lg:text-3xl xl:text-3xl font-FiraSans;
+    @apply text-primary font-light text-lg sm:text-xl lg:text-3xl xl:text-3xl font-Comfortaa;
   }
   p {
     @apply font-extralight font-FiraSans text-sm lg:text-lg  xl:text-xl;
   }
   li {
-    @apply font-extralight text-sm lg:text-lg  xl:text-xl font-FiraSans;
+    @apply text-sm lg:text-lg  xl:text-xl font-FiraSans;
   }
   a {
-    @apply font-extralight font-Comfortaa text-sm lg:text-lg  xl:text-xl;
+    @apply font-extralight font-FiraSans text-sm lg:text-lg  xl:text-xl;
   }
 }

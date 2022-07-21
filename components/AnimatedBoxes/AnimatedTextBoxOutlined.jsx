@@ -7,7 +7,10 @@ import useElementViewPortPosition from '../Hooks/useElementViewPortPosition'
 
 export const AnimatedTextBoxOutlined = ({ text, from, bg }) => {
   const ref = useRef(null)
-  const { position } = useElementViewPortPosition(ref)
+  const {
+    position: [start, end]
+  } = useElementViewPortPosition(ref)
+
   const textAppearsFrom =
     from === 'right' ? ['-100vw', '150vw'] : ['100vw', '-150vw']
 
@@ -16,7 +19,12 @@ export const AnimatedTextBoxOutlined = ({ text, from, bg }) => {
   const textColor = bg === 'primary' ? 'text-white' : 'text-primary'
 
   const { scrollYProgress } = useViewportScroll()
-  const xVar = useTransform(scrollYProgress, position, textAppearsFrom)
+  // const xVar = useTransform(scrollYProgress, position, textAppearsFrom)
+  const xVar = useTransform(
+    scrollYProgress,
+    [start, end + end * 0.1],
+    ['50vw', '-400vw']
+  )
 
   return (
     <div className="w-screen">
@@ -27,7 +35,7 @@ export const AnimatedTextBoxOutlined = ({ text, from, bg }) => {
         >
           <div className="sticky-wrapper sticky top-0 h-[100vh] w-full flex flex-col items-start justify-center overflow-hidden ">
             <motion.div
-              className={` text-[100px] ${textColor}  uppercase h-1/3 flex items-center justify-center w-max `}
+              className={` text-[150px] ${textColor}  uppercase h-1/3 flex items-center justify-center w-max `}
               style={{ x: xVar }}
               {...slideAnimation}
             >

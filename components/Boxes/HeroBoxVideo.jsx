@@ -31,10 +31,7 @@ export const HeroBoxVideo = ({
                 {prevText}
               </motion.p>
 
-              <motion.h1
-                variants={buttonsVariants}
-                className="font-Comfortaa  "
-              >
+              <motion.h1 variants={buttonsVariants} className="  ">
                 {first} <br /> <span className="text-accent ">{accent}</span>
               </motion.h1>
 

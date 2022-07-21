@@ -45,9 +45,9 @@ export const AnimatedCarousel = ({ programs }) => {
     <div className=" w-full">
       <section ref={carouselRef} className="bg-white w-full h-[300vh] ">
         <div className="sticky-wrapper sticky top-0 h-[80vh] w-full flex flex-col items-start justify-center overflow-hidden">
-          <div className="md:w-1/2 text-primary flex flex-col items-center justify-center py-10 mx-auto ">
-            <h2 className="text-primary">Nuestros programas</h2>
-            <p className="my-5 text-center">
+          <div className="md:w-1/2 text-primary flex flex-col items-start justify-center py-10 mx-auto ">
+            <h2 className="text-primary font-FiraSans">Nuestros programas</h2>
+            <p className="my-5 text-center text-black">
               Con el objetivo de brindar un servicio integral, nuestro
               ecosistema de salud y bienestar está compuesto por diversos
               programas complementarios entre si.
