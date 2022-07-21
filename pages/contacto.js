@@ -12,7 +12,7 @@ const Contacto = () => {
     // console.log(values)
   }
   return (
-    <div className='w-screen min-h-screen'>
+    <div className='w-screen min-h-screen relative z-10'>
       <Head>
         <title>Care Assistance - Contacto</title>
         <meta name="description" content="Contacto" />
@@ -26,11 +26,7 @@ const Contacto = () => {
         image='/img/contacto/contactobanner.png'
         buttonText='Nuestros clientes'
       />
-
-
       <FormSimple />
-
-
     </div>
   )
 }

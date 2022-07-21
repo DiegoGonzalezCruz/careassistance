@@ -81,7 +81,7 @@ export const Numbers = () => {
         className="container max-w-full h-[450vh] bg-white overflow-visible"
       >
         <div className=" sticky-wrapper sticky top-0 h-[80vh] w-full flex flex-col items-start justify-center  ">
-          <div className="absolute w-full h-full debug1">
+          <div className="absolute w-full h-full ">
             <Image
               src={'/img/home/FondoCifras1.png'}
               layout="fill"
@@ -98,7 +98,7 @@ export const Numbers = () => {
             whileInView="visible"
             variants={boxVariant}
             style={{ y: yVar }}
-            className=" w-full text-white relative flex flex-col h-full items-center justify-center debug2 "
+            className=" w-full text-white relative flex flex-col h-full items-center justify-center  "
           >
             {stats.map((stat, index) => (
               <div

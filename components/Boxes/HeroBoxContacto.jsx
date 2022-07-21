@@ -11,7 +11,7 @@ export const HeroBoxContacto = ({
   image = ''
 }) => {
   return (
-    <div className="w-screen md:h-[40vh] relative ">
+    <div className="w-screen md:h-[40vh] relative z-10">
       <header className="py-10 relative flex flex-row items-center justify-center h-full w-full bg-primary ">
         <div className="text-white flex flex-col z-20 w-2/3 h-full relative ">
           <motion.div

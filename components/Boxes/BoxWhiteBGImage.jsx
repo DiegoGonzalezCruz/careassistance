@@ -34,7 +34,7 @@ export const BoxWhiteBGImage = () => {
   // scrollY.onChange((v) => console.log(v))
 
   return (
-    <div className="w-screen debug1 ">
+    <div className="w-screen  ">
       <section ref={ref}>
         <div
           className="container bg-white max-w-full "

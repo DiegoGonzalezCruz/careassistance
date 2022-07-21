@@ -13,32 +13,34 @@ const caretDown = (
 
 export const Desktop = () => {
   return (
-    <div className="md:flex md:flex-row text-primary items-center w-3/4 gap-10 ">
-      <ul className=" w-full h-full flex flex-row items-center justify-end gap-10">
-        {navbarItems.map((item, index) => {
-          return (
-            <li key={item.title} className="hover:text-accent">
-              <Link href={item.href}>{item.title}</Link>
-            </li>
-          )
-        })}
-      </ul>
+    <div className="hidden md:flex h-full w-full justify-center ">
+      <div className="md:flex md:flex-row text-primary items-center w-3/4 gap-10 ">
+        <ul className=" w-full h-full flex flex-row items-center justify-end gap-10">
+          {navbarItems.map((item, index) => {
+            return (
+              <li key={item.title} className="hover:text-accent">
+                <Link href={item.href}>{item.title}</Link>
+              </li>
+            )
+          })}
+        </ul>
 
-      <div className="border border-primary rounded-full flex-row flex items-center gap-3 p-1">
-        <div className="h-10 w-10 relative">
-          <Image
-            src="/img/logo/Flag_of_Chile.svg"
-            layout="fill"
-            className="rounded-full"
-            objectFit="cover"
-            alt="desktop"
-          />
-        </div>
-        <div className="relative flex items-center">
-          <FontAwesomeIcon
-            icon={faAngleDown}
-            className="cursor-pointer text-2xl"
-          />
+        <div className="border border-primary rounded-full flex-row flex items-center gap-3 p-1">
+          <div className="h-10 w-10 relative">
+            <Image
+              src="/img/logo/Flag_of_Chile.svg"
+              layout="fill"
+              className="rounded-full"
+              objectFit="cover"
+              alt="desktop"
+            />
+          </div>
+          <div className="relative flex items-center">
+            <FontAwesomeIcon
+              icon={faAngleDown}
+              className="cursor-pointer text-2xl"
+            />
+          </div>
         </div>
       </div>
     </div>

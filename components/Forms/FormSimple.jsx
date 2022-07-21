@@ -1,15 +1,27 @@
-import { Field, Form, Formik } from 'formik'
-import Image from 'next/image'
-import React from 'react'
+import { Form, Formik } from 'formik'
+import React, { useCallback } from 'react'
 import TextInput from './Input'
 import InputMsg from './InputMsg'
 
 export const FormSimple = () => {
-  const handleSubmit = (val) => console.log(val, 'values')
+  const handleSubmit = (val) =>
+    fetch('/api/contactMail', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(val)
+    }).then(console.log('success', val))
+
   return (
-    <div className="flex flex-col items-center w-screen min-h-[80vh] bg-white pt-20">
-      <div className="relative self-start h-full w-1/12 debug1">
-        <Image src="/images/contact/forma1.png" layout="fill" />
+    <div className="flex flex-col items-center w-full min-h-[80vh] bg-white pt-20  relative">
+      <div className="forma absolute left-0 top-1/3 -translate-x-60 -rotate-45 translate-y-1/2 flex flex-col">
+        <div className="bg-primary rounded-full h-20 w-20 self-end m-4"></div>
+        <div className="border-primary border-2 rounded-full w-[25rem] h-24 flex items-center justify-center">
+          <div className="border-primary border-4 rounded-full w-[10rem] h-12 translate-y-full"></div>
+        </div>
+        <div className="bg-accent rounded-full h-4 w-4 self-end m-10 -translate-x-full"></div>
       </div>
       <Formik
         initialValues={{
@@ -69,7 +81,7 @@ export const FormSimple = () => {
         <p>Puedes escribirnos a:</p>
         <p>contacto@careassistance.com</p>
       </div>
-      <div className="forma absolute right-0 bottom-0 translate-x-60 -translate-y-1/2 -rotate-45">
+      <div className="forma absolute right-0 top-1/2 translate-x-60 -translate-y-1/2 -rotate-45">
         <div className="border-primary border-2 rounded-full w-[25rem] h-24 flex items-center justify-center">
           <div className="border-primary border-4 rounded-full w-[10rem] h-12 translate-y-full relative"></div>
           <div className="rounded-full bg-accent w-8 h-8 absolute top-0 left-10 -translate-y-1/2"></div>

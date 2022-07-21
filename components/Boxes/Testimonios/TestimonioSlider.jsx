@@ -5,9 +5,6 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image'
 
 export const TestimonioSlider = ({ testimonials, sideImg, hola }) => {
-  console.log(sideImg, 'sideImg')
-  console.log(testimonials, 'testimonials')
-  console.log(hola, 'hola')
   const [testimonialShowed, setTestimonialShowed] = useState(0)
 
   const moreTestimonial = () => {
