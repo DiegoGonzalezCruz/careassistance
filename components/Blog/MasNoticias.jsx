@@ -46,13 +46,13 @@ export const MasNoticias = ({ categories, posts }) => {
           className="md:w-3/4 flex flex-col items-center justify-center mx-auto"
         >
           <div variants={overlayVariants} className="my-5 self-start">
-            <h2 className="text-primary">
+            <h2 className="text-primary font-FiraSans">
               Más <span className="text-primary">noticias</span>
             </h2>
           </div>
           <div
             variants={overlayVariants}
-            className="categories flex flex-wrap items-center justify-center w-full"
+            className="categories flex flex-wrap items-center justify-center w-full "
           >
             {/* Lista de Categories */}
             <ul className="flex flex-row gap-3 w-full justify-around">
@@ -75,10 +75,9 @@ export const MasNoticias = ({ categories, posts }) => {
           </div>
           <div
             variants={overlayVariants}
-            className="flex flex-wrap gap-10 py-10 items-center justify-center"
+            className="flex flex-wrap gap-5 py-10 items-center justify-center "
           >
             {filteredPosts.map((post) => (
-              // <AnimatePresence key={post.id}>
               <BlogPost
                 key={post.id}
                 post={post}
@@ -86,7 +85,6 @@ export const MasNoticias = ({ categories, posts }) => {
                 variants={overlayVariants}
                 slug={post.slug}
               />
-              // </AnimatePresence>
             ))}
           </div>
         </div>

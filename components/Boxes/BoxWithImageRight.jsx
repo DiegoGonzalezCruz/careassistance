@@ -26,7 +26,7 @@ export const BoxWithImageRight = ({
 
   return (
     <div
-      className={`${bgColor}  flex overflow-hidden min-h-[80vh] w-screen relative `}
+      className={`${bgColor} flex overflow-hidden min-h-[80vh] w-screen relative`}
     >
       <div className="flex flex-col md:flex-row-reverse w-full items-center justify-center">
         <motion.div
@@ -55,8 +55,8 @@ export const BoxWithImageRight = ({
             bgColor === 'bg-primary' ? 'text-white' : 'text-black'
           } w-full h-full px-5 flex flex-col items-center justify-center `}
         >
-          <div className=" w-3/4 mx-auto">
-            <h2 className="font-bold text-primary">{title}</h2>
+          <div className=" w-3/4 mx-auto ">
+            <h2 className="font-bold text-primary font-FiraSans">{title}</h2>
             <p className="py-6">{text}</p>
           </div>
         </motion.div>

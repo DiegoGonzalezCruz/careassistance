@@ -32,7 +32,7 @@ export const ComoFuncionanNuestrosProgramas = () => {
           animate="visible"
           className="h-full w-full mx-auto flex flex-col items-center gap-5 "
         >
-          <h2 className="text-primary text-xl text-center">
+          <h2 className="text-primary text-xl text-center font-FiraSans">
             ¿Cómo funcionan <br />
             <span className="text-accent text-3xl">nuestros programas?</span>
           </h2>

@@ -25,15 +25,13 @@ export const Footer = () => {
       </div>
       {/* <div className="w-3 border-2 border-white self-center"></div> */}
       <div className=" links md:w-2/4 flex flex-col gap-5 md:items-start p-10 justify-between h-full ">
-        <div className="wrapper w-full h-full my-5 flex flex-col items-start justify-between">
+        <div className="wrapper w-full h-full my-5 flex flex-col items-start justify-between gap-1">
           {footer1.map((link) => {
             return (
               <Link href={link.href} passHref key={link.title}>
-                <div className="flex flex-row gap-10 justify-start">
-                  <p className="link link-hover hover:underline hover:opacity-100 opacity-50 text-base">
-                    {link.title}
-                  </p>
-                </div>
+                <p className="link link-hover hover:underline hover:opacity-100 opacity-50 text-base">
+                  {link.title}
+                </p>
               </Link>
             )
           })}
@@ -42,7 +40,7 @@ export const Footer = () => {
           {footer2.map((link) => {
             return (
               <Link href={link.href} passHref key={link.title}>
-                <p className="link link-hover text-base font-bold text-accent">
+                <p className="link link-hover text-normal font-bold text-accent">
                   {link.title}
                 </p>
               </Link>

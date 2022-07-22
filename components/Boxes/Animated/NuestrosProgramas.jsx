@@ -29,7 +29,7 @@ export const NuestrosProgramas = ({ programs }) => {
             sana y la adopción de hábitos saludables.
           </p>
         </div>
-        <div className="w-full h-full flex flex-col items-center">
+        <div className="w-full h-full flex flex-col items-center ">
           <div className="card bg-base-100 shadow-xl flex flex-row w-full h-full ">
             <div className="card-body w-1/3 ">
               <ul className="">
@@ -38,7 +38,7 @@ export const NuestrosProgramas = ({ programs }) => {
                   return (
                     <li
                       key={item.id}
-                      className={`text-xs border-b-2 hover:border-b-base-200 cursor-pointer text-primary py-4 hover:font-extrabold flex flex-row items-center pl-4 gap-2 ${
+                      className={`text-xs border-b-2 hover:border-b-base-200 cursor-pointer text-primary py-1 hover:font-extrabold flex flex-row items-center pl-4 gap-2 ${
                         program === idx
                           ? 'font-extrabold text-white bg-base-200'
                           : ''
@@ -91,7 +91,7 @@ export const NuestrosProgramas = ({ programs }) => {
           <p>Transforma la Salud y Bienestar de tus colaboradores</p>
           <button
             onClick={() => router.push('/contacto')}
-            className="btn btn-accent rounded-full text-white w-1/5"
+            className="btn btn-accent rounded-full text-white w-1/3"
           >
             Suma Clínica Virtual a tu empresa
           </button>

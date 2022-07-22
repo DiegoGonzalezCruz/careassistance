@@ -22,8 +22,8 @@ export const MapBox = () => {
   return (
     <div className="w-screen">
       <section ref={ref} className="">
-        <div className="container max-w-full h-[450vh] overflow-visible debug1 bg-base-200 w-full">
-          <div className=" debug1 sticky top-0 left-0 w-screen h-screen flex flex-row items-start justify-center overflow-hidden ">
+        <div className="container max-w-full h-[450vh] overflow-visible  bg-base-200 w-full ">
+          <div className="  sticky top-0 left-0 w-screen h-screen flex flex-row items-start justify-center overflow-hidden  ">
             <motion.div
               className="relative w-full h-full bg-base-200 "
               style={{
@@ -41,18 +41,19 @@ export const MapBox = () => {
                 alt="mapa"
               />
             </motion.div>
-            {/* <div className="w-1/2 h-full bg-base-200 flex items-center relative">
+
+            <div className="w-1/2 h-1/2 bottom-5 left-0 flex items-center absolute">
               <div className="w-3/4 mx-auto">
                 <p className="text-white md:text-xl">
                   Disponemos de un firme recorrido en
-                  <span className="text-accent"> Chile y México</span>, donde
-                  incorporamos el know-how necesario e invertimos en el
+                  <span className="text-accent font-bold"> Chile y México</span>
+                  , donde incorporamos el know-how necesario e invertimos en el
                   perfeccionamiento tecnológico, con el que nos posicionamos
                   como actores de cambio en el ámbito de la telemedicina y la
                   atención en salud y bienestar.
                 </p>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>

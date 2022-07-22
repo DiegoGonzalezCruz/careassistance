@@ -4,7 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image'
 
-export const TestimonioSlider = ({ testimonials, sideImg, hola }) => {
+export const TestimonioSlider = ({
+  testimonials,
+  sideImg,
+  location = 'mx-auto w-3/4'
+}) => {
   const [testimonialShowed, setTestimonialShowed] = useState(0)
 
   const moreTestimonial = () => {
@@ -25,7 +29,9 @@ export const TestimonioSlider = ({ testimonials, sideImg, hola }) => {
   }
 
   return (
-    <div className="w-3/4 mx-auto h-full flex flex-row items-center justify-center  ">
+    <div
+      className={`${location} h-full flex flex-row items-center justify-center  `}
+    >
       {sideImg ? (
         <div className="w-1/5 h-full relative mx-5">
           <Image src={sideImg} layout="fill" alt="testimonios" />
@@ -44,7 +50,7 @@ export const TestimonioSlider = ({ testimonials, sideImg, hola }) => {
           text={testimonials[testimonialShowed].content.rendered}
           img={testimonials[testimonialShowed]?.acf?.logo?.url}
         />
-        <div className="flex flex-row gap-4 text-accent items-center">
+        <div className="flex flex-row gap-4 text-accent items-center my-2  justify-center">
           <FontAwesomeIcon
             icon={faArrowLeft}
             className="cursor-pointer"

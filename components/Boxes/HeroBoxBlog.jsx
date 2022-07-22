@@ -5,14 +5,14 @@ import { buttonsVariants, overlayVariants } from '../../styles/animations'
 
 export const HeroBoxBlog = ({ prevText, text, accent, sub, image = '' }) => {
   return (
-    <div className="w-screen md:h-[40vh] relative  bg-secondary">
+    <div className="w-screen h-[40vh] relative  bg-secondary">
       <header className=" flex flex-row items-center justify-center h-full w-full ">
-        <div className="text-white flex flex-col w-1/2 h-full    ">
+        <div className="text-white flex flex-col w-3/5 h-full    ">
           <motion.div
             initial="hidden"
             whileInView="visible"
             variants={overlayVariants}
-            className=" text-white flex flex-col z-20  mx-auto my-auto md:px-10 gap-2"
+            className=" text-white flex flex-col z-20  mx-auto my-auto md:px-10 gap-2 w-3/4"
           >
             <h1 className="text-white font-Comfortaa font-thin text-xl">
               {prevText} <br />
@@ -30,9 +30,11 @@ export const HeroBoxBlog = ({ prevText, text, accent, sub, image = '' }) => {
           variants={overlayVariants}
           initial="hidden"
           whileInView="visible"
-          className="absolute right-0 h-96 w-96 rounded-xl -bottom-1/4 "
+          className=" rounded-xl  w-2/5 h-full"
         >
-          <Image src={image} layout="fill" objectFit="contain" alt={accent} />
+          <div className="relative h-full w-full translate-y-1/3">
+            <Image src={image} layout="fill" objectFit="contain" alt={accent} />
+          </div>
         </motion.div>
       </header>
     </div>

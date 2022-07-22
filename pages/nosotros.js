@@ -4,6 +4,7 @@ import { HeroBox } from '../components/Boxes/HeroBox'
 import { InfiniteBox } from '../components/Boxes/Animated/InfiniteBox'
 import { MapBox } from '../components/Boxes/Animated/MapBox'
 import { CalltoAction } from '../components/Boxes/CalltoAction'
+import { CalltoActionHome } from '../components/Boxes/CalltoActionHome'
 
 const Nosotros = () => {
   return (
@@ -23,7 +24,7 @@ const Nosotros = () => {
       />
       <InfiniteBox />
       <MapBox />
-      <CalltoAction question={'¿Quieres sumar estos beneficios a tu empresa?'} buttonText={'Contáctanos'} />
+      <CalltoActionHome question={'¿Quieres sumar estos beneficios a tu empresa?'} buttonText={'Contáctanos'} />
 
     </div>
   )
